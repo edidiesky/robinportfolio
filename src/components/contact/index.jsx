@@ -54,7 +54,7 @@ export default function () {
     return (
       <div className="left w-90 auto h-100 flex column gap-3">
         <Head text={"Contact"} subtext={"Lets Talk."} />
-        <div className="w-100 py-4 hidden">
+        <div className="w-100 hidden">
           <form
             className="authContentFormWrapper flex column"
             onSubmit={handleSubmit}
