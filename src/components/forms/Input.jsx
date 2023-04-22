@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import {AiFillWarning} from 'react-icons/ai'
 
 export default function Input({ id, onChange, errorMessage, index, ...props }) {
   const [touched, setTouched] = useState(false);
@@ -19,7 +20,7 @@ export default function Input({ id, onChange, errorMessage, index, ...props }) {
           focused={touched.toString()}
           onChange={onChange}
         />
-        <span className="error">{errorMessage}</span>
+        <span className="error flex gap-1"><AiFillWarning fontSize={'14px'}/> {errorMessage}</span>
       </LabelContainer>
       ''
     </div>
@@ -61,7 +62,7 @@ const LabelContainer = styled.label`
       border: 1px solid var(--red);
     }
     &:invalid[focused="true"] ~ span {
-      display: block;
+      display: flex;
     }
     &:invalid[focused="true"] {
       border: 1px solid var(--red);
@@ -72,7 +73,7 @@ const LabelContainer = styled.label`
   }
 
   span {
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: #c61212;
     font-weight: 600;
     display: none;
