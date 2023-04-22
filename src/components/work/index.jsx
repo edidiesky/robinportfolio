@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { Head } from "../common";
-import Tilt from "react-tilt";
-import { Link } from "react-router-dom";
-import { FaEye, FaGithub } from "react-icons/fa";
 import { work } from "../../data";
 export default function WorkIndex() {
   const WorkRight = () => {

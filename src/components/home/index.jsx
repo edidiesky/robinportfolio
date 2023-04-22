@@ -149,12 +149,12 @@ const WorkWrapper = styled.div`
       }
     }
     h3 {
-      font-size: 2rem;
+      font-size: 1.8rem;
       color: #fff;
       line-height: 1.6;
       position: relative;
       width: 100%;
-      @media (max-width: 380px) {
+      @media (max-width: 340px) {
         flex-direction: column;
         align-items: flex-start;
       }
