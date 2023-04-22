@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { Outlet } from "react-router-dom";
 import SidebarIndex from "./sidebar/index";
 const LayoutWrapper = styled.div`
-  background: #Fff;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -12,22 +11,27 @@ const LayoutWrapper = styled.div`
     width: 100%;
     display: grid;
     grid-template-columns: auto 1fr;
-    
+
     @media (max-width: 980px) {
       grid-template-columns: 1fr;
     }
     .container {
       width: 100%;
-      min-height: 100vh;
     }
   }
 `;
 
 export default function Layout() {
+  const [height, setHeight] = useState(0);
 
+  useEffect(() => {
+    const container = document.querySelector(".based");
+    const height = container.getBoundingClientRect().height;
+    setHeight(height);
+  }, []);
 
   return (
-    <LayoutWrapper>
+    <LayoutWrapper className="based" style={{ height }}>
       <div className="LayoutContainer">
         <SidebarIndex />
         <div className="container">
@@ -35,6 +39,5 @@ export default function Layout() {
         </div>
       </div>
     </LayoutWrapper>
-  )
-
+  );
 }

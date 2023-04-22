@@ -79,10 +79,15 @@ const SkillsWrapper = styled.div`
   }
   .card {
     position: relative;
+    background-color: #Fff;
+    border-radius: 50%;
+    height: 10rem;
+    display: grid;
+    place-items: center;
     .image {
       position: absolute;
       width: 100%;
-      height: 100%;
+      height: 80%;
     }
   }
   .left {

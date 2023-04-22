@@ -20,16 +20,34 @@ const SidebarWrapper = styled.div`
   .sidebarContainer {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
     position: sticky;
     background: var(--primary);
     left: 0;
-    top: 10%;
+    top: 0%;
+    overflow: auto;
+
     li:hover {
       color: var(--secondary);
     }
+    h1 {
+      padding: 1.8rem;
+      width: 100%;
+      text-align: center;
+      position: relative;
+      &::after {
+        width: 1rem;
+        height: 1rem;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 15%;
+        border-radius: 50%;
+        background-color: var(--secondary);
+        content: "";
+      }
+    }
     li {
-      padding:1.8rem;
+      padding: 1.8rem;
       width: 100%;
       border-bottom: 1px solid rgba(255, 255, 255, 0.09);
       .nav-link {
@@ -53,37 +71,6 @@ const SidebarWrapper = styled.div`
         }
       }
     }
-    /* .list {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      font-family: "Karla", sans-serif;
-      gap: 1rem;
-      .nav-link {
-        padding: 14px 20px;
-        font-size: 1.3rem;
-        height: 3rem;
-        font-weight: 600;
-        margin: 0 auto;
-        width: 100%;
-        color: var(--grey-1);
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        gap: 1.3rem;
-        transition: all 0.5s;
-        border-radius: 4px;
-        font-family: "Karla", sans-serif;
-
-        &:hover {
-          color: var(--secondary);
-          transform: translateX(-10px);
-        }
-        svg {
-          font-size: 2rem;
-        }
-      }
-    } */
   }
 `;
 
@@ -100,6 +87,7 @@ export default function SidebarIndex() {
   return (
     <SidebarWrapper>
       <div className="sidebarContainer">
+        <h1 className="family1 text-white">E</h1>
         <ul className="flex column gap-1">
           {sidebarData.map((x, index) => {
             return (

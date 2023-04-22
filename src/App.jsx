@@ -18,7 +18,7 @@ export default function App() {
     setHeight(height);
   }, []);
   return (
-    <div className="based" style={{height}}>
+    <div className="based" style={{ height }}>
       <Routes>
         <Route path={"/"} element={<Layout />}>
           <Route index element={<Home />} />
@@ -32,7 +32,3 @@ export default function App() {
     </div>
   );
 }
-
-
-
-
