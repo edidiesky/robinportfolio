@@ -4,43 +4,7 @@ import { Head } from "../common";
 import Tilt from "react-tilt";
 import { Link } from "react-router-dom";
 import { FaEye, FaGithub } from "react-icons/fa";
-import Input from "../forms/Input";
-
-const work = [
-  {
-    id: 1,
-    image: "https://updates.theme-fusion.com/wp-content/uploads/2022/08/184248308-5eeafc99-5f05-413b-a132-c905cdbb1094.jpg",
-    text: "Car Website",
-    tech: ["Redux", "styled-components", "node", "expressjs", "socketIo"],
-    description:
-      "A full-stack car website platform which gives opportunity for the users to see different section of cars besed on different search functionality and many more. Notwithstanding, it also provide a platform (dashboard) for the admin to see and manage different section section of the project",
-  },
-  {
-    id: 2,
-    image: "/jobit.png",
-    text: "Vendor Website",
-    tech: ["Redux", "styled-components", "node", "expressjs", "socketIo"],
-    description:
-      "A full-stack shop website platform which gives opportunity for the users to see and purchase different product based on required payment method and many more. Notwithstanding, it also provide a platform (dashboard) for the admin and vendors to see and manage different section section of the project",
-  },
-  {
-    id: 3,
-    image: "/jobit.png",
-    text: "Social media website",
-    tech: ["Redux", "styled-components", "node", "expressjs", "socketIo"],
-    description:
-      "A platform where user can easily post follow and unfollow friends and send messages to differnt users and many more. This project also provide key features such as authentication, authorization, conversation through a means of socketIo through different users.",
-  },
-  {
-    id: 4,
-    image: "/jobit.png",
-    text: "Restaurant website",
-    tech: ["Redux", "styled-components", "node", "expressjs", "nodemailer"],
-    description:
-      "A platform where user can easily post follow and unfollow friends and send messages to differnt users and many more. This project also provide key features such as authentication, authorization, conversation through a means of socketIo through different users.",
-  },
-];
-
+import { work } from "../../data";
 export default function WorkIndex() {
   const WorkRight = () => {
     return (
@@ -65,7 +29,7 @@ export default function WorkIndex() {
           }
         />
 
-        <div className="py-6 w-100 grid grid-gap1 grid-auto">
+        <div className="py-6 w-100 grid grid-auto">
           {work.map((x, index) => {
             return (
               <div
@@ -73,13 +37,13 @@ export default function WorkIndex() {
                 data-aos-duration="900"
                 data-aos-delay={index * 400}
               >
-                <Tilt
+                <div
                   className="w-100 card flex column gap-3"
                   key={x.id}
                   options={{ max: 45, scale: 1, speed: 450 }}
                 >
                   <img src={x.image} alt="" className="image" />
-                  <header className="flex column gap-2">
+                  {/* <header className="flex column gap-2">
                     <h3 className="uppercase fs-20 text-bold text-white">
                       {x.text}
                     </h3>
@@ -97,8 +61,8 @@ export default function WorkIndex() {
                         return <div className="techlist">#{x}</div>;
                       })}
                     </div>
-                  </header>
-                </Tilt>
+                  </header> */}
+                </div>
               </div>
             );
           })}
@@ -106,7 +70,9 @@ export default function WorkIndex() {
       </div>
     );
   };
-
+// 90D3B0
+// DBD2C9
+// C4CCDF
   return (
     <WorkWrapper>
       <WorkLeft />
@@ -132,13 +98,13 @@ const WorkWrapper = styled.div`
   }
   .grid-auto {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 1rem;
     @media (max-width: 980px) {
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
   }
   .card {
     position: relative;
-    background-color: var(--dark-4);
     padding: 1.4rem;
     padding-bottom: 2rem;
     border-radius: 10px;
@@ -180,13 +146,11 @@ const WorkWrapper = styled.div`
     padding: 7rem 0;
   }
   h1 {
-    font-size: 10rem;
     font-weight: 700;
     width: 85%;
     color: var(--dark-1);
     .span1 {
       color: #fff;
-      font-size: 40px;
     }
   }
   p {

@@ -17,6 +17,7 @@ const LayoutWrapper = styled.div`
     }
     .container {
       width: 100%;
+      overflow: hidden;
     }
   }
 `;

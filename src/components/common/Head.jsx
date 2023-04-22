@@ -26,7 +26,7 @@ export default function Head({text, subtext, para}) {
             data-aos="fade-up"
             data-aos-duration="1050"
             data-aos-delay="450"
-            className="block py-2 para"
+            className="block py-2 para para1"
           >
            {para}
           </span>

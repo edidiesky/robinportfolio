@@ -116,7 +116,9 @@ input {
 h1 {
   font-size: 80px;
 }
-
+.span1 {
+  font-size: 40px;
+}
 p {
   font-family: "Lato", sans-serif;
 }
@@ -312,9 +314,11 @@ a:hover {
 
 .w-85 {
   width: 80%;
+  max-width: 1480px;
 }
 .w-90 {
   width: 85%;
+  max-width: 1480px;
 }
 .w-100 {
   width: 100%;
@@ -328,6 +332,12 @@ a:hover {
 @media (max-width: 980px) {
   html {
     font-size: 50%;
+  }
+  h1 {
+    font-size: 50px;
+  }
+  .span1 {
+    font-size: 28px;
   }
   p {
     width: 100%;

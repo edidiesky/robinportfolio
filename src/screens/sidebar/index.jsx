@@ -6,7 +6,7 @@ import { MdWork } from "react-icons/md";
 import Dropdown from "./Dropdown";
 
 const SidebarWrapper = styled.div`
-  width: 16rem;
+  width: 20rem;
   background: var(--primary);
 
   @media (max-width: 980px) {

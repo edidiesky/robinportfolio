@@ -2,8 +2,7 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { MeshWobbleMaterial, OrbitControls, useGLTF } from "@react-three/drei";
 import React, { useRef, useState } from "react";
 import styled from "styled-components";
-import { Head } from "../common";
-import AnimatedLetters from "../common/Animatedletters";
+import { Link } from "react-router-dom";
 
 const Balls = () => {
   const primitive = useRef(null);
@@ -24,10 +23,11 @@ export default function WorkIndex() {
     return (
       <div className="w-100 flex justify-center item-center hidden">
         <div
-          className="layout flex justify-center item-center"
+          className="layout flex justify-center content item-center"
           data-aos="fade-left"
           data-aos-duration="1150"
           data-aos-delay="750"
+          style={{width:"100%"}}
         >
           <Canvas camera={{ position: [-5, 2, 10], fov: 20 }}>
             <ambientLight intensity={0.4} />
@@ -44,11 +44,6 @@ export default function WorkIndex() {
             />
             <pointLight position={[-10, 0, -20]} intensity={0.5} />
             <pointLight position={[0, -10, 0]} intensity={0.15} />
-            {/* <group>
-      <primitive>
-        <planeBufferGeometry attach={"geometry"} args={[100, 100]} />
-      </primitive>
-    </group> */}
             <Balls position={[1, 0, 1]} args={[2, 1, 1]} color="lightblue" />
             <OrbitControls />
           </Canvas>
@@ -60,14 +55,19 @@ export default function WorkIndex() {
   const WorkLeft = () => {
     return (
       <div className="left w-90 auto h-100 flex column gap-3">
-        <Head text={"Hi,"} />
-        <h2>
-          <AnimatedLetters
-            letterClass={letterclass}
-            strArray={"Edidiong Essien.".split("")}
-            idx={19}
-          />
-        </h2>
+        <h2>CLEAR THINKING MADE VISUAL.</h2>
+        <h3 className="flex item-center gap-1">
+          EDIDIONG ESSIEN<span className="span">Full Stack Developer</span>
+        </h3>
+        <div className="w-100 flex gap-2 hidden">
+          <Link
+            to={"/contact"}
+            className="btn fs-18 py-2 px-4 text-white text-bold"
+            style={{ padding: "1.4rem 4rem" }}
+          >
+            Contact Me
+          </Link>
+        </div>
       </div>
     );
   };
@@ -85,11 +85,16 @@ export default function WorkIndex() {
 const WorkWrapper = styled.div`
   background-color: var(--dark-3);
   width: 100%;
+  min-height: 100vh;
+  .content {
+    width: 20rem;
+    height: 30rem;
+  }
   .wrapper {
     width: 100%;
     display: grid;
     grid-gap: 2rem;
-    grid-template-columns: 1fr 35vw;
+    grid-template-columns: 1fr 25vw;
     min-height: 100vh;
     @media (max-width: 780px) {
       grid-template-columns: 1fr;
@@ -113,13 +118,19 @@ const WorkWrapper = styled.div`
     }
     .left {
       padding: 7rem 0;
+      align-items: center;
+      padding: 7rem 0px;
+      display: flex;
+      /* place-items: center; */
+      height: 100%;
+      justify-content: center;
     }
     h1 {
       font-size: 8rem;
       font-weight: 700;
       width: 100%;
       color: var(--dark-1);
-      .span1 {
+      .span {
         color: #fff;
         font-size: 40px;
       }
@@ -129,17 +140,44 @@ const WorkWrapper = styled.div`
       font-weight: 700;
       width: 100%;
       color: #fff;
-      width:100%;
-            position:relative;
-      .span1 {
+      width: 100%;
+      position: relative;
+
+      .span {
         color: #fff;
         font-size: 40px;
       }
     }
-    p {
-      font-size: 1.3rem;
+    h3 {
+      font-size: 2rem;
       color: #fff;
       line-height: 1.6;
+      position: relative;
+      width: 100%;
+      @media (max-width: 380px) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .span {
+        position: relative;
+        transform: translateX(25px);
+        @media (max-width: 380px) {
+          transform: translateX(15px);
+        }
+        &::after {
+          width: 0.7rem;
+          height: 0.7rem;
+          position: absolute;
+          left: -8%;
+          top: 50%;
+          transform: translateY(-50%);
+          border-radius: 50%;
+          background-color: var(--secondary);
+          content: "";
+          @media (max-width: 380px) {
+          }
+        }
+      }
     }
     .para {
       font-size: 1.8rem;
