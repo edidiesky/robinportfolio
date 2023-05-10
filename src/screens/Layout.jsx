@@ -9,12 +9,6 @@ const LayoutWrapper = styled.div`
   align-items: flex-start;
   .LayoutContainer {
     width: 100%;
-    display: grid;
-    grid-template-columns: auto 1fr;
-
-    @media (max-width: 980px) {
-      grid-template-columns: 1fr;
-    }
     .container {
       width: 100%;
       overflow: hidden;
@@ -34,7 +28,7 @@ export default function Layout() {
   return (
     <LayoutWrapper className="based" style={{ height }}>
       <div className="LayoutContainer">
-        <SidebarIndex />
+        {/* <SidebarIndex /> */}
         <div className="container">
           <Outlet />
         </div>

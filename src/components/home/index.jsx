@@ -55,7 +55,7 @@ export default function WorkIndex() {
   const WorkLeft = () => {
     return (
       <div className="left w-90 auto h-100 flex column gap-3">
-        <h2>CLEAR THINKING MADE VISUAL.</h2>
+        <h1 className="text-white">CLEAR THINKING MADE VISUAL.</h1>
         <h3 className="flex item-center gap-1">
           EDIDIONG ESSIEN<span className="span">Full Stack Developer</span>
         </h3>
@@ -124,29 +124,6 @@ const WorkWrapper = styled.div`
       /* place-items: center; */
       height: 100%;
       justify-content: center;
-    }
-    h1 {
-      font-size: 8rem;
-      font-weight: 700;
-      width: 100%;
-      color: var(--dark-1);
-      .span {
-        color: #fff;
-        font-size: 40px;
-      }
-    }
-    h2 {
-      font-size: 6rem;
-      font-weight: 700;
-      width: 100%;
-      color: #fff;
-      width: 100%;
-      position: relative;
-
-      .span {
-        color: #fff;
-        font-size: 40px;
-      }
     }
     h3 {
       font-size: 1.8rem;
