@@ -55,11 +55,11 @@ export default function WorkIndex() {
   const WorkLeft = () => {
     return (
       <div className="flex-1">
-        <div className="left w-90 h-100 flex column gap-3">
-          <h4 className="flex item-center gap-1">
-            Hi, there<span className="span">Full Stack Developer</span>
+        <div className="left w-100 h-100 flex column gap-1">
+          <h4 className="flex fs-16 family2 text-light item-center gap-1 text-secondary">
+            Hi, there<span className="span">my name is</span>
           </h4>
-          <h1 className="text-white">EDIDIONG ESSIEN</h1>
+          <h1 className="text-white family1">EDIDIONG ESSIEN</h1>
           <h3 className="flex item-center gap-1">
             EDIDIONG ESSIEN<span className="span">Full Stack Developer</span>
           </h3>
@@ -79,7 +79,7 @@ export default function WorkIndex() {
 
   return (
     <WorkWrapper>
-      <div className="wrapper w-90 auto">
+      <div className="wrapper w-85 auto flex item-center gap-3 justify-space">
         <WorkLeft />
         <WorkRight />
       </div>
@@ -90,84 +90,14 @@ export default function WorkIndex() {
 const WorkWrapper = styled.div`
   background-color: var(--dark-3);
   width: 100%;
-  min-height: 100vh;
+  padding: 7rem 0;
   .content {
     width: 20rem;
     height: 30rem;
   }
-  .wrapper {
-    width: 100%;
-    display: grid;
-    grid-gap: 2rem;
-    grid-template-columns: 1fr 25vw;
-    min-height: 100vh;
-    @media (max-width: 780px) {
-      grid-template-columns: 1fr;
-    }
-    .grid-auto {
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
-    .layout {
-      width: 100%;
-      height: 50vh;
-    }
-    .card {
-      position: relative;
-      background-color: var(--dark-1);
-      padding: 1.4rem;
-      border-radius: 10px;
-      .image {
-        width: 100%;
-        object-fit: cover;
-      }
-    }
-    .left {
-      padding: 7rem 0;
-      align-items: center;
-      padding: 7rem 0px;
-      display: flex;
-      /* place-items: center; */
-      height: 100%;
-      justify-content: center;
-    }
-    h3 {
-      font-size: 1.8rem;
-      color: #fff;
-      line-height: 1.6;
-      position: relative;
-      width: 100%;
-      @media (max-width: 340px) {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .span {
-        position: relative;
-        transform: translateX(25px);
-        @media (max-width: 380px) {
-          transform: translateX(15px);
-        }
-        &::after {
-          width: 0.7rem;
-          height: 0.7rem;
-          position: absolute;
-          left: -8%;
-          top: 50%;
-          transform: translateY(-50%);
-          border-radius: 50%;
-          background-color: var(--secondary);
-          content: "";
-          @media (max-width: 380px) {
-          }
-        }
-      }
-    }
-    .para {
-      font-size: 1.8rem;
-      color: var(--grey-1);
-      font-weight: 400;
-      font-family: "Lato", sans-serif;
-      width: 90%;
-      line-height: 1.8;
-    }
+  h1 {
+    font-size: 8rem;
+    line-height: 1.3;
+    font-family: "Roboto Slab", sans-serif;
   }
 `;

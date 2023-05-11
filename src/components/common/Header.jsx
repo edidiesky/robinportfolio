@@ -13,7 +13,7 @@ export default function Header() {
   return (
     <HeaderContent className="w-100">
       <div className="w-85 auto flex item-center justify-space">
-        <h4 className="uppercase family2 text-white fs-18 text-light">
+        <h4 className="uppercase flex-1 family2 text-white fs-18 text-light">
           EDIDIONG ESSIEN
         </h4>
         <div className="icon">
