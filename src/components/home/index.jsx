@@ -62,13 +62,15 @@ export default function WorkIndex() {
           <div className="flex column gap-2">
             <h1 className="text-white family1">EDIDIONG ESSIEN</h1>
             <h1 className="text-white family1 active">
-              I build things for the web.
+              I create habitation for things on the web.
             </h1>
           </div>
-          <h4 className="family2 w-85 fs-16 text-light text-white">
-            I’m a software engineer specializing in building (and occasionally
-            designing) exceptional digital experiences. Currently, I’m focused
-            on building accessible, human-centered products at Upstatement.{" "}
+          <h4 className="family2 w-85 fs-18 text-light text-white">
+            I’m a full stack developer specializing in building server and
+            client side section of the web with exceptional digital experiences
+            for the user. Currently, I’m working as a freelancer and looking for
+            various opportunities to add value to organizations brands and
+            product.{" "}
           </h4>
           <div className="w-100 flex gap-2 hidden">
             <Link
@@ -106,7 +108,7 @@ const WorkWrapper = styled.div`
     height: 30rem;
   }
   .wrapper {
-    @media (max-width:780px) {
+    @media (max-width: 780px) {
       flex-direction: column;
     }
   }
@@ -119,8 +121,9 @@ const WorkWrapper = styled.div`
     font-family: "Roboto Slab", sans-serif;
     &.active {
       color: #ffffff7a;
-    } 
-    @media (max-width:780px) {
+      font-size: 5rem;
+    }
+    @media (max-width: 780px) {
       font-size: 4.7rem;
     }
   }
