@@ -55,20 +55,25 @@ export default function WorkIndex() {
   const WorkLeft = () => {
     return (
       <div className="flex-1">
-        <div className="left w-100 h-100 flex column gap-1">
+        <div className="left w-100 h-100 flex column gap-3">
           <h4 className="flex fs-16 family2 text-light item-center gap-1 text-secondary">
             Hi, there<span className="span">my name is</span>
           </h4>
-          <div className="flex column">
+          <div className="flex column gap-2">
             <h1 className="text-white family1">EDIDIONG ESSIEN</h1>
             <h1 className="text-white family1 active">
               I build things for the web.
             </h1>
           </div>
+          <h4 className="family2 w-85 fs-16 text-light text-white">
+            I’m a software engineer specializing in building (and occasionally
+            designing) exceptional digital experiences. Currently, I’m focused
+            on building accessible, human-centered products at Upstatement.{" "}
+          </h4>
           <div className="w-100 flex gap-2 hidden">
             <Link
               to={"/contact"}
-              className="btn fs-18 py-2 px-4 text-white text-bold"
+              className="btn fs-16 py-2 px-4 text-white text-bold"
               style={{ padding: "1.4rem 4rem" }}
             >
               Contact Me
@@ -93,16 +98,30 @@ const WorkWrapper = styled.div`
   background-color: var(--dark-3);
   width: 100%;
   padding: 7rem 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
   .content {
     width: 20rem;
     height: 30rem;
   }
+  .wrapper {
+    @media (max-width:780px) {
+      flex-direction: column;
+    }
+  }
+  h4 {
+    line-height: 25px;
+  }
   h1 {
     font-size: 6rem;
-    line-height: 1.3;
+    line-height: 50px;
     font-family: "Roboto Slab", sans-serif;
     &.active {
       color: #ffffff7a;
+    } 
+    @media (max-width:780px) {
+      font-size: 4.7rem;
     }
   }
   .WorkRight {

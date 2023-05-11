@@ -55,6 +55,7 @@ const HeaderContent = styled.div`
     }
   }
   .list {
+    justify-content: flex-end;
     @media (max-width: 980px) {
       display: none;
     }
