@@ -88,7 +88,7 @@ export default function WorkIndex() {
 
   return (
     <WorkWrapper>
-      <div className="wrapper w-85 auto flex item-center gap-3 justify-space">
+      <div className="wrapper w-85 auto flex item-center gap-6 justify-space">
         <WorkLeft />
         <WorkRight />
       </div>
@@ -110,6 +110,7 @@ const WorkWrapper = styled.div`
   .wrapper {
     @media (max-width: 780px) {
       flex-direction: column;
+      gap: 6rem;
     }
   }
   h4 {
@@ -122,6 +123,10 @@ const WorkWrapper = styled.div`
     &.active {
       color: #ffffff7a;
       font-size: 5rem;
+      @media (max-width: 580px) {
+      font-size: 4rem;
+      line-height: 35px;
+    }
     }
     @media (max-width: 780px) {
       font-size: 4.7rem;
