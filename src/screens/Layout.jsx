@@ -35,16 +35,13 @@ export default function Layout() {
     <LayoutWrapper className="based" style={{ height }}>
       <div className="LayoutContainer">
         {/* <SidebarIndex /> */}
-        <Header/>
+        <Header />
         <div className="container">
-          {/* <Home/>
-          <About/>
-          <Skills/>
-          */}
-          <About/>
-           <Skills/>
-           <Work/> 
-          <Contact/>
+          <Home />
+          <About />
+          <Skills />
+          <Work />
+          <Contact />
         </div>
       </div>
     </LayoutWrapper>

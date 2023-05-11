@@ -21,13 +21,13 @@ export default function WorkIndex() {
   const [letterclass, setLetterClass] = useState("text-animate");
   const WorkRight = () => {
     return (
-      <div className="w-100 flex justify-center item-center hidden">
+      <div className="flex-1 flex justify-center item-center hidden">
         <div
           className="layout flex justify-center content item-center"
           data-aos="fade-left"
           data-aos-duration="1150"
           data-aos-delay="750"
-          style={{width:"100%"}}
+          style={{ width: "100%" }}
         >
           <Canvas camera={{ position: [-5, 2, 10], fov: 20 }}>
             <ambientLight intensity={0.4} />
@@ -54,22 +54,24 @@ export default function WorkIndex() {
 
   const WorkLeft = () => {
     return (
-      <div className="left w-90 auto h-100 flex column gap-3">
-        <h4 className="flex item-center gap-1">
-          Hi, there<span className="span">Full Stack Developer</span>
-        </h4>
-        <h1 className="text-white">EDIDIONG ESSIEN</h1>
-        <h3 className="flex item-center gap-1">
-          EDIDIONG ESSIEN<span className="span">Full Stack Developer</span>
-        </h3>
-        <div className="w-100 flex gap-2 hidden">
-          <Link
-            to={"/contact"}
-            className="btn fs-18 py-2 px-4 text-white text-bold"
-            style={{ padding: "1.4rem 4rem" }}
-          >
-            Contact Me
-          </Link>
+      <div className="flex-1">
+        <div className="left w-90 h-100 flex column gap-3">
+          <h4 className="flex item-center gap-1">
+            Hi, there<span className="span">Full Stack Developer</span>
+          </h4>
+          <h1 className="text-white">EDIDIONG ESSIEN</h1>
+          <h3 className="flex item-center gap-1">
+            EDIDIONG ESSIEN<span className="span">Full Stack Developer</span>
+          </h3>
+          <div className="w-100 flex gap-2 hidden">
+            <Link
+              to={"/contact"}
+              className="btn fs-18 py-2 px-4 text-white text-bold"
+              style={{ padding: "1.4rem 4rem" }}
+            >
+              Contact Me
+            </Link>
+          </div>
         </div>
       </div>
     );

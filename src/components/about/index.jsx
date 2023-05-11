@@ -115,7 +115,7 @@ const SkillsWrapper = styled.div`
   }
   .grid-auto {
     grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-    grid-gap: 8rem;
+    grid-gap: 4rem;
     @media (max-width: 980px) {
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       grid-row-gap: 10rem;
@@ -151,7 +151,7 @@ const SkillsWrapper = styled.div`
         color: var(--secondary);
       }
       .icon1 {
-        filter: brightness(100%);
+        filter: brightness(0%);
       }
     }
   }
