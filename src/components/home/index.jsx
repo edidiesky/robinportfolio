@@ -68,8 +68,8 @@ export default function WorkIndex() {
           <h4 className="family2 w-85 fs-18 text-light text-white">
             I’m a full stack developer specializing in building server and
             client side section of the web with exceptional digital experiences
-            for the user. Currently, I’m working as a freelancer and looking for
-            various opportunities to add value to organizations brands and
+            for the user. Currently, I’m working as a <span className="textActive">freelancer</span>  and looking for
+            various opportunities to  <span className="textActive">value to organizations</span>  brands and
             product.{" "}
           </h4>
           <div className="w-100 flex gap-2 hidden">
@@ -97,7 +97,7 @@ export default function WorkIndex() {
 }
 
 const WorkWrapper = styled.div`
-  background-color: var(--dark-3);
+  background-color: rgb(27,27,27);
   width: 100%;
   padding: 7rem 0;
   min-height: 100vh;
@@ -114,7 +114,7 @@ const WorkWrapper = styled.div`
     }
   }
   h4 {
-    line-height: 25px;
+    line-height: 30px;
   }
   h1 {
     font-size: 6rem;
