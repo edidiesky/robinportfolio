@@ -4,11 +4,13 @@ import AOS from "aos";
 import { Canvas, useFrame } from "@react-three/fiber";
 import "aos/dist/aos.css";
 import "animate.css";
-import { Layout, Home, Error, Contact, About, Skills, Work } from "./screens";
+import { Layout } from "./screens";
 
 export default function App() {
   useEffect(() => {
-    AOS.init();
+    AOS.init({
+      once: true,
+    });
   }, []);
   const [height, setHeight] = useState(0);
 
@@ -20,14 +22,7 @@ export default function App() {
   return (
     <div className="based" style={{ height }}>
       <Routes>
-        <Route path={"/"} element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="about" element={<About />} />
-          <Route path="skills" element={<Skills />} />
-          <Route path="work" element={<Work />} />
-          <Route path="*" element={<Error />} />
-        </Route>
+        <Route path={"/"} element={<Layout />}></Route>
       </Routes>
     </div>
   );

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600;1,700&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /* *,
 ::after,
@@ -22,10 +22,10 @@ body {
     margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-family: "Montserrat", sans-serif;
-    line-height: 50px;
+    font-family: "Work+Sans", sans-serif;
+    line-height: 1.4;
     color: var(--primary);
-    background-color: var(--primary);
+    font-weight: normal;
 }
 
 
@@ -37,17 +37,17 @@ body {
 :root {
     --primary: rgb(18 23 30);
     --grey-1: rgb(126, 136, 144);
-    --gradient: #2F3243;
-    --secondary: #F4AD24;
-    --light-grey: #F2F2F2;
+    --gradient: #2f3243;
+    --secondary: #f4ad24;
+    --light-grey: #f2f2f2;
     --dark-1: rgb(51, 60, 78);
-    --grey-2: #A6D2FF;
-    --gradient-2: #C4CCDF;
+    --grey-2: #a6d2ff;
+    --gradient-2: #c4ccdf;
     --gradient-3: rgb(148, 146, 143);
-    --gradient-4: #B7FFEF;
-    --gradient-5: #EAD592;
+    --gradient-4: #b7ffef;
+    --gradient-5: #ead592;
     --dark-4: #293142;
-    --dark-3: #181E25;
+    --dark-3: #181e25;
     --red: #c61212;
 }
 
@@ -64,23 +64,11 @@ html {
 
 .shadow {
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
-    transition: all .5s;
+    transition: all 0.5s;
 }
 
 .shadow:hover {
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
-}
-
-.subBtn {
-    padding: 2rem;
-    border: none;
-    outline: none;
-    font-size: 16px;
-    color: #fff;
-    background-color: var(--dark-blue);
-    font-weight: 400;
-    text-transform: uppercase;
-    cursor: pointer;
 }
 
 .subBtn:hover {
@@ -88,15 +76,17 @@ html {
 }
 
 .btn {
-    background-color: var(--secondary);
-    border: none;
+    border: 2px solid var(--secondary);
     outline: none;
     cursor: pointer;
-    font-family: "Karla", sans-serif;
+    font-family: "Montserrat", sans-serif;
+    color: var(--secondary);
+    background-color: transparent;
+    text-transform: uppercase;
 }
 
 .btn:hover {
-    opacity: 0.7;
+    background-color: var(--secondary);
 }
 
 .text-secondary {
@@ -132,9 +122,9 @@ input {
 }
 
 h1 {
-    font-size: 100px;
+    font-size: 150px;
     font-family: "Bebas Neue", sans-serif;
-    line-height: 90px;
+    line-height: 100px;
     font-weight: 700;
     letter-spacing: 1.5px;
 }
@@ -144,11 +134,11 @@ h1 {
 }
 
 p {
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto Slab", sans-serif;
 }
 
 .family1 {
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto Slab", sans-serif;
 }
 
 .family2 {
@@ -158,6 +148,52 @@ p {
 .family3 {
     font-family: "Bebas Neue", sans-serif;
     letter-spacing: 1.5px;
+}
+
+.head {
+    font-size: 40px;
+    font-family: "Lora", sans-serif;
+    position: relative;
+    margin-bottom: 4rem;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+}
+
+.heads {
+    font-size: 50px;
+    font-family: "Lora", sans-serif;
+    position: relative;
+    margin-bottom: 4rem;
+}
+
+.head::after {
+    position: absolute;
+    width: 100px;
+    height: 2px;
+    background-color: var(--secondary);
+    bottom: -25%;
+    left: 50%;
+    content: "";
+    transform: translateX(-45%);
+}
+
+.family4 {
+    font-family: "Montserrat", sans-serif;
+}
+
+.area {
+    height: 6rem;
+    background: transparent;
+    padding: 0;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 1.6rem;
+    font-weight: 400;
+    transition: all 0.6s;
+    color: #fff;
+    border-bottom: 1.6px solid #fff;
+    font-family: inherit;
 }
 
 .py-6 {
@@ -229,6 +265,14 @@ a:hover {
 
 .uppercase {
     text-transform: uppercase;
+}
+
+.gradient {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient( 180deg, #2c2b2b 12%, hsla(0, 0%, 0%, calc(100% - 45%)) 100%);
+    z-index: 300;
 }
 
 
@@ -382,7 +426,7 @@ a:hover {
 }
 
 .w-90 {
-    width: 85%;
+    width: 90%;
     max-width: 1480px;
 }
 
@@ -429,5 +473,35 @@ a:hover {
     }
     .w-85 {
         width: 90%;
+    }
+}
+
+@media (max-width: 980px) {
+    .head::after {
+        position: absolute;
+        width: 100px;
+        height: 2px;
+        background-color: var(--secondary);
+        bottom: -25%;
+        left: 10%;
+        content: "";
+    }
+    .head {
+        text-align: start;
+    }
+}
+
+@media (max-width: 580px) {
+    .head::after {
+        position: absolute;
+        width: 100px;
+        height: 1.5px;
+        background-color: var(--secondary);
+        bottom: -25%;
+        left: 10%;
+        content: "";
+    }
+    .head {
+        font-size: 30px;
     }
 }

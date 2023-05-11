@@ -22,12 +22,22 @@ const inputData = [
     errorMessage: "It should be a valid name",
     required: true,
   },
+  {
+    id: 3,
+    name: "subject",
+    placeholder: "Name",
+    type: "name",
+    text: "subject",
+    errorMessage: "It should be a valid subject",
+    required: true,
+  },
 ];
 
 export default function () {
   const [formdata, setFormData] = useState({
     email: "",
     name: "",
+    subject: "",
     message: "",
   });
   const onChange = (e) => {
@@ -38,30 +48,26 @@ export default function () {
     e.preventDefault();
     // dispatch(loginCustomer(formdata));
   };
-  const ContactRight = () => {
-    return (
-      <div className="w-100">
-        <img
-          src="https://avada.website/resume/wp-content/uploads/sites/66/2016/07/contact_bg.jpg"
-          alt=""
-          style={{ width: "100%", height: "100%", objectFit: "cover" }}
-        />
-      </div>
-    );
-  };
-
   const ContactLeft = () => {
     return (
-      <div className="left w-90 auto h-100 flex column gap-3">
-        <Head text={"Contact"} subtext={"Lets Talk."} />
-        <div className="w-100 hidden">
-          <form
-            className="authContentFormWrapper flex column"
-            onSubmit={handleSubmit}
-            data-aos="fade-up"
-            data-aos-duration="950"
-            data-aos-delay="400"
+      <div className="contactLeft w-90 auto item-center justify-center h-100 flex column gap-4">
+        <div className="w-85 auto">
+          <h3
+            style={{ fontWeight: "normal" }}
+            className="head text-white text-center"
           >
+            Get In Touch
+          </h3>
+          <span
+            className="block fs-20 py-2 text1 text-white text-center w-85 auto family1"
+            style={{ fontWeight: "300" }}
+          >
+            Have an interesting work in mind for me? Feel free to send me your
+            message!
+          </span>
+        </div>
+        <div className="w-100">
+          <form className="authContentFormWrapper flex column gap-4">
             {inputData.map((input, index) => {
               return (
                 <Input
@@ -82,7 +88,7 @@ export default function () {
             })}
             <div className="w-100 hidden">
               <div className="w-100 flex column gap-1">
-                <label htmlFor="message">Message</label>
+                <div htmlFor="message">Message</div>
                 <textarea
                   name=""
                   className="area"
@@ -91,7 +97,7 @@ export default function () {
                 ></textarea>
               </div>
             </div>
-            <div className="w-100 py-6 flex gap-2 hidden">
+            <div className="w-100 py-6 flex gap-2 item-center justify-center hidden">
               <button
                 className="btn fs-16 py-2 px-4 text-white text-bold"
                 style={{ padding: "1.4rem 4rem" }}
@@ -108,85 +114,58 @@ export default function () {
   return (
     <ContactWrapper>
       <ContactLeft />
-      <ContactRight />
+      <img
+        src="https://v2.brittanychiang.com/img/bg-contact/contact-xl.jpg"
+        alt=""
+        className="w-100 h-100 image"
+      />
+      <div className="imagegradient w-100 h-100"></div>
     </ContactWrapper>
   );
 }
 
 const ContactWrapper = styled.div`
   width: 100%;
-  background-color: var(--dark-3);
+  min-height: 70vh;
+  position: relative;
+  padding: 10rem 0;
   display: grid;
-  grid-gap: 2rem;
-  grid-template-columns: 1fr 28vw;
-  min-height: 100vh;
-  @media (max-width: 780px) {
-    grid-template-columns: 1fr;
-  }
-  .area {
-    height: 20rem;
-    width: 100%;
-    border: none;
-    outline: none;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    padding: 2rem;
-    color: #fff;
-    font-family: inherit;
-    background-color: var(--dark-1);
-    font-size: 1.4rem;
-    font-family: "Karla", sans-serif;
-    &:hover {
-      border: 1px solid #222;
-    }
-
-    &:focus {
-      border: 1px solid #222;
-    }
-    &.inputError {
-      border: 1px solid var(--red);
-    }
-    &:invalid[focused="true"] ~ span {
-      display: block;
-    }
-    &:invalid[focused="true"] {
-      border: 1px solid var(--red);
-    }
-    &:valid[focused="true"] {
-      border: 1px solid var(--green);
+  place-items: center;
+  .text1,
+  h3 {
+    width: 60%;
+    @media (max-width: 580px) {
+      width: 90%;
+      text-align: start;
+      margin: 0;
     }
   }
-  .left {
-    padding: 7rem 0;
+  .imagegradient {
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.61),
+      rgba(0, 0, 0, 0.61),
+      rgba(0, 0, 0, 0.61),
+      rgba(0, 0, 0, 0.61),
+      rgba(0, 0, 0, 0.61)
+    );
   }
-  h1 {
-    font-size: 10rem;
-    font-weight: 700;
-    width: 90%;
-    color: var(--dark-1);
-    .span1 {
-      color: #fff;
-      font-size: 40px;
+  .image,
+  .imagegradient {
+    position: absolute;
+  }
+  .contactLeft {
+    z-index: 400;
+    gap: 10rem;
+  }
+  .authContentFormWrapper {
+    width: 40%;
+    margin: 0 auto;
+    @media (max-width: 980px) {
+      width: 70%;
     }
-  }
-  label {
-    font-size: 1.3rem;
-    color: #fff;
-    font-weight: 500;
-    text-transform: capitalize;
-  }
-  p {
-    font-size: 1.3rem;
-    color: #fff;
-    line-height: 1.6;
-  }
-  .para {
-    font-size: 1.8rem;
-    color: var(--grey-1);
-    font-weight: 400;
-    font-family: "Lato", sans-serif;
-    width: 90%;
-    line-height: 1.8;
+    @media (max-width: 580px) {
+      width: 90%;
+    }
   }
 `;
-
-// https://avada.website/resume/wp-content/uploads/sites/66/2016/07/contact_bg.jpg

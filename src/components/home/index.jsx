@@ -55,7 +55,10 @@ export default function WorkIndex() {
   const WorkLeft = () => {
     return (
       <div className="left w-90 auto h-100 flex column gap-3">
-        <h1 className="text-white">CLEAR THINKING MADE VISUAL.</h1>
+        <h4 className="flex item-center gap-1">
+          Hi, there<span className="span">Full Stack Developer</span>
+        </h4>
+        <h1 className="text-white">EDIDIONG ESSIEN</h1>
         <h3 className="flex item-center gap-1">
           EDIDIONG ESSIEN<span className="span">Full Stack Developer</span>
         </h3>

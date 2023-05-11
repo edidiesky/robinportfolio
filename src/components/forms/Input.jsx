@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import {AiFillWarning} from 'react-icons/ai'
+import { AiFillWarning } from "react-icons/ai";
 
 export default function Input({ id, onChange, errorMessage, index, ...props }) {
   const [touched, setTouched] = useState(false);
@@ -8,21 +8,23 @@ export default function Input({ id, onChange, errorMessage, index, ...props }) {
     setTouched(true);
   };
   return (
-    <div className="w-100 hidden">
-      <LabelContainer
-        htmlFor={id}
-      >
-        {id}
-        <input
-          {...props}
-          onBlur={handleTouch}
-          onFocus={() => (props.name === "password2" ? setTouched(true) : "")}
-          focused={touched.toString()}
-          onChange={onChange}
-        />
-        <span className="error flex gap-1"><AiFillWarning fontSize={'14px'}/> {errorMessage}</span>
+    <div className="w-100">
+      <LabelContainer htmlFor={id}>
+        <div className="inputWrapper flex column">
+          <input
+            {...props}
+            onBlur={handleTouch}
+            onFocus={() => (props.name === "password2" ? setTouched(true) : "")}
+            focused={touched.toString()}
+            onChange={onChange}
+          />
+          <div className="spantext">{id}</div>
+          <div className="contactspan"></div>
+          <span className="error flex gap-1">
+            <AiFillWarning fontSize={"14px"} /> {errorMessage}
+          </span>
+        </div>
       </LabelContainer>
-      ''
     </div>
   );
 }
@@ -32,33 +34,51 @@ const LabelContainer = styled.label`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 1rem;
-  font-size: 1.3rem;
+  gap: 0.3rem;
+  font-size: 1.5rem;
   color: #fff;
-  font-weight: 500;
-  text-transform: capitalize;
-
-  input {
-    height: 5.5rem;
-    background: var(--dark-1);
-    padding: 0 2.4rem;
-    box-shadow: 0 1px 2px rgba(0,0,0,.3);
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  .inputWrapper {
     width: 100%;
-    border-radius: 3px;
-    border: 1px solid var(--dark-1);
-    outline: none;
-    font-size: 1.4rem;
-    font-weight: 400;
-    transition: all 0.2s;
-    color: #fff;
-    &:hover {
-      border: 1px solid #222;
-      box-shadow: 0 2px 3px rgba(0, 0, 0, 0.08);
+    position: relative;
+    gap: 2rem;
+    .spantext {
+      position: absolute;
+      top: -60%;
+      gap: 0.3rem;
+      font-size: 1.5rem;
+      color: #fff;
+      text-transform: uppercase;
+      font-family: "Montserrat", sans-serif;
+      font-weight: bold;
+      letter-spacing: 1px;
+      transition: all 0.6s ease;
     }
-    &:focus {
-      border: 1px solid #222;
-    }
-    &.inputError {
+    input {
+      height: 4rem;
+      background: transparent;
+      padding: 0;
+      width: 100%;
+      border: none;
+      outline: none;
+      font-size: 1.6rem;
+      font-weight: 400;
+      transition: all 0.6s;
+      color: #fff;
+      border-bottom: 1.6px solid #fff;
+      &:focus {
+        font-size: 1.8rem;
+      }
+      &:focus ~ .contactspan {
+        width: 100%;
+      }
+      &:focus + .spantext {
+        transform: translate3d(-10px, -10px, 0) scale(.8);
+      }
+      /* &.inputError {
       border: 1px solid var(--red);
     }
     &:invalid[focused="true"] ~ span {
@@ -69,13 +89,23 @@ const LabelContainer = styled.label`
     }
     &:valid[focused="true"] {
       border: 1px solid var(--green);
+    } */
     }
-  }
+    .contactspan {
+      width: 0;
+      background-color: var(--secondary);
+      height: 1.6px;
+      position: absolute;
+      bottom: 0%;
+      border-radius: 10px;
+      transition: all 0.6s ease;
+    }
 
-  span {
-    font-size: 1.2rem;
-    color: #c61212;
-    font-weight: 600;
-    display: none;
+    span {
+      font-size: 1.2rem;
+      color: #c61212;
+      font-weight: 600;
+      display: none;
+    }
   }
 `;

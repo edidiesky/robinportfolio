@@ -2,6 +2,12 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Outlet } from "react-router-dom";
 import SidebarIndex from "./sidebar/index";
+import Home from "./Home";
+import About from "./About";
+import Skills from "./Skills";
+import Work from "./Work";
+import Contact from "./Contact";
+import Header from "../components/common/Header";
 const LayoutWrapper = styled.div`
   width: 100%;
   display: flex;
@@ -29,8 +35,16 @@ export default function Layout() {
     <LayoutWrapper className="based" style={{ height }}>
       <div className="LayoutContainer">
         {/* <SidebarIndex /> */}
+        <Header/>
         <div className="container">
-          <Outlet />
+          {/* <Home/>
+          <About/>
+          <Skills/>
+          */}
+          <About/>
+           <Skills/>
+           <Work/> 
+          <Contact/>
         </div>
       </div>
     </LayoutWrapper>

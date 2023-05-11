@@ -1,168 +1,139 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
-import { Head } from "../common";
-import { work } from "../../data";
-export default function WorkIndex() {
-  const WorkRight = () => {
-    return (
-      <div className="w-100 right">
-        <img
-          src="https://avada.website/resume/wp-content/uploads/sites/66/2016/07/contact_bg.jpg"
-          alt=""
-          style={{ width: "100%", height: "100%", objectFit: "cover" }}
-        />
+import { FaSearchPlus } from "react-icons/fa";
+import { work } from "../../data/work";
+
+export default function News() {
+  return (
+    <NewsContent className="flex w-100 column gap-4">
+      <div className="w-85 auto ">
+        <h3
+          style={{ fontWeight: "normal" }}
+          className="head text-dark text-center"
+        >
+          SOME OF MY WORKS
+        </h3>
       </div>
-    );
-  };
-
-  const WorkLeft = () => {
-    return (
-      <div className="left w-90 auto h-100 flex column gap-3">
-        <Head
-          text={"My Work & Skills"}
-          subtext={"Recent Projects."}
-          para={
-            "The following work show-case my skills and experience via real world examples. Each projects is being made access with links to my github repositories and live demonstration of each projects. This projects aim to show my problem solving skills with reference to modern day technologies and my management of each of the problem efficiently"
-          }
-        />
-
-        <div className="py-6 w-100 grid grid-auto">
-          {work.map((x, index) => {
-            return (
-              <div
-                data-aos="fade-left"
-                data-aos-duration="900"
-                data-aos-delay={index * 400}
-              >
-                <div
-                  className="w-100 card flex column gap-3"
-                  key={x.id}
-                  options={{ max: 45, scale: 1, speed: 450 }}
-                >
-                  <img src={x.image} alt="" className="image" />
-                  {/* <header className="flex column gap-2">
-                    <h3 className="uppercase fs-20 text-bold text-white">
-                      {x.text}
-                    </h3>
-                    <p className="fs-14 text-light">{x.description}</p>
-                    <div className="view flex gap-1 item-center">
-                      <Link to={""} className="link">
-                        <FaGithub />
-                      </Link>
-                      <Link to={""} className="link">
-                        <FaEye />
-                      </Link>
-                    </div>
-                    <div className="w-100 tech">
-                      {x.tech?.map((x) => {
-                        return <div className="techlist">#{x}</div>;
-                      })}
-                    </div>
-                  </header> */}
+      <div
+        data-aos="fade"
+        data-aos-duration="1600"
+        className="w-85 auto gap-2 newswp"
+      >
+        {work.map((x, index) => {
+          return (
+            <div
+              className="NewsRight1 w-100 flex item-center justify-center"
+              key={index}
+            >
+              <div className="gradient"></div>
+              <img alt="" src={x.image} className="imagewrapper w-100" />
+              <div className="NewsRightCenter w-100 h-100 flex column gap-1">
+                <div className="icon flex item-center justify-center">
+                  <FaSearchPlus color="#Fff" fontSize={"28px"} />
                 </div>
               </div>
-            );
-          })}
-        </div>
+              <div className="NewsRightBottom flex column item-center justify-center gap-1 w-100">
+                <h3 className="fs-24 w-100 text-light title text-center text-dark">
+                  {x.title}
+                </h3>
+              </div>
+            </div>
+          );
+        })}
       </div>
-    );
-  };
-// 90D3B0
-// DBD2C9
-// C4CCDF
-  return (
-    <WorkWrapper>
-      <WorkLeft />
-      <WorkRight />
-    </WorkWrapper>
+    </NewsContent>
   );
 }
-
-const WorkWrapper = styled.div`
-  background-color: var(--dark-3);
-  width: 100%;
-  display: grid;
-  grid-gap: 2rem;
-  grid-template-columns: 1fr 28vw;
-  min-height: 100vh;
-  @media (max-width: 980px) {
-    grid-template-columns: 1fr;
+// https://avada.website/restaurant/wp-content/uploads/sites/112/2021/04/hero-mobile.jpg
+const NewsContent = styled.div`
+  padding: 4rem 0;
+  gap: 7rem;
+  .title {
+    font-family: "Bebas Neue", sans-serif;
   }
-  .right {
-    @media (max-width: 980px) {
-      display: none;
-    }
-  }
-  .grid-auto {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 1rem;
-    @media (max-width: 980px) {
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
-  }
-  .card {
+  .NewsRight1 {
+    height: 30rem;
+    transition: all 0.7s;
     position: relative;
-    padding: 1.4rem;
-    padding-bottom: 2rem;
-    border-radius: 10px;
-    .view {
+    overflow: hidden;
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+    .gradient,
+    .NewsRightCenter {
+      opacity: 0;
+      visibility: hidden;
+      z-index: 3000;
+      top: -100%;
       position: absolute;
-      top: 10%;
-      right: 10%;
-      .link {
-        width: 3rem;
-        height: 3rem;
-        border-radius: 50%;
-        background-color: #333;
-        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.04);
-        display: grid;
-        place-items: center;
-        SVG {
-          width: 50%;
-          height: 50%;
-          color: #fff;
-        }
+      justify-content: center;
+    }
+    &:hover {
+      .gradient,
+      .NewsRightCenter {
+        /* opacity: 1;
+        visibility: visible;
+        transition: all 0.7s;
+        height: 100%; */
+        top: 0;
+        opacity: 1;
+        visibility: visible;
+        transition: all 0.7s;
+      }
+      .NewsRightBottom {
+        bottom: 0%;
       }
     }
-    .tech {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.2rem;
-      .techlist {
-        font-weight: 600;
-        color: var(--secondary);
-        font-size: 1.1rem;
+
+    .NewsRightC {
+      width: 70%;
+      z-index: 300;
+    }
+  }
+  .NewsRightBottom {
+    position: absolute;
+    width: 100%;
+    padding: 2rem 0;
+    min-height: 5rem;
+    background-color: #fff;
+    bottom: -100%;
+    z-index: 3000;
+    transition: all 0.7s;
+  }
+  .imagewrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .newswp {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 3rem;
+    .imageContent {
+      flex: 1;
+    }
+    .NewsRight {
+      flex: 1;
+      padding: 15rem 0;
+      background-color: #000;
+      transition: all 0.7s;
+      &:hover {
+        transform: scale(1.02);
+        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+      }
+      .NewsRightC {
+        width: 70%;
       }
     }
-    .image {
-      width: 100%;
-      object-fit: cover;
+    @media (max-width: 980px) {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
   }
-  .left {
-    padding: 7rem 0;
-  }
-  h1 {
-    font-weight: 700;
-    width: 85%;
-    color: var(--dark-1);
-    .span1 {
-      color: #fff;
-    }
-  }
-  p {
-    font-size: 1.3rem;
-    color: #fff;
-    line-height: 1.6;
-  }
-  .para {
-    font-size: 1.8rem;
-    color: var(--grey-1);
-    font-weight: 400;
-    font-family: "Lato", sans-serif;
-    width: 90%;
-    line-height: 1.8;
+
+  .CriticsBottom {
+    display: grid;
+    padding-top: 10rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 5rem;
   }
 `;
-
-// https://avada.website/resume/wp-content/uploads/sites/66/2016/07/contact_bg.jpg
