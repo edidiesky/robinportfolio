@@ -21,7 +21,7 @@ export default function WorkIndex() {
   const [letterclass, setLetterClass] = useState("text-animate");
   const WorkRight = () => {
     return (
-      <div className="flex-1 flex justify-center item-center hidden">
+      <div className="WorkRight flex justify-center item-center hidden">
         <div
           className="layout flex justify-center content item-center"
           data-aos="fade-left"
@@ -59,10 +59,12 @@ export default function WorkIndex() {
           <h4 className="flex fs-16 family2 text-light item-center gap-1 text-secondary">
             Hi, there<span className="span">my name is</span>
           </h4>
-          <h1 className="text-white family1">EDIDIONG ESSIEN</h1>
-          <h3 className="flex item-center gap-1">
-            EDIDIONG ESSIEN<span className="span">Full Stack Developer</span>
-          </h3>
+          <div className="flex column">
+            <h1 className="text-white family1">EDIDIONG ESSIEN</h1>
+            <h1 className="text-white family1 active">
+              I build things for the web.
+            </h1>
+          </div>
           <div className="w-100 flex gap-2 hidden">
             <Link
               to={"/contact"}
@@ -96,8 +98,14 @@ const WorkWrapper = styled.div`
     height: 30rem;
   }
   h1 {
-    font-size: 8rem;
+    font-size: 6rem;
     line-height: 1.3;
     font-family: "Roboto Slab", sans-serif;
+    &.active {
+      color: #ffffff7a;
+    }
+  }
+  .WorkRight {
+    flex: 0.5;
   }
 `;
