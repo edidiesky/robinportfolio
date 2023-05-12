@@ -37,7 +37,7 @@ export default function SkillsIndex() {
         <div className="w-100 auto">
           <h2
             style={{ fontWeight: "normal" }}
-            className="head text-white family2 fs-50 text-center"
+            className="head text-white family2 fs-50 text-start"
           >
             Skills
           </h2>

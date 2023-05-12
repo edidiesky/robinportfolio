@@ -48,10 +48,10 @@ export default function AboutIndex() {
   const AboutLeft = () => {
     return (
       <div className="left w-85 auto h-100 flex column gap-3">
-        <div className="w-100 auto">
+        <div className="w-100">
           <h3
             style={{ fontWeight: "normal" }}
-            className="head text-white text-center"
+            className="head text-white text-start"
           >
             What I Do
           </h3>
@@ -125,8 +125,6 @@ const SkillsWrapper = styled.div`
   }
   .text1,
   .head {
-    width: 60%;
-    margin: 0 auto;
     @media (max-width: 580px) {
       width: 90%;
       text-align: start;
