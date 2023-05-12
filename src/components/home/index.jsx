@@ -114,6 +114,9 @@ export default function WorkIndex() {
             <Link to={"/"}>
               <AiFillLinkedin color="var(--grey-1)" fontSize={"24px"} />
             </Link>
+            <Link to={"/"}>
+              <GrFacebook color="var(--grey-1)" fontSize={"24px"} />
+            </Link>
           </div>
         </div>
       </div>
