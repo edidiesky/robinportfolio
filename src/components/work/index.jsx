@@ -44,7 +44,6 @@ export default function News() {
     </NewsContent>
   );
 }
-// https://avada.website/restaurant/wp-content/uploads/sites/112/2021/04/hero-mobile.jpg
 const NewsContent = styled.div`
   padding: 4rem 0;
   gap: 7rem;
