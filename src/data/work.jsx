@@ -50,7 +50,7 @@ export const work = [
       "HTML",
     ],
      type:"Full-Stack Development",
-    title: " Cloneing a functional Social Media Website",
+    title: " Cloning a functional Social Media Website",
   },
   {
     image:

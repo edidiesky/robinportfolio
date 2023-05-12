@@ -5,7 +5,7 @@ import { work } from "../../data/work";
 
 export default function News() {
   return (
-    <NewsContent className="flex w-100 column gap-4">
+    <NewsContent className="flex w-100 column gap-2">
       <div className="w-85 auto ">
         <h3
           style={{ fontWeight: "normal" }}
@@ -31,7 +31,7 @@ export default function News() {
                   style={{ fontWeight: "400" }}
                   className="family2 fs-16 text-secondary"
                 >
-                  {x.type}
+                  A {x.type}
                 </h4>
                 <h2 className="fs-46 w-50 family2 text-light text-white">
                   {x.title}
@@ -55,7 +55,7 @@ export default function News() {
 }
 const NewsContent = styled.div`
   padding: 4rem 0;
-  gap: 7rem;
+  gap: 2rem;
   background-color: var(--primary);
   .title {
     font-family: "Bebas Neue", sans-serif;

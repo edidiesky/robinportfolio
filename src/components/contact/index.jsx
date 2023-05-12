@@ -59,7 +59,7 @@ export default function () {
             Get In Touch
           </h3>
           <span
-            className="block fs-20 py-2 text1 text-white text-center w-85 auto family1"
+            className="block fs-16 py-1 text1 text-white text-center w-85 auto family1"
             style={{ fontWeight: "300" }}
           >
             Have an interesting work in mind for me? Feel free to send me your
@@ -128,9 +128,13 @@ const ContactWrapper = styled.div`
   width: 100%;
   min-height: 70vh;
   position: relative;
-  padding: 10rem 0;
+  padding: 6rem 0;
   display: grid;
   place-items: center;
+  .head::after {
+    left: 50%;
+    transform: translateX(-45%);
+  }
   .text1,
   h3 {
     width: 60%;

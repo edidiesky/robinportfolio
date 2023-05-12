@@ -84,17 +84,17 @@ export default function WorkIndex() {
             >
               Contact Me
             </Link> */}
-            <Link to={'/'}>
-              <BsInstagram color="var(--grey-1)" fontSize={'24px'}/>
+            <Link to={"/"}>
+              <BsInstagram color="var(--grey-1)" fontSize={"24px"} />
             </Link>
-            <Link to={'/'}>
-              <BsGithub color="var(--grey-1)" fontSize={'24px'}/>
+            <Link to={"/"}>
+              <BsGithub color="var(--grey-1)" fontSize={"24px"} />
             </Link>
-            <Link to={'/'}>
-              <BsTwitter color="var(--grey-1)" fontSize={'24px'}/>
+            <Link to={"/"}>
+              <BsTwitter color="var(--grey-1)" fontSize={"24px"} />
             </Link>
-            <Link to={'/'}>
-              <AiFillLinkedin color="var(--grey-1)" fontSize={'24px'}/>
+            <Link to={"/"}>
+              <AiFillLinkedin color="var(--grey-1)" fontSize={"24px"} />
             </Link>
           </div>
         </div>
@@ -119,6 +119,9 @@ const WorkWrapper = styled.div`
   min-height: 100vh;
   display: grid;
   place-items: center;
+  @media (max-width: 780px) {
+    padding: 8rem 0;
+  }
   .content {
     width: 20rem;
     height: 30rem;
@@ -133,22 +136,26 @@ const WorkWrapper = styled.div`
   h4 {
     line-height: 26px;
     font-size: 17px;
+    @media (max-width: 780px) {
+      font-size: 15px;
+    }
   }
   h1 {
     font-size: 4rem;
     line-height: 56px;
     font-weight: normal;
     @media (max-width: 780px) {
-      font-size: 4.7rem;
+      font-size: 4rem;
+      font-weight: 400;
     }
   }
   .WorkRight {
     flex: 0.5;
   }
-  a{
-    transition: all .6s;
+  a {
+    transition: all 0.6s;
     &:hover {
-      opacity: .7;
+      opacity: 0.7;
     }
   }
 `;

@@ -24,6 +24,7 @@ const Skills = [
 const tools = [
   "Command Line",
   "Redux",
+  "Redux Dev tool",
   "Context Api",
   "Post Man",
   "Git + Github",

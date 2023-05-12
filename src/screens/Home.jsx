@@ -1,24 +1,20 @@
-import React, { useEffect } from 'react'
-import { Meta } from '../components/common';
-import HomeIndex from '../components/home';
-import styled from 'styled-components'
+import React, { useEffect } from "react";
+import { Meta } from "../components/common";
+import HomeIndex from "../components/home";
+import styled from "styled-components";
 
 export default function Home() {
-  useEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-  }, []);
   return (
     <>
-     <Meta/>
-    <HomeContainer>
-      <HomeIndex/>
-    </HomeContainer>
+      <Meta />
+      <HomeContainer>
+        <HomeIndex />
+      </HomeContainer>
     </>
-  )
+  );
 }
 
-
 const HomeContainer = styled.div`
-width:100%;
-overflow:hidden;
-`
+  width: 100%;
+  overflow: hidden;
+`;

@@ -9,7 +9,7 @@ export default function Input({ id, onChange, errorMessage, index, ...props }) {
   };
   return (
     <div className="w-100">
-      <LabelContainer htmlFor={id}>
+      <LabelContainer htmlFor={id} className="family2">
         <div className="inputWrapper flex column">
           <input
             {...props}
@@ -38,7 +38,6 @@ const LabelContainer = styled.label`
   font-size: 1.5rem;
   color: #fff;
   text-transform: uppercase;
-  font-family: "Montserrat", sans-serif;
   font-weight: bold;
   letter-spacing: 1px;
   .inputWrapper {
@@ -49,11 +48,11 @@ const LabelContainer = styled.label`
       position: absolute;
       top: -60%;
       gap: 0.3rem;
-      font-size: 1.5rem;
+      font-size: 1.7rem;
       color: #fff;
       text-transform: uppercase;
-      font-family: "Montserrat", sans-serif;
-      font-weight: bold;
+      font-family: inherit;
+      font-weight: normal;
       letter-spacing: 1px;
       transition: all 0.6s ease;
     }
@@ -68,7 +67,8 @@ const LabelContainer = styled.label`
       font-weight: 400;
       transition: all 0.6s;
       color: #fff;
-      border-bottom: 1.6px solid #fff;
+      font-family: "Nunito", sans-serif;
+      border-bottom: 1px solid #fff;
       &:focus {
         font-size: 1.8rem;
       }
@@ -94,7 +94,7 @@ const LabelContainer = styled.label`
     .contactspan {
       width: 0;
       background-color: var(--secondary);
-      height: 1.6px;
+      height: 1px;
       position: absolute;
       bottom: 0%;
       border-radius: 10px;
