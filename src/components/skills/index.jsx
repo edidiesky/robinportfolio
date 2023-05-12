@@ -35,12 +35,12 @@ export default function SkillsIndex() {
     return (
       <div className="left w-85 auto h-100 flex column gap-3">
         <div className="w-100 auto">
-          <h3
+          <h2
             style={{ fontWeight: "normal" }}
-            className="head text-dark text-center"
+            className="head text-white family2 fs-50 text-center"
           >
             Skills
-          </h3>
+          </h2>
         </div>
         <div className="w-100 grid grid-wrapper">
           <div className="left flex column gap-2">
@@ -50,7 +50,7 @@ export default function SkillsIndex() {
                 alt=""
                 className="icon1"
               />
-              <h3 className="fs-20 family1 text text-extra-bold uppercase text-dark">
+              <h3 style={{ fontWeight: "normal" }} className="fs-24 family2 text uppercase text-white">
                 TECHNOLOGIES
               </h3>
             </div>
@@ -78,7 +78,7 @@ export default function SkillsIndex() {
                 alt=""
                 className="icon1"
               />
-              <h3 className="fs-20 family1 text-extra-bold uppercase text-dark">
+              <h3 style={{ fontWeight: "normal" }} className="fs-24 family2 uppercase text-white">
                 Tools
               </h3>
             </div>
@@ -86,7 +86,7 @@ export default function SkillsIndex() {
               {tools.map((x, index) => {
                 return (
                   <div
-                    className="w-100 fs-16 text-dark family1 flex item-center gap-1"
+                    className="w-100 fs-14 text-white family1 flex item-center gap-1"
                     key={x.id}
                     data-aos="fade"
                     data-aos-duration="1200"
@@ -105,7 +105,7 @@ export default function SkillsIndex() {
                 alt=""
                 className="icon1"
               />
-              <h3 className="fs-20 family1 text-extra-bold uppercase text-dark">
+              <h3 style={{ fontWeight: "normal" }} className="fs-24  family2 uppercase text-white">
                 Knowledge
               </h3>
             </div>
@@ -113,7 +113,7 @@ export default function SkillsIndex() {
               {tools.map((x, index) => {
                 return (
                   <div
-                    className="w-100 fs-16 text-dark family1 flex item-center gap-1"
+                    className="w-100 fs-14 text-white family1 flex item-center gap-1"
                     key={x.id}
                     data-aos="fade"
                     data-aos-duration="1200"
@@ -144,6 +144,7 @@ const SkillsWrapper = styled.div`
   padding: 5rem 0;
   display: grid;
   place-items: center;
+  background-color: var(--primary);
   .grid-auto {
     grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
     grid-column-gap: 1.8rem;
@@ -173,15 +174,15 @@ const SkillsWrapper = styled.div`
     content: "";
   }
   .icon1 {
-    filter: brightness(70%);
-    width: 50px;
+    filter: grayscale(100%);
+    width: 40px;
     height: auto;
     transition: all 0.6s ease;
     @media (max-width: 580px) {
       width: 40px;
     }
     &:hover {
-      filter: brightness(0%);
+      filter: brightness(80%);
     }
   }
   .card {
@@ -190,8 +191,7 @@ const SkillsWrapper = styled.div`
     place-items: center;
     .image {
       width: 70px;
-      height: auto;
-      filter: grayscale(100%);
+      height: auto; 
       @media (max-width: 580px) {
         width: 65px;
       }

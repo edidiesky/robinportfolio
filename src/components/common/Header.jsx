@@ -13,9 +13,9 @@ export default function Header() {
   return (
     <HeaderContent className="w-100">
       <div className="w-85 auto flex item-center justify-space">
-        <h4 className="uppercase flex-1 family2 text-white fs-18 text-light">
+        <Link to={'/'} className="uppercase flex-1 family2 text-white fs-30 text-light">
           EDIDIONG ESSIEN
-        </h4>
+        </Link>
         <div className="icon">
           <HiBars4 fontSize={'24px'} color="#fff"/>
         </div>
@@ -23,7 +23,7 @@ export default function Header() {
           {data.map((x) => {
             return (
               <Link
-                className="link fs-14 uppercase text-white family2"
+                className="link fs-18 uppercase text-white family2"
                 to={`${x.path}`}
                 key={x.id}
               >
@@ -39,12 +39,11 @@ export default function Header() {
 
 const HeaderContent = styled.div`
   background-color:var(--dark-3);
-  padding: 1.4rem 0;
-  position: sticky;
-  top: 0;
+  padding:2rem 0;
   z-index: 4000;
-  .link {
+  a {
     padding: 0 1.7rem;
+    transition: all .4s ease;
     &:hover {
       color: var(--secondary);
     }

@@ -51,7 +51,7 @@ export default function AboutIndex() {
         <div className="w-100 auto">
           <h3
             style={{ fontWeight: "normal" }}
-            className="head text-dark text-center"
+            className="head text-white text-center"
           >
             What I Do
           </h3>
@@ -66,16 +66,16 @@ export default function AboutIndex() {
                     key={x.id}
                     data-aos="fade"
                     data-aos-duration="1500"
-                    data-aos-delay={index * 450}
+                    data-aos-delay={index * 350}
                     style={{ height: "15rem" }}
                   >
                     <div className="top flex item-center gap-2">
                       <img src={x.icon} alt="" className="icon1" />
-                      <h3 className="fs-20 family4 uppercase text-dark">
+                      <h3 className="fs-18 family2 uppercase text-white">
                         {x.title}
                       </h3>
                     </div>
-                    <h4 className="family1 fs-14 text-light text-dark">
+                    <h4 className="family1 fs-14 text-light text-white">
                       {x.description}
                     </h4>
                   </div>
@@ -90,6 +90,12 @@ export default function AboutIndex() {
 
   return (
     <SkillsWrapper>
+      <img
+        src="https://v2.brittanychiang.com/img/bg-services/services-lg.jpg"
+        alt=""
+        className="imageWrapper"
+      />
+      <div className="imagegradient"></div>
       <AboutLeft />
     </SkillsWrapper>
   );
@@ -101,8 +107,22 @@ const SkillsWrapper = styled.div`
   position: relative;
   padding: 5rem 0;
   display: grid;
-  background-color: #F0F0F0;
   place-items: center;
+  .imagegradient {
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.61),
+      rgba(0, 0, 0, 0.61),
+      rgba(0, 0, 0, 0.61),
+      rgba(0, 0, 0, 0.61),
+      rgba(0, 0, 0, 0.61)
+    );
+  }
+  .imageWrapper,.imagegradient {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
   .text1,
   .head {
     width: 60%;
@@ -134,18 +154,13 @@ const SkillsWrapper = styled.div`
     min-height: 20rem;
     .top {
       h3 {
-        font-size: 20px;
+        font-size: 24px;
+        font-weight:normal;
         @media (max-width: 480px) {
           font-size: 16px;
         }
       }
     }
-    /* &:nth-child(1) {
-      border-right: 1px solid #fff;
-    }
-    &:nth-child(3) {
-      border-right: 1px solid #fff;
-    } */
     &:hover {
       h4 {
         color: var(--secondary);
@@ -158,7 +173,7 @@ const SkillsWrapper = styled.div`
   h4 {
     font-weight: 300;
     line-height: 1.7;
-    font-size: 16px;
+    font-size: 14px;
     transition: all 0.6s ease;
     @media (max-width: 480px) {
       font-size: 14px;
@@ -169,7 +184,7 @@ const SkillsWrapper = styled.div`
     transition: all 0.6s ease;
   }
   img {
-    width: 5rem;
+    width: 4rem;
     @media (max-width: 480px) {
       width: 4rem;
     }
@@ -178,5 +193,3 @@ const SkillsWrapper = styled.div`
     padding: 7rem 0;
   }
 `;
-
-// https://avada.website/resume/wp-content/uploads/sites/66/2016/07/contact_bg.jpg

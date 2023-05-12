@@ -13,6 +13,7 @@ const LayoutWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  background-color: rgb(51, 51, 51);
   .LayoutContainer {
     width: 100%;
     .container {

@@ -1,6 +1,9 @@
 import { Canvas, useFrame } from "@react-three/fiber";
 import { MeshWobbleMaterial, OrbitControls, useGLTF } from "@react-three/drei";
 import React, { useRef, useState } from "react";
+import { BsInstagram, BsGithub, BsTwitter } from "react-icons/bs";
+import { AiFillLinkedin } from "react-icons/ai";
+import { GrFacebook } from "react-icons/gr";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
@@ -25,8 +28,7 @@ export default function WorkIndex() {
         <div
           className="layout flex justify-center content item-center"
           data-aos="fade-left"
-          data-aos-duration="1150"
-          data-aos-delay="750"
+          data-aos-duration="1250"
           style={{ width: "100%" }}
         >
           <Canvas camera={{ position: [-5, 2, 10], fov: 20 }}>
@@ -56,29 +58,43 @@ export default function WorkIndex() {
     return (
       <div className="flex-1">
         <div className="left w-100 h-100 flex column gap-3">
-          <h4 className="flex fs-16 family2 text-light item-center gap-1 text-secondary">
+          {/* <h4 className="flex fs-16 family2 text-light item-center gap-1 text-secondary">
             Hi, there<span className="span">my name is</span>
-          </h4>
-          <div className="flex column gap-2">
-            <h1 className="text-white family1">EDIDIONG ESSIEN</h1>
-            <h1 className="text-white family1 active">
-              I create habitation for things on the web.
+          </h4> */}
+          <div className="flex w-100 column gap-2">
+            <h1 className="text-white">
+              Victor is a web developer who loves to develop functional web
+              features
             </h1>
           </div>
-          <h4 className="family2 w-85 fs-18 text-light text-white">
-            I’m a full stack developer specializing in building server and
+          <h4 className="family1 w-90 fs-20 text-light text-grey">
+            {/* I’m a full stack developer specializing in building server and
             client side section of the web with exceptional digital experiences
-            for the user. Currently, I’m working as a <span className="textActive">freelancer</span>  and looking for
-            various opportunities to  <span className="textActive">value to organizations</span>  brands and
-            product.{" "}
+            for the user. Currently, I’m working as a{" "} */}
+            I’m working as a <span className="textActive">freelancer</span> and
+            looking for various opportunities to{" "}
+            <span className="textActive">value to organizations</span> brands
+            and product.{" "}
           </h4>
-          <div className="w-100 flex gap-2 hidden">
-            <Link
+          <div className="w-100 py-2 flex gap-2 hidden">
+            {/* <Link
               to={"/contact"}
               className="btn fs-16 py-2 px-4 text-white text-bold"
               style={{ padding: "1.4rem 4rem" }}
             >
               Contact Me
+            </Link> */}
+            <Link to={'/'}>
+              <BsInstagram color="var(--grey-1)" fontSize={'24px'}/>
+            </Link>
+            <Link to={'/'}>
+              <BsGithub color="var(--grey-1)" fontSize={'24px'}/>
+            </Link>
+            <Link to={'/'}>
+              <BsTwitter color="var(--grey-1)" fontSize={'24px'}/>
+            </Link>
+            <Link to={'/'}>
+              <AiFillLinkedin color="var(--grey-1)" fontSize={'24px'}/>
             </Link>
           </div>
         </div>
@@ -97,9 +113,9 @@ export default function WorkIndex() {
 }
 
 const WorkWrapper = styled.div`
-  background-color: rgb(27,27,27);
+  background-color: rgb(27, 27, 27);
   width: 100%;
-  padding: 7rem 0;
+  padding: 15rem 0;
   min-height: 100vh;
   display: grid;
   place-items: center;
@@ -108,31 +124,31 @@ const WorkWrapper = styled.div`
     height: 30rem;
   }
   .wrapper {
+    gap: 4rem;
     @media (max-width: 780px) {
       flex-direction: column;
       gap: 6rem;
     }
   }
   h4 {
-    line-height: 30px;
+    line-height: 26px;
+    font-size: 17px;
   }
   h1 {
-    font-size: 6rem;
-    line-height: 50px;
-    font-family: "Roboto Slab", sans-serif;
-    &.active {
-      color: #ffffff7a;
-      font-size: 5rem;
-      @media (max-width: 580px) {
-      font-size: 4rem;
-      line-height: 35px;
-    }
-    }
+    font-size: 4rem;
+    line-height: 56px;
+    font-weight: normal;
     @media (max-width: 780px) {
       font-size: 4.7rem;
     }
   }
   .WorkRight {
     flex: 0.5;
+  }
+  a{
+    transition: all .6s;
+    &:hover {
+      opacity: .7;
+    }
   }
 `;
