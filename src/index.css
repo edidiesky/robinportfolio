@@ -72,13 +72,14 @@ html {
 }
 
 .btn {
-  border: 2px solid white;
+  border: 1px solid white;
   outline: none;
   cursor: pointer;
   font-family: "Teko", sans-serif;
   color: #fff;
   background-color: transparent;
   text-transform: uppercase;
+  transition: all .5s;
 }
 
 .btn:hover {
