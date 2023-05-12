@@ -19,8 +19,8 @@ export default function News() {
           return (
             <div
               data-aos="fade"
-              data-aos-duration="1600"
-              data-aos-dalay={index * 300}
+              data-aos-duration="1900"
+              data-aos-dalay={index * 350}
               className="headerWrapper w-100"
               key={index}
             >
@@ -31,15 +31,19 @@ export default function News() {
                   style={{ fontWeight: "400" }}
                   className="family2 fs-16 text-secondary"
                 >
-                  Ful-Stack Development
+                  {x.type}
                 </h4>
                 <h2 className="fs-46 w-50 family2 text-light text-white">
                   {x.title}
                 </h2>
                 <h4 className="family1 fs-14 text-white">{x.description}</h4>
                 <div className="w-100 flex item-center gap-2">
-                  <div className="btn fs-14 family2 py-1">View project Demo</div>
-                  <div className="btn fs-14 family2 py-1">View project Code</div>
+                  <div className="btn fs-14 family2 py-1">
+                    View project Demo
+                  </div>
+                  <div className="btn fs-14 family2 py-1">
+                    View project Code
+                  </div>
                 </div>
               </div>
             </div>
