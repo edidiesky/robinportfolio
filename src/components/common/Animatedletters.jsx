@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Styled from "styled-components";
-// import "./letter.scss";
+import "./letter.scss";
 
 export default function AnimatedLetters({ letterClass, strArray, idx }) {
   // body...

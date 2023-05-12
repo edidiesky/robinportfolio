@@ -6,6 +6,7 @@ import { AiFillLinkedin } from "react-icons/ai";
 import { GrFacebook } from "react-icons/gr";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import AnimatedLetters from "../common/Animatedletters";
 
 const Balls = () => {
   const primitive = useRef(null);
@@ -61,10 +62,27 @@ export default function WorkIndex() {
           {/* <h4 className="flex fs-16 family2 text-light item-center gap-1 text-secondary">
             Hi, there<span className="span">my name is</span>
           </h4> */}
-          <div className="flex w-100 column gap-2">
+          <div className="flex w-100 column">
             <h1 className="text-white">
-              Victor is a web developer who loves to develop functional web
-              features
+              <AnimatedLetters
+                strArray={"Victor is a web developer".split("")}
+                idx={14}
+                letterClass={"text-animate"}
+              />
+            </h1>
+            <h1 className="text-white">
+              <AnimatedLetters
+                strArray={" who loves to develop ".split("")}
+                idx={46}
+                letterClass={"text-animate"}
+              />
+            </h1>
+            <h1 className="text-white">
+              <AnimatedLetters
+                strArray={"functional web features".split("")}
+                idx={64}
+                letterClass={"text-animate"}
+              />
             </h1>
           </div>
           <h4 className="family1 w-90 fs-20 text-light text-grey">
@@ -123,8 +141,8 @@ const WorkWrapper = styled.div`
     padding: 8rem 0;
   }
   .content {
-    width: 20rem;
-    height: 30rem;
+    width: 16rem;
+    height: 24rem;
   }
   .wrapper {
     gap: 4rem;
@@ -151,6 +169,9 @@ const WorkWrapper = styled.div`
   }
   .WorkRight {
     flex: 0.5;
+    @media (max-width: 1280px) {
+      flex: 0.6;
+    }
   }
   a {
     transition: all 0.6s;
