@@ -94,8 +94,8 @@ export default function WorkIndex() {
             client side section of the web with exceptional digital experiences
             for the user. Currently, I’m working as a{" "} */}
             I’m working as a <span className="textActive">freelancer</span> and
-            looking for various opportunities to{" "}
-            <span className="textActive">value to organizations</span> brands
+            looking for various opportunities to create{" "}
+            <span className="textActive">value to organization's</span> brands
             and product.{" "}
           </h4>
           <div className="w-100 py-2 flex gap-2 hidden">

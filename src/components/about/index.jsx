@@ -164,7 +164,7 @@ const SkillsWrapper = styled.div`
         color: var(--secondary);
       }
       .icon1 {
-        filter: brightness(0%);
+        filter: brightness(80%);
       }
     }
   }
