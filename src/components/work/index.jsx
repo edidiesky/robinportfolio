@@ -37,7 +37,7 @@ export default function News() {
                   {x.title}
                 </h2>
                 <h4 className="family1 fs-14 text-white">{x.description}</h4>
-                <div className="w-100 flex item-center gap-2">
+                <div className="w-100 btnWrapper flex item-center gap-2">
                   <div className="btn fs-14 family2 py-1">
                     View project Demo
                   </div>
@@ -62,6 +62,12 @@ const NewsContent = styled.div`
   }
   .btn {
     padding: 1.2rem 3rem;
+  }
+  .btnWrapper {
+     @media (max-width: 580px) {
+       flex-direction: column;
+       align-items: flex-start;
+      }
   }
   .herowrapper {
     z-index: 6000;
@@ -168,43 +174,3 @@ const NewsContent = styled.div`
     );
   }
 `;
-
-// return (
-//   <NewsContent className="flex w-100 column gap-4">
-//     <div className="w-85 auto ">
-//       <h3
-//         style={{ fontWeight: "normal" }}
-//         className="head text-white text-center"
-//       >
-//         SOME OF MY WORKS
-//       </h3>
-//     </div>
-//     <div
-//       data-aos="fade"
-//       data-aos-duration="1600"
-//       className="w-85 auto gap-2 newswp"
-//     >
-//       {work.map((x, index) => {
-//         return (
-//           <div
-//             className="NewsRight1 w-100 flex item-center justify-center"
-//             key={index}
-//           >
-//             <div className="gradient"></div>
-//             <img alt="" src={x.image} className="imagewrapper w-100" />
-//             <div className="NewsRightCenter w-100 h-100 flex column gap-1">
-//               <div className="icon flex item-center justify-center">
-//                 <FaSearchPlus color="#Fff" fontSize={"28px"} />
-//               </div>
-//             </div>
-//             <div className="NewsRightBottom flex column item-center justify-center gap-1 w-100">
-//               <h3 className="fs-24 w-100 text-light title text-center text-white">
-//                 {x.title}
-//               </h3>
-//             </div>
-//           </div>
-//         );
-//       })}
-//     </div>
-//   </NewsContent>
-// );

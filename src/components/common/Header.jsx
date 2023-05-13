@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { HiBars4 } from "react-icons/hi2";
+import { onSidebar } from "../../Features";
+import { useDispatch } from "react-redux";
 const data = [
   { id: 1, title: "About", path: "About" },
   { id: 2, title: "Passion", path: "Passion" },
@@ -10,6 +12,7 @@ const data = [
   { id: 5, title: "Contact", path: "contact" },
 ];
 export default function Header() {
+  const dispatch = useDispatch()
   return (
     <HeaderContent className="w-100">
       <div className="w-85 auto flex item-center justify-space">
@@ -19,14 +22,14 @@ export default function Header() {
         >
           EDIDIONG ESSIEN
         </Link>
-        <div className="icon">
-          <HiBars4 fontSize={"24px"} color="#fff" />
+        <div className="icon" onClick={() => dispatch(onSidebar())} >
+          <HiBars4 fontSize={"34px"} color="#fff" />
         </div>
         <div className="flex item-center list flex-1 gap-1">
           {data.map((x) => {
             return (
               <Link
-                className="link fs-18 uppercase text-white family2"
+                className="link fs-16 uppercase text-white family2"
                 to={`${x.path}`}
                 key={x.id}
               >
@@ -47,6 +50,7 @@ const HeaderContent = styled.div`
   a {
     padding: 0 1.7rem;
     transition: all 0.4s ease;
+    font-weight: normal;
     &:hover {
       color: var(--secondary);
     }

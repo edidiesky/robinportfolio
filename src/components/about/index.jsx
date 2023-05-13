@@ -105,7 +105,7 @@ const SkillsWrapper = styled.div`
   width: 100%;
   min-height: 50vh;
   position: relative;
-  padding: 5rem 0;
+  padding: 2rem 0;
   display: grid;
   place-items: center;
   .imagegradient {
@@ -178,7 +178,7 @@ const SkillsWrapper = styled.div`
     }
   }
   .icon1 {
-    filter: brightness(50%);
+    filter: brightness(100%);
     transition: all 0.6s ease;
   }
   img {
@@ -188,6 +188,6 @@ const SkillsWrapper = styled.div`
     }
   }
   .left {
-    padding: 7rem 0;
+    padding: 3rem 0;
   }
 `;

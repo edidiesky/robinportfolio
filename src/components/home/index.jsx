@@ -58,29 +58,33 @@ export default function WorkIndex() {
   const WorkLeft = () => {
     return (
       <div className="flex-1">
-        <div className="left w-100 h-100 flex column gap-3">
-          {/* <h4 className="flex fs-16 family2 text-light item-center gap-1 text-secondary">
-            Hi, there<span className="span">my name is</span>
-          </h4> */}
+        <div className="left w-100 h-100 flex column gap-2">
+          <h4 className="flex fs-20 family2 text-light item-center gap-1 text-secondary">
+            <AnimatedLetters
+              strArray={"Nice to meet you!".split("")}
+              idx={7}
+              letterClass={"text-animate"}
+            />
+          </h4>
           <div className="flex w-100 column">
             <h1 className="text-white">
               <AnimatedLetters
-                strArray={"Victor is a web developer".split("")}
-                idx={14}
+                strArray={"I'm Victor Robin,".split("")}
+                idx={12}
                 letterClass={"text-animate"}
               />
             </h1>
-            <h1 className="text-white">
+            <h1 className="text-grey">
               <AnimatedLetters
-                strArray={" who loves to develop ".split("")}
-                idx={46}
+                strArray={"i develop beautiful".split("")}
+                idx={24}
                 letterClass={"text-animate"}
               />
             </h1>
-            <h1 className="text-white">
+            <h1 className="text-grey">
               <AnimatedLetters
-                strArray={"functional web features".split("")}
-                idx={64}
+                strArray={"and functional websites".split("")}
+                idx={38}
                 letterClass={"text-animate"}
               />
             </h1>
@@ -145,7 +149,7 @@ const WorkWrapper = styled.div`
   }
   .content {
     width: 16rem;
-    height: 24rem;
+    height: 20rem;
   }
   .wrapper {
     gap: 4rem;

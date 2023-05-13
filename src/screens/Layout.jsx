@@ -8,6 +8,7 @@ import Skills from "./Skills";
 import Work from "./Work";
 import Contact from "./Contact";
 import Header from "../components/common/Header";
+import SmallSidebar from "./sidebar/SmallSidebar";
 const LayoutWrapper = styled.div`
   width: 100%;
   display: flex;
@@ -37,6 +38,7 @@ export default function Layout() {
       <div className="LayoutContainer">
         {/* <SidebarIndex /> */}
         <Header />
+        <SmallSidebar/>
         <div className="container">
           <Home />
           <About />
