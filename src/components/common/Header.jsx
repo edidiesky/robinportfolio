@@ -44,7 +44,7 @@ export default function Header() {
 }
 
 const HeaderContent = styled.div`
-  background-color: var(--dark-3);
+  background-color: var(--primary);
   padding: 2rem 0;
   z-index: 4000;
   a {

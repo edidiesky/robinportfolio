@@ -23,6 +23,9 @@ const Balls = () => {
 
 export default function WorkIndex() {
   const [letterclass, setLetterClass] = useState("text-animate");
+  useEffect(() => {
+    
+  }, [setLetterClass])
   const WorkRight = () => {
     return (
       <div className="WorkRight flex justify-center item-center hidden">
@@ -138,7 +141,7 @@ export default function WorkIndex() {
 }
 
 const WorkWrapper = styled.div`
-  background-color: rgb(27, 27, 27);
+  background-color:var(--primary);
   width: 100%;
   padding: 15rem 0;
   min-height: 100vh;

@@ -6,8 +6,10 @@ import { work } from "../../data/work";
 export default function News() {
   return (
     <NewsContent className="flex w-100 column gap-2">
-      <div className="w-85 auto ">
+      <div className="w-85 auto hidden">
         <h3
+          data-aos="fade-up"
+          data-aos-duration="1200"
           style={{ fontWeight: "normal" }}
           className="head text-white text-start"
         >
