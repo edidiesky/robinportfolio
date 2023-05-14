@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { FaSearchPlus } from "react-icons/fa";
 import { work } from "../../data/work";
+import { Link } from "react-router-dom";
 
 export default function News() {
   return (
@@ -41,9 +42,9 @@ export default function News() {
                   <div className="btn fs-14 family2 py-1">
                     View project Demo
                   </div>
-                  <div className="btn fs-14 family2 py-1">
+                  <Link to={'https://github.com/Vivixell/portfolioVictorRobin'} className="btn fs-14 family2 py-1">
                     View project Code
-                  </div>
+                  </Link>
                 </div>
               </div>
             </div>
