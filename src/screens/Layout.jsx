@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { Outlet } from "react-router-dom";
-import SidebarIndex from "./sidebar/index";
-import Home from "./Home";
-import About from "./About";
-import Skills from "./Skills";
-import Work from "./Work";
-import Contact from "./Contact";
-import Header from "../components/common/Header";
 import SmallSidebar from "./sidebar/SmallSidebar";
+import HeroIndex from "../components/home";
+import AboutIndex from "../components/about";
+import SkillsIndex from "../components/skills";
+import Work from "../components/work";
+import ContactIndex from "../components/contact";
+import Header from "../components/common/Header";
 const LayoutWrapper = styled.div`
   width: 100%;
   display: flex;
@@ -38,13 +36,13 @@ export default function Layout() {
       <div className="LayoutContainer">
         {/* <SidebarIndex /> */}
         <Header />
-        <SmallSidebar/>
+        <SmallSidebar />
         <div className="container">
-          <Home />
-          <About />
-          <Skills />
+          <HeroIndex />
+          <AboutIndex />
+          <SkillsIndex />
           <Work />
-          <Contact />
+          <ContactIndex />
         </div>
       </div>
     </LayoutWrapper>

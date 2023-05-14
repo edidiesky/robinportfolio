@@ -33,7 +33,7 @@ const inputData = [
   },
 ];
 
-export default function () {
+export default function ContactIndex() {
   const [formdata, setFormData] = useState({
     email: "",
     name: "",
