@@ -23,6 +23,9 @@ const Balls = () => {
 
 export default function WorkIndex() {
   const [letterclass, setLetterClass] = useState("text-animate");
+  useEffect(() => {
+    
+  }, [setLetterClass])
   const WorkRight = () => {
     return (
       <div className="WorkRight flex justify-center item-center hidden">
@@ -59,7 +62,7 @@ export default function WorkIndex() {
     return (
       <div className="flex-1">
         <div className="left w-100 h-100 flex column gap-2">
-          <h4 className="flex fs-20 family2 text-light item-center gap-1 text-secondary">
+          <h4 className="flex fs-20 family1 text-light item-center gap-1 text-secondary">
             <AnimatedLetters
               strArray={"Nice to meet you!".split("")}
               idx={7}
@@ -76,7 +79,7 @@ export default function WorkIndex() {
             </h1>
             <h1 className="text-grey">
               <AnimatedLetters
-                strArray={"i develop beautiful".split("")}
+                strArray={"I develop beautiful".split("")}
                 idx={24}
                 letterClass={"text-animate"}
               />
@@ -138,7 +141,7 @@ export default function WorkIndex() {
 }
 
 const WorkWrapper = styled.div`
-  background-color: rgb(27, 27, 27);
+  background-color:var(--primary);
   width: 100%;
   padding: 15rem 0;
   min-height: 100vh;
