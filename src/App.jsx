@@ -8,13 +8,10 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import "aos/dist/aos.css";
 import "animate.css";
 import { Layout } from "./screens";
-import Preloader from "./gsap";
 
 export default function App() {
   useEffect(() => {
-    AOS.init({
-      once: true,
-    });
+   
     Pace.on("done", () => {
       gsap
         .timeline()
@@ -60,6 +57,9 @@ export default function App() {
             visibility:'hidden'
           }
         );
+    });
+    AOS.init({
+      once: true,
     });
   }, []);
   const [height, setHeight] = useState(0);
