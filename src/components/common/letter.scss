@@ -5,6 +5,9 @@
   animation-delay: 1s;
   animation-fill-mode: both;
   min-width: 6px;
+  &:hover {
+    color: var(--secondary);
+  }
 }
 
 .text-bounce {
@@ -14,6 +17,10 @@
   animation-delay: 1s;
   animation-fill-mode: both;
   min-width: 6px;
+  &:hover {
+    animation: rubberBand .1s;
+    color: var(--secondary);
+  }
 }
 
 .text-animate-hover {
@@ -23,7 +30,7 @@
 
   &:hover {
     animation: rubberBand 1s;
-    color: var(--primary-color);
+    color: var(--secondary);
   }
 }
 

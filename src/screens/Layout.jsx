@@ -5,8 +5,9 @@ import HeroIndex from "../components/home";
 import AboutIndex from "../components/about";
 import SkillsIndex from "../components/skills";
 import Work from "../components/work";
-import ContactIndex from "../components/contact";
+import Contactindex from "../components/contact";
 import Header from "../components/common/Header";
+import Message from "../components/loaders/Message";
 const LayoutWrapper = styled.div`
   width: 100%;
   display: flex;
@@ -35,6 +36,7 @@ export default function Layout() {
     <LayoutWrapper className="based" style={{ height }}>
       <div className="LayoutContainer">
         {/* <SidebarIndex /> */}
+        <Message/>
         <Header />
         <SmallSidebar />
         <div className="container">
@@ -42,7 +44,7 @@ export default function Layout() {
           <AboutIndex />
           <SkillsIndex />
           <Work />
-          <ContactIndex />
+          <Contactindex />
         </div>
       </div>
     </LayoutWrapper>

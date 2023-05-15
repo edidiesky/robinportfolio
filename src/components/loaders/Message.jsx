@@ -1,42 +1,77 @@
-import React, { useContext, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { FaExclamationCircle, FaTimes } from "react-icons/fa";
+import React from "react";
 import styled from "styled-components";
+import { useDispatch } from "react-redux";
+import { RxCross1 } from "react-icons/rx";
+import { CgDanger } from "react-icons/cg";
+export default function Message({
+  showAlert,
+  alertText,
+  alertType,
+  handleClearAlert,
+}) {
+  // dispatch
+  const dispatch = useDispatch();
 
-export default function Alert2({ form, alertText, alertType }) {
   return (
-    <Div>
-      <span className={`alert ${alertType}`}>{alertText}</span>
-    </Div>
+    <MessageContent
+      className={
+        showAlert
+          ? "family1 gap-1 flex item-center justify-space active"
+          : alertType === "danger"
+            ? "family1 gap-1 flex item-center danger justify-space"
+            : "family1 gap-1 flex item-center justify-space"
+      }
+    >
+      {alertType === "danger" && <CgDanger className="fs-24" />}
+      <div className="flex flex1">{alertText}</div>
+      <div className="icon flex item-center justify-center" onClick={() => dispatch(handleClearAlert())}>
+        <RxCross1 />
+      </div>
+    </MessageContent>
   );
 }
-const Div = styled.div`
-  padding-bottom: 1rem;
-  width: 95%;
-  margin: 0 auto;
-  .alert {
-    display: flex;
-    align-items: center;
-    color: rgb(0 84 210 / 93%);
-    border-radius: 10px;
-    font-size: 1.4rem;
-    font-weight: 600;
-    border: 1px solid rgb(0 84 210 / 93%);
-    padding: 2rem 4rem;
-    transition: all 0.6s var(--transition-1);
-    line-height: 2;
-    text-transform: uppercase;
-    &.success {
-      color: #02761f;
-      background: #ecf4ee;
-      transform: translateY(0);
-      border: 1px solid #096921;
+
+const MessageContent = styled.div`
+  width: 450px;
+  padding: 1rem 2rem;
+  min-height: 7rem;
+  background-color: #222;
+  position: fixed;
+  z-index: 100000;
+  left: 1%;
+  bottom: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  transition: all 1.3s;
+  /* transform: translate3d(0, -100px, 0); */
+  left: -100%;
+  &.active {
+    left: 1%;
+  }
+  &.danger {
+    background-color: var(--red);
+    color: #fff;
+    top: 20px;
+  }
+  @media (max-width: 780px) {
+    min-width: 300px;
+    justify-content: flex-start;
+  }
+  .flex1 {
+    flex: 1;
+  }
+  .icon {
+    cursor: pointer;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    &:hover {
+      background-color: #6c6868;
     }
-    &.danger {
-      border: 1.5px solid #c72e2e;
-      background-color: #f8efef;
-      color: #c72e2e;
-      transform: translateY(0);
+    svg {
+      font-size: 20px;
+      color: var(--grey-2);
     }
   }
 `;

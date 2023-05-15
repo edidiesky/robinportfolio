@@ -3,35 +3,7 @@ import styled from "styled-components";
 import Head from "../common/Head";
 import Input from "../forms/Input";
 
-const inputData = [
-  {
-    id: 1,
-    name: "email",
-    placeholder: "example@site.com",
-    type: "email",
-    text: "Email",
-    errorMessage: "It should be a valid email",
-    required: true,
-  },
-  {
-    id: 2,
-    name: "name",
-    placeholder: "Name",
-    type: "name",
-    text: "Name",
-    errorMessage: "It should be a valid name",
-    required: true,
-  },
-  {
-    id: 3,
-    name: "subject",
-    placeholder: "Name",
-    type: "name",
-    text: "subject",
-    errorMessage: "It should be a valid subject",
-    required: true,
-  },
-];
+
 
 export default function ContactIndex() {
   const [formdata, setFormData] = useState({
@@ -40,6 +12,44 @@ export default function ContactIndex() {
     subject: "",
     message: "",
   });
+  const [name1, setName1] = useState('')
+  console.log(name1);
+  const {
+    email,
+    name,
+    subject,
+    message,
+  } = formdata
+  console.log(formdata);
+  // const inputData = [
+  //   {
+  //     id: 1,
+  //     name: "email",
+  //     placeholder: "example@site.com",
+  //     type: "email",
+  //     text: "Email",
+  //     errorMessage: "It should be a valid email",
+  //     required: true,
+  //   },
+  //   {
+  //     id: 2,
+  //     name: "name",
+  //     placeholder: "Name",
+  //     type: "name",
+  //     text: "Name",
+  //     errorMessage: "It should be a valid name",
+  //     required: true,
+  //   },
+  //   {
+  //     id: 3,
+  //     name: "subject",
+  //     placeholder: "Name",
+  //     type: "name",
+  //     text: "subject",
+  //     errorMessage: "It should be a valid subject",
+  //     required: true,
+  //   },
+  // ];
   const onChange = (e) => {
     setFormData({ ...formdata, [e.target.name]: e.target.value });
   };
@@ -48,8 +58,16 @@ export default function ContactIndex() {
     e.preventDefault();
     // dispatch(loginCustomer(formdata));
   };
-  const ContactLeft = () => {
-    return (
+
+
+  return (
+    <ContactWrapper>
+      <img
+        src="https://v2.brittanychiang.com/img/bg-contact/contact-xl.jpg"
+        alt=""
+        className="w-100 h-100 image"
+      />
+      <div className="imagegradient w-100 h-100"></div>
       <div className="contactLeft w-90 auto item-center justify-center h-100 flex column gap-4">
         <div className="w-85 auto">
           <h3
@@ -67,40 +85,44 @@ export default function ContactIndex() {
           </span>
         </div>
         <div className="w-100">
-          <form className="authContentFormWrapper flex column gap-4">
-            {inputData.map((input, index) => {
-              return (
-                <Input
-                  id={input.text}
-                  onChange={onChange}
-                  placeholder={input.placeholder}
-                  type={input.type}
-                  name={input.name}
-                  value={formdata[input.name]}
-                  input={input}
-                  key={input.id}
-                  index={index}
-                  required={input.required}
-                  pattern={input.pattern}
-                  errorMessage={input.errorMessage}
-                />
-              );
-            })}
-            <div className="w-100 hidden">
-              <div className="w-100 flex column gap-1">
-                <div htmlFor="message">Message</div>
-                <textarea
-                  name=""
-                  className="area"
-                  placeholder="How can we help"
-                  id="message"
-                ></textarea>
+          <form className="authContentFormWrapper flex column gap-4" onSubmit={handleSubmit}>
+            {/* name */}
+            <label htmlFor="name" className="label">
+              <div className="inputWrapper w-100">
+                <div className="spantext">Name</div>
+                <input onChange={onChange} value={name} name="name" id="name" type="text" className="input" />
+                {/* <div className="contactspan"></div> */}
               </div>
-            </div>
-            <div className="w-100 py-6 flex gap-2 item-center justify-center hidden">
+            </label>
+            {/* email */}
+            <label htmlFor="email" className="label">
+              <div className="inputWrapper w-100">
+                <div className="spantext">Email</div>
+                <input onChange={onChange} value={email} name="email" id="email" type="email" className="input" />
+                <div className="contactspan"></div>
+              </div>
+            </label>
+            {/*  */}
+            <label htmlFor="subject" className="label">
+              <div className="inputWrapper w-100">
+                <div className="spantext">Subject</div>
+                <input onChange={onChange} value={subject} name="subject" id="subject" type="text" className="input" />
+                <div className="contactspan"></div>
+              </div>
+            </label>
+            <label htmlFor="message" className="label">
+              <div className="inputWrapper w-100 area">
+                <div className="spantext">message</div>
+                <textarea onChange={onChange} name="message" value={message} id="message" type="text" className="area" />
+                <div className="contactspan"></div>
+              </div>
+            </label>
+            <div className="w-100 bntWrapper flex gap-2 item-center justify-center hidden">
               <button
-                className="btn fs-16 py-2 px-4 text-white text-bold"
-                style={{ padding: "1.4rem 4rem" }}
+                type="submit"
+                onClick={handleSubmit}
+                className="btn fs-24 py-2 px-4 text-white text-bold"
+                style={{ padding: ".8rem 4rem", fontWeight: "normal" }}
               >
                 Lets Talk
               </button>
@@ -108,18 +130,6 @@ export default function ContactIndex() {
           </form>
         </div>
       </div>
-    );
-  };
-
-  return (
-    <ContactWrapper>
-      <ContactLeft />
-      <img
-        src="https://v2.brittanychiang.com/img/bg-contact/contact-xl.jpg"
-        alt=""
-        className="w-100 h-100 image"
-      />
-      <div className="imagegradient w-100 h-100"></div>
     </ContactWrapper>
   );
 }
@@ -131,6 +141,9 @@ const ContactWrapper = styled.div`
   padding: 6rem 0;
   display: grid;
   place-items: center;
+  .bntWrapper {
+    padding-top: 4rem;
+  }
   .head::after {
     left: 50%;
     transform: translateX(-45%);
@@ -138,10 +151,9 @@ const ContactWrapper = styled.div`
   .text1,
   h3 {
     width: 60%;
-    @media (max-width: 580px) {
+    @media (max-width: 780px) {
       width: 90%;
-      text-align: start;
-      margin: 0;
+      text-align: center;
     }
   }
   .imagegradient {
@@ -171,5 +183,79 @@ const ContactWrapper = styled.div`
     @media (max-width: 580px) {
       width: 90%;
     }
+  }
+  .label {
+    width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 1.8rem;
+  font-family: "Nunito", sans-serif;
+  z-index: 4000;
+  .inputWrapper {
+    width: 100%;
+    position: relative;
+    gap: 2rem;
+    /* &.area {
+      height: 7rem;
+    } */
+    .spantext {
+      position: absolute;
+      top: -60%;
+      gap: 0.3rem;
+      font-size: 1.4rem;
+      color: #fff;
+      text-transform: uppercase;
+      font-family: inherit;
+      font-weight: 600;
+      letter-spacing: 1px;
+      transition: all 0.6s ease;
+    }
+    input {
+      height:4rem;
+      background: transparent;
+      padding: 0;
+      width: 100%;
+      border: none;
+      outline: none;
+      font-size: 1.6rem;
+      font-weight: 400;
+      transition: all 0.6s;
+      color: #fff;
+      font-family: "Nunito", sans-serif;
+      border-bottom: 1px solid #fff;
+      &:focus ~ .contactspan {
+        width: 100%;
+      }
+      /* &.inputError {
+      border: 1px solid var(--red);
+    }
+    &:invalid[focused="true"] ~ span {
+      display: flex;
+    }
+    &:invalid[focused="true"] {
+      border: 1px solid var(--red);
+    }
+    &:valid[focused="true"] {
+      border: 1px solid var(--green);
+    } */
+    }
+    .contactspan {
+      width: 0;
+      background-color: var(--secondary);
+      height: 1px;
+      position: absolute;
+      bottom: 0%;
+      border-radius: 10px;
+      transition: all 0.6s ease;
+    }
+
+    span {
+      font-size: 1.2rem;
+      color: #c61212;
+      font-weight: 600;
+      display: none;
+    }
+  }
   }
 `;

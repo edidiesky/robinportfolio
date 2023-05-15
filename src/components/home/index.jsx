@@ -24,10 +24,10 @@ const Balls = () => {
 export default function HeroIndex() {
   const [letterclass, setLetterClass] = useState("text-animate");
   // useEffect(() => {
-  // //   setTimeout(() => {
-  // //     setLetterClass('text-bounce')
-  // //   }, 4000);
-  // // }, [setLetterClass])
+  //   setTimeout(() => {
+  //     setLetterClass('text-bounce')
+  //   }, 4000);
+  // }, [setLetterClass])
   const WorkRight = () => {
     return (
       <div className="WorkRight flex justify-center item-center hidden">
