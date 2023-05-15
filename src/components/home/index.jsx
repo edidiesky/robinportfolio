@@ -1,11 +1,11 @@
 import { Canvas, useFrame } from "@react-three/fiber";
 import { MeshWobbleMaterial, OrbitControls, useGLTF } from "@react-three/drei";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { BsInstagram, BsGithub, BsTwitter } from "react-icons/bs";
 import { AiFillLinkedin } from "react-icons/ai";
 import { GrFacebook } from "react-icons/gr";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"
 import AnimatedLetters from "../common/Animatedletters";
 
 const Balls = () => {
@@ -24,7 +24,7 @@ const Balls = () => {
 export default function WorkIndex() {
   const [letterclass, setLetterClass] = useState("text-animate");
   useEffect(() => {
-    
+
   }, [setLetterClass])
   const WorkRight = () => {
     return (
