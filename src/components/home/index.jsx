@@ -7,6 +7,7 @@ import { GrFacebook } from "react-icons/gr";
 import styled from "styled-components";
 import { Link } from "react-router-dom"
 import AnimatedLetters from "../common/Animatedletters";
+import { useEffect } from "react";
 
 const Balls = () => {
   const primitive = useRef(null);
@@ -21,7 +22,7 @@ const Balls = () => {
   );
 };
 
-export default function WorkIndex() {
+export default function HeroIndex() {
   const [letterclass, setLetterClass] = useState("text-animate");
   useEffect(() => {
 

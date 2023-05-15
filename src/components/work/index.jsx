@@ -2,10 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import { FaSearchPlus } from "react-icons/fa";
 import { work } from "../../data/work";
+import { Link } from "react-router-dom";
 
-export default function News() {
+export default function Work() {
   return (
-    <NewsContent className="flex w-100 column gap-2">
+    <WorkContent className="flex w-100 column gap-2">
       <div className="w-85 auto hidden">
         <h3
           data-aos="fade-up"
@@ -16,7 +17,7 @@ export default function News() {
           SOME OF MY WORKS
         </h3>
       </div>
-      <div className="w-100 auto gap-2 newswp">
+      <div className="w-100 auto gap-2 Workwp">
         {work.map((x, index) => {
           return (
             <div
@@ -43,19 +44,19 @@ export default function News() {
                   <div className="btn fs-14 family2 py-1">
                     View project Demo
                   </div>
-                  <div className="btn fs-14 family2 py-1">
+                  <Link to={'https://github.com/Vivixell/portfolioVictorRobin'} className="btn fs-14 family2 py-1">
                     View project Code
-                  </div>
+                  </Link>
                 </div>
               </div>
             </div>
           );
         })}
       </div>
-    </NewsContent>
+    </WorkContent>
   );
 }
-const NewsContent = styled.div`
+const WorkContent = styled.div`
   padding: 4rem 0;
   gap: 2rem;
   background-color: var(--primary);
@@ -101,7 +102,7 @@ const NewsContent = styled.div`
       }
     }
   }
-  .NewsRight1 {
+  .WorkRight1 {
     height: 30rem;
     transition: all 0.7s;
     position: relative;
@@ -109,7 +110,7 @@ const NewsContent = styled.div`
     box-shadow: 0 4px 7px rgba(0, 0, 0, 0.2);
     border-radius: 2px;
     .gradient,
-    .NewsRightCenter {
+    .WorkRightCenter {
       opacity: 0;
       visibility: hidden;
       z-index: 3000;
@@ -119,7 +120,7 @@ const NewsContent = styled.div`
     }
     &:hover {
       .gradient,
-      .NewsRightCenter {
+      .WorkRightCenter {
         /* opacity: 1;
         visibility: visible;
         transition: all 0.7s;
@@ -129,17 +130,17 @@ const NewsContent = styled.div`
         visibility: visible;
         transition: all 0.7s;
       }
-      .NewsRightBottom {
+      .WorkRightBottom {
         bottom: 0%;
       }
     }
 
-    .NewsRightC {
+    .WorkRightC {
       width: 70%;
       z-index: 300;
     }
   }
-  .NewsRightBottom {
+  .WorkRightBottom {
     position: absolute;
     width: 100%;
     padding: 2rem 0;
