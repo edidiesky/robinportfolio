@@ -2,25 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 export default function Preloader() {
-  //   return (
-  //     <PreloaderContent>
-  //       <div className="top">
-  //         <div className="top_content"></div>
-  //         <div className="top_content"></div>
-  //         <div className="top_content"></div>
-  //       </div>
-  //       <div className="bottom">
-  //         <div className="bottom_content bottom_content1"></div>
-  //         <div className="bottom_content bottom_content2"></div>
-  //         <div className="bottom_content bottom_content3"></div>
-  //       </div>
-  //     </PreloaderContent>
-  //   );
   return (
     <PreloaderContent>
-      <div className="text family2 fs-40 text-white text-light ">
-        Edidie Portfolio
-      </div>
       {/* <div className="top">
       </div> */}
       <div className="preloader">

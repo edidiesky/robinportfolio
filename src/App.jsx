@@ -22,14 +22,24 @@ export default function App() {
         .to(".pace", {
           transform: "scale(10,1)",
           duration: 3,
-        },"+=.3")
+        }, "+=.3")
         .to(
           ".pace",
           {
             height: "100%",
             duration: 0.9,
             top: 0,
-          },"-=.3"
+          }, "-=.3"
+        )
+        .to(
+          ".pace",
+          {
+            height: "100%",
+            duration: 0.9,
+            top: 0,
+            background: "none",
+            visibility:'hidden'
+          }, "-=.3"
         )
         .to(
           ".preloader .loading_text",
@@ -41,42 +51,31 @@ export default function App() {
             ease: "expo. inOut",
           },
           "p"
+        ).to(
+          ".preloader",
+          {
+            delay: 0.2,
+            duration: 8,
+            opacity: 0,
+            visibility:'hidden'
+          }
         );
     });
   }, []);
   const [height, setHeight] = useState(0);
 
-  useEffect(() => {
-    const container = document.querySelector(".based");
-    const height = container.getBoundingClientRect().height;
-    setHeight(height);
-    // gsap.to("body", 0, { css: { visibility: "true" } });
-    // //  create a timeline
-    // const tl = gsap.timeline();
-    // tl.to(".top_content", 1.6, {
-    //   height: 0,
-    //   ease: "expo. inOut",
-    //   stagger: 0.4,
-    // }).to(".bottom_content", 1.6, {
-    //   width: 0,
-    //   ease: "expo. inOut",
-    //   delay: -0.8,
-    //   stagger: {
-    //     amount: 0.4,
-    //   },
-    // });
-  }, []);
+
   return (
     <div className="based" style={{ height }}>
-      <Preloader />
+      {/* <Preloader /> */}
+      <div className="preloader">
+        <div className="loading_text family1 fs-12 text-white text-light ">
+          LOADING
+        </div>
+      </div>
       <Routes>
         <Route path={"/"} element={<Layout />}></Route>
       </Routes>
     </div>
   );
-  // return (
-  //   <div className="based" style={{ height }}>
-  //     <Preloader />
-  //   </div>
-  // );
 }

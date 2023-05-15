@@ -68,7 +68,7 @@ const SmallSidebarContent = styled.div`
     width: 8rem;
     height: 8rem;
     background-color: var(--primary);
-    @media (min-width: 780px) {
+    @media (min-width: 980px) {
       display: none;
     }
     svg {
