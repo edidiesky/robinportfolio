@@ -23,9 +23,11 @@ const Balls = () => {
 
 export default function HeroIndex() {
   const [letterclass, setLetterClass] = useState("text-animate");
-  useEffect(() => {
-
-  }, [setLetterClass])
+  // useEffect(() => {
+  // //   setTimeout(() => {
+  // //     setLetterClass('text-bounce')
+  // //   }, 4000);
+  // // }, [setLetterClass])
   const WorkRight = () => {
     return (
       <div className="WorkRight flex justify-center item-center hidden">
@@ -66,7 +68,7 @@ export default function HeroIndex() {
             <AnimatedLetters
               strArray={"Nice to meet you!".split("")}
               idx={7}
-              letterClass={"text-animate"}
+              letterClass={letterclass}
             />
           </h4>
           <div className="flex w-100 column">
@@ -74,21 +76,21 @@ export default function HeroIndex() {
               <AnimatedLetters
                 strArray={"I'm Victor Robin,".split("")}
                 idx={12}
-                letterClass={"text-animate"}
+                letterClass={letterclass}
               />
             </h1>
             <h1 className="text-grey">
               <AnimatedLetters
                 strArray={"I develop beautiful".split("")}
                 idx={24}
-                letterClass={"text-animate"}
+                letterClass={letterclass}
               />
             </h1>
             <h1 className="text-grey">
               <AnimatedLetters
                 strArray={"and functional websites".split("")}
                 idx={38}
-                letterClass={"text-animate"}
+                letterClass={letterclass}
               />
             </h1>
           </div>
@@ -190,3 +192,7 @@ const WorkWrapper = styled.div`
     }
   }
 `;
+
+
+
+

@@ -11,51 +11,45 @@ import { Layout } from "./screens";
 
 export default function App() {
   useEffect(() => {
-   
+    //  preloader
+    gsap.to("body", 0, { css: { visibility: "visible" } })
     Pace.on("done", () => {
       gsap
         .timeline()
         .add("p")
         .to(".pace", {
-          transform: "scale(10,1)",
-          duration: 3,
-        }, "+=.3")
+          duration: .4,
+          delay: .8,
+          ease: "power1.out",
+        })
         .to(
           ".pace",
           {
             height: "100%",
-            duration: 0.9,
+            duration: 0.8,
             top: 0,
+            visibility: 'hidden'
           }, "-=.3"
         )
         .to(
-          ".pace",
-          {
-            height: "100%",
-            duration: 0.9,
-            top: 0,
-            background: "none",
-            visibility:'hidden'
-          }, "-=.3"
-        )
-        .to(
-          ".preloader .loading_text",
+          ".preloader .loading_text", 1.3,
           {
             delay: 0.2,
-            duration: 4,
+            duration: 6,
             opacity: 0,
             yPercent: -400,
-            ease: "expo. inOut",
+            ease: "expo.inOut",
           },
           "p"
         ).to(
           ".preloader",
           {
-            delay: 0.2,
-            duration: 8,
-            opacity: 0,
-            visibility:'hidden'
-          }
+            delay: 0.8,
+            duration: 1,
+            top: -10000,
+            ease: "expo.inOut"
+          },
+          "p"
         );
     });
     AOS.init({

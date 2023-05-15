@@ -20,16 +20,16 @@ export default function Header() {
           to={"/"}
           className="uppercase linktext flex-1 family2 text-white fs-30 text-light"
         >
-          EDIDIONG ESSIEN
+          VICTOR ROBIN
         </Link>
         <div className="icon" onClick={() => dispatch(onSidebar())} >
           <HiBars4 fontSize={"34px"} color="#fff" />
         </div>
-        <div className="flex item-center list flex-1 gap-1">
+        <div className="flex item-center list flex-1 gap-3">
           {data.map((x) => {
             return (
               <Link
-                className="link fs-16 uppercase text-white family2"
+                className="link fs-20 uppercase text-white family2"
                 to={`${x.path}`}
                 key={x.id}
               >
