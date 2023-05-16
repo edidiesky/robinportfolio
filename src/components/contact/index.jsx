@@ -1,67 +1,59 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import Head from "../common/Head";
-import Input from "../forms/Input";
+import emailjs from '@emailjs/browser';
+import { useDispatch, useSelector } from "react-redux";
+import { clearUserAlertError, handleform } from "../../Features/user/userSlice";
+import Message from "../loaders/Message";
+import { useEffect } from "react";
+import { useRef } from "react";
 
 
 
 export default function ContactIndex() {
   const [formdata, setFormData] = useState({
-    email: "",
-    name: "",
-    subject: "",
+    user_email: "",
+    user_name: "",
     message: "",
+    subject:""
   });
-  const [name1, setName1] = useState('')
-  console.log(name1);
+  const form = useRef();
+  const dispatch = useDispatch()
   const {
-    email,
-    name,
-    subject,
+    user_email,
+    user_name,
     message,
+    subject
   } = formdata
-  console.log(formdata);
-  // const inputData = [
-  //   {
-  //     id: 1,
-  //     name: "email",
-  //     placeholder: "example@site.com",
-  //     type: "email",
-  //     text: "Email",
-  //     errorMessage: "It should be a valid email",
-  //     required: true,
-  //   },
-  //   {
-  //     id: 2,
-  //     name: "name",
-  //     placeholder: "Name",
-  //     type: "name",
-  //     text: "Name",
-  //     errorMessage: "It should be a valid name",
-  //     required: true,
-  //   },
-  //   {
-  //     id: 3,
-  //     name: "subject",
-  //     placeholder: "Name",
-  //     type: "name",
-  //     text: "subject",
-  //     errorMessage: "It should be a valid subject",
-  //     required: true,
-  //   },
-  // ];
+  const { showAlert, alertText, alertType } = useSelector(store => store.user)
   const onChange = (e) => {
     setFormData({ ...formdata, [e.target.name]: e.target.value });
   };
+
   // performing form submission to backend
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!user_email || !subject || !user_name || !message) {
+      dispatch(handleform(formdata))
+    } else {
+      emailjs.sendForm('service_l5afxzs', 'template_m6d3vk7', form.current, 'QWKTEx5C0Fp0YpDNp')
+        .then((result) => {
+          console.log(result.text);
+        }, (error) => {
+          console.log(error.text);
+        });
+    }
+
     // dispatch(loginCustomer(formdata));
   };
-
+  useEffect(() => {
+    setTimeout(() => {
+      dispatch(clearUserAlertError())
+    }, 1000);
+  }, [])
 
   return (
     <ContactWrapper>
+      <Message alertText={alertText} alertType={alertType} showAlert={showAlert} />
       <img
         src="https://v2.brittanychiang.com/img/bg-contact/contact-xl.jpg"
         alt=""
@@ -85,20 +77,20 @@ export default function ContactIndex() {
           </span>
         </div>
         <div className="w-100">
-          <form className="authContentFormWrapper flex column gap-4" onSubmit={handleSubmit}>
+          <form ref={form} className="authContentFormWrapper flex column gap-4" onSubmit={handleSubmit}>
             {/* name */}
             <label htmlFor="name" className="label">
               <div className="inputWrapper w-100">
                 <div className="spantext">Name</div>
-                <input onChange={onChange} value={name} name="name" id="name" type="text" className="input" />
-                {/* <div className="contactspan"></div> */}
+                <input onChange={onChange} value={user_name} name="user_name" id="name" type="text" className="input" />
+                <div className="contactspan"></div>
               </div>
             </label>
             {/* email */}
             <label htmlFor="email" className="label">
               <div className="inputWrapper w-100">
                 <div className="spantext">Email</div>
-                <input onChange={onChange} value={email} name="email" id="email" type="email" className="input" />
+                <input onChange={onChange} value={user_email} name="user_email" id="email" type="email" className="input" />
                 <div className="contactspan"></div>
               </div>
             </label>

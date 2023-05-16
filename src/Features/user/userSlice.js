@@ -4,7 +4,6 @@ import axios from 'axios'
 import {
   registerCustomer
 } from './userReducer'
-import { users } from '../../data/userData';
 
 
 // Local Storage Data
@@ -21,7 +20,7 @@ const initialState = {
   isLoading: false,
   token: customerToken ? customerToken : "",
   showAlert: false,
-  users: users,
+  users: null,
   alertText: "",
   alertType: "",
   addressData: addressData ? addressData : null,
@@ -47,8 +46,21 @@ const userSlice = createSlice({
       state.alertType = ''
       state.isError = false
       state.isSuccess = false
-      state.isError = false
       state.userAlert = false
+    },
+    handleform: (state, action) => {
+      const formdata = action.payload
+      const {
+        user_name,
+        user_email,
+        message,
+        subject
+      } = formdata
+      if (!user_email || !user_name || !subject || !message) {
+        state.showAlert = true
+        state.alertText = 'Please fill in the required form data'
+        state.alertType = 'danger'
+      }
     },
     extraReducers: {
 
@@ -77,7 +89,8 @@ const userSlice = createSlice({
 
 // console.log(userSlice);
 export const {
-  clearUserAlertError
+  clearUserAlertError,
+  handleform
 } = userSlice.actions
 
 export default userSlice.reducer;
