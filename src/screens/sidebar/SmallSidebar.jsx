@@ -3,11 +3,17 @@ import styled from "styled-components";
 import { RxCross2 } from "react-icons/rx";
 import { useSelector, useDispatch } from "react-redux";
 import { offSidebar } from "../../Features";
-
+import { Link } from "react-scroll";
+const data = [
+  { id: 1, title: "Home", path: "about" },
+  { id: 2, title: "About Me", path: "about" },
+  { id: 3, title: "MY Skills", path: "skills" },
+  { id: 3, title: "Project Collections", path: "work" },
+  { id: 5, title: "Contact Me", path: "contact" },
+];
 export default function SmallSidebar() {
   const dispatch = useDispatch();
   const { sidebar } = useSelector((store) => store.toggle);
-  const [togglesidebar, setToggleSidebar] = useState(false);
   return (
     <SmallSidebarContent className={sidebar ? "active" : ""}>
       <div className="barWrapper1" onClick={() => dispatch(offSidebar())}>
@@ -15,21 +21,22 @@ export default function SmallSidebar() {
       </div>
       <div className="smallSidebarWrapper">
         <ul className="flex column">
-          <li className="text-center w-100 gap-2 item-center px-2 py-1 family2 f-16 text-bold pt-2 text-blue">
-            Home
-          </li>
-          <li className="text-center w-100 gap-2 item-center px-2 py-1 family2 f-16 text-bold pt-2 text-blue">
-            About Me
-          </li>
-          <li className="text-center w-100 gap-2 item-center px-2 py-1 family2 f-16 text-bold pt-2 text-blue">
-            MY Skills
-          </li>
-          <li className="text-center w-100 gap-2 item-center px-2 py-1 family2 f-16 text-bold pt-2 text-blue">
-            Project Collections
-          </li>
-          <li className="text-center w-100 gap-2 item-center px-2 py-1 family2 f-16 text-bold pt-2 text-blue">
-            Contact Me
-          </li>
+          {data.map((x) => {
+            return (
+              <Link
+                spy={true}
+                onClick={() => dispatch(offSidebar())}
+                smooth={true}
+                offset={50}
+                duration={1000}
+                className="text-center w-100 li gap-2 item-center px-2 py-1 family2 f-16 text-bold pt-2 text-blue"
+                to={`${x.path}`}
+                key={x.id}
+              >
+                {x.title}
+              </Link>
+            );
+          })}
         </ul>
       </div>
     </SmallSidebarContent>
@@ -40,7 +47,7 @@ const SmallSidebarContent = styled.div`
   position: fixed;
   left: 0;
   z-index: 2200;
-  transition: all .5s;
+  transition: all 0.5s;
   width: 100%;
   background: #fff;
   height: 100vh;
@@ -88,7 +95,7 @@ const SmallSidebarContent = styled.div`
     align-items: center;
     justify-content: center;
     ul {
-      li {
+      .li {
         font-size: 40px;
         font-weight: normal;
         color: var(--primary);
