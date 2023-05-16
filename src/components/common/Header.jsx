@@ -9,7 +9,7 @@ const data = [
   { id: 1, title: "About", path: "about" },
   { id: 2, title: "Passion", path: "about" },
   { id: 3, title: "Experience", path: "skills" },
-  { id: 3, title: "Project Collections", path: "work" },
+  { id: 3, title: "Work", path: "work" },
   { id: 5, title: "Contact", path: "contact" },
 ];
 export default function Header() {
