@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import SmallSidebar from "./sidebar/SmallSidebar";
-import HeroIndex from "../components/home";
 import AboutIndex from "../components/about";
 import SkillsIndex from "../components/skills";
 import Work from "../components/work";
 import Contactindex from "../components/contact";
 import Header from "../components/common/Header";
 import Message from "../components/loaders/Message";
+import HeroIndex from "../components/hero";
 const LayoutWrapper = styled.div`
   width: 100%;
   display: flex;

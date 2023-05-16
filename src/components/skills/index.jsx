@@ -148,7 +148,6 @@ const SkillsWrapper = styled.div`
   background-color: var(--primary);
   .grid-auto {
     grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-    grid-column-gap: 1.8rem;
     @media (max-width: 980px) {
       grid-template-columns: repeat(auto-fit, minmax(auto, 1fr));
     }
@@ -159,7 +158,7 @@ const SkillsWrapper = styled.div`
     }
   }
   .grid-wrapper {
-    grid-template-columns: 1fr 15vw 15vw;
+    grid-template-columns: 1fr 10vw 10vw;
     grid-gap: 8rem;
     @media (max-width: 980px) {
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
