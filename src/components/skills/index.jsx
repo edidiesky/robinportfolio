@@ -132,7 +132,7 @@ export default function SkillsIndex() {
   };
 
   return (
-    <SkillsWrapper>
+    <SkillsWrapper id="skills">
       <SkillsLeft />
     </SkillsWrapper>
   );

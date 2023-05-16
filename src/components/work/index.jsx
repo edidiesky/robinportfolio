@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 export default function Work() {
   return (
-    <WorkContent className="flex w-100 column gap-2">
+    <WorkContent id="work" className="flex w-100 column gap-2">
       <div className="w-85 auto hidden">
         <h3
           data-aos="fade-up"

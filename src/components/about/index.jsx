@@ -89,7 +89,7 @@ export default function AboutIndex() {
   };
 
   return (
-    <SkillsWrapper>
+    <SkillsWrapper id="about">
       <img
         src="https://v2.brittanychiang.com/img/bg-services/services-lg.jpg"
         alt=""

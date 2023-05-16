@@ -52,7 +52,7 @@ export default function ContactIndex() {
   }, [])
 
   return (
-    <ContactWrapper>
+    <ContactWrapper id="contact">
       <Message alertText={alertText} alertType={alertType} showAlert={showAlert} />
       <img
         src="https://v2.brittanychiang.com/img/bg-contact/contact-xl.jpg"

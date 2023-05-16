@@ -1,18 +1,19 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { HiBars4 } from "react-icons/hi2";
 import { onSidebar } from "../../Features";
 import { useDispatch } from "react-redux";
+import { Link } from "react-scroll";
+
 const data = [
-  { id: 1, title: "About", path: "About" },
-  { id: 2, title: "Passion", path: "Passion" },
-  { id: 3, title: "Experience", path: "Experience" },
-  { id: 3, title: "Work", path: "Work" },
+  { id: 1, title: "About", path: "about" },
+  { id: 2, title: "Passion", path: "about" },
+  { id: 3, title: "Experience", path: "skills" },
+  { id: 3, title: "Work", path: "work" },
   { id: 5, title: "Contact", path: "contact" },
 ];
 export default function Header() {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   return (
     <HeaderContent className="w-100">
       <div className="w-85 auto flex item-center justify-space">
@@ -22,13 +23,17 @@ export default function Header() {
         >
           VICTOR ROBIN
         </Link>
-        <div className="icon" onClick={() => dispatch(onSidebar())} >
+        <div className="icon" onClick={() => dispatch(onSidebar())}>
           <HiBars4 fontSize={"34px"} color="#fff" />
         </div>
         <div className="flex item-center list flex-1 gap-3">
           {data.map((x) => {
             return (
               <Link
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={1000}
                 className="link fs-20 uppercase text-white family2"
                 to={`${x.path}`}
                 key={x.id}
