@@ -67,7 +67,7 @@ export default function HeroIndex() {
           <h4 className="flex fs-20 family1 text-light item-center gap-1 text-secondary">
             <AnimatedLetters
               strArray={"Nice to meet you!".split("")}
-              idx={7}
+              idx={12}
               letterClass={letterclass}
             />
           </h4>
@@ -103,7 +103,7 @@ export default function HeroIndex() {
             <span className="textActive">value to organization's</span> brands
             and product.{" "}
           </h4>
-          <div className="w-100 py-2 flex gap-2 hidden">
+          <div className="w-100 wrapperlink py-2 flex gap-2 hidden">
             {/* <Link
               to={"/contact"}
               className="btn fs-16 py-2 px-4 text-white text-bold"
@@ -156,6 +156,9 @@ const WorkWrapper = styled.div`
     width: 16rem;
     height: 20rem;
   }
+  .wrapperlink {
+    animation: fadeInUp 1s 2s backwards;
+  }
   .wrapper {
     gap: 4rem;
     @media (max-width: 780px) {
@@ -166,16 +169,20 @@ const WorkWrapper = styled.div`
   h4 {
     line-height: 26px;
     font-size: 17px;
+    animation: fadeIn 10s 2s backwards;
     @media (max-width: 780px) {
       font-size: 15px;
     }
   }
   h1 {
-    font-size: 4rem;
+    font-size: 4.5rem;
     line-height: 56px;
     font-weight: normal;
-    @media (max-width: 780px) {
+    &.text-grey {
       font-size: 4rem;
+    }
+    @media (max-width: 780px) {
+      font-size: 3.5rem;
       font-weight: 400;
     }
   }
