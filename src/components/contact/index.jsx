@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import emailjs from '@emailjs/browser';
 import { useDispatch, useSelector } from "react-redux";
-import { clearUserAlertError, handleform } from "../../Features/user/userSlice";
+import { clearUserAlertError, handleMessage, handleform } from "../../Features/user/userSlice";
 import Message from "../loaders/Message";
 import { useEffect } from "react";
 import { useRef } from "react";
@@ -37,7 +37,7 @@ export default function ContactIndex() {
     } else {
       emailjs.sendForm('service_l5afxzs', 'template_m6d3vk7', form.current, 'QWKTEx5C0Fp0YpDNp')
         .then((result) => {
-          console.log(result.text);
+          dispatch(handleMessage('Message has been sucessfully sent'))
         }, (error) => {
           console.log(error.text);
         });

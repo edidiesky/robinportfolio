@@ -62,6 +62,12 @@ const userSlice = createSlice({
         state.alertType = 'danger'
       }
     },
+    handleMessage: (state, action) => {
+      const formdata = action.payload
+      state.showAlert = true
+      state.alertText = formdata
+      state.alertType = 'sucess'
+    },
     extraReducers: {
 
       [registerCustomer.pending]: (state) => {
@@ -90,7 +96,8 @@ const userSlice = createSlice({
 // console.log(userSlice);
 export const {
   clearUserAlertError,
-  handleform
+  handleform,
+  handleMessage
 } = userSlice.actions
 
 export default userSlice.reducer;
