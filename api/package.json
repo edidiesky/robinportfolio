@@ -5,7 +5,7 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "server": "nodemon server.js ",
+    "server": "node server.js ",
     "client": "npm run dev --prefix ../dist",
     "start": "concurrently --kill-others-on-fail \"npm run server\"",
     "data:import": "node seeder",
