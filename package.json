@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "npm install --legacy-peer-deps && vite build",
+    "start": "cd api && npm start",
     "preview": "vite preview"
   },
   "dependencies": {
