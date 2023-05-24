@@ -97,7 +97,7 @@ const SkillsWrapper = styled.div`
   position: relative;
   display: grid;
   place-items: center;
-  padding:14rem 0;
+  padding: 14rem 0;
   transform-style: inherit;
   .imagegradient {
     background-image: linear-gradient(
@@ -137,8 +137,7 @@ const SkillsWrapper = styled.div`
   .left {
     z-index: 300;
     display: grid;
-  place-items: center;
-  height: 100%;
+    place-items: center;
   }
   .grid-auto {
     grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
