@@ -101,12 +101,12 @@ const WorkContent = styled.div`
     }
     @media (max-width: 480px) {
       width: 90%;
+      gap:1.2rem;
     }
     .tools {
       padding: 0.5rem 2rem;
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       background-color: #fff;
-      border-radius: 30px;
       font-weight: 600;
       text-transform: uppercase;
       transition: all 0.5s;
