@@ -45,8 +45,10 @@ const tools = [
 ];
 
 export default function AboutIndex() {
-  const AboutLeft = () => {
-    return (
+  return (
+    <SkillsWrapper id="about">
+      <div className="imageWrapper"></div>
+      <div className="imagegradient"></div>
       <div className="left w-85 auto h-100 flex column gap-3">
         <div className="w-100">
           <h3
@@ -85,29 +87,17 @@ export default function AboutIndex() {
           </div>
         </div>
       </div>
-    );
-  };
-
-  return (
-    <SkillsWrapper id="about">
-      <img
-        src="https://v2.brittanychiang.com/img/bg-services/services-lg.jpg"
-        alt=""
-        className="imageWrapper"
-      />
-      <div className="imagegradient"></div>
-      <AboutLeft />
     </SkillsWrapper>
   );
 }
 
 const SkillsWrapper = styled.div`
   width: 100%;
-  min-height: 50vh;
+  min-height: 100vh;
   position: relative;
-  padding: 2rem 0;
   display: grid;
   place-items: center;
+  transform-style: inherit;
   .imagegradient {
     background-image: linear-gradient(
       to bottom,
@@ -117,11 +107,23 @@ const SkillsWrapper = styled.div`
       rgba(0, 0, 0, 0.61),
       rgba(0, 0, 0, 0.61)
     );
+    z-index: 200;
   }
-  .imageWrapper,.imagegradient {
+  .imageWrapper,
+  .imagegradient {
     position: absolute;
     width: 100%;
     height: 100%;
+  }
+  .imageWrapper {
+    background-image: url("https://v2.brittanychiang.com/img/bg-services/services-lg.jpg");
+    background-size: cover;
+    position: absolute;
+    background-position: center;
+    width: 100%;
+    z-index: -1;
+    height: 100%;
+    background-attachment: fixed;
   }
   .text1,
   .head {
@@ -130,6 +132,9 @@ const SkillsWrapper = styled.div`
       text-align: start;
       margin: 0;
     }
+  }
+  .left {
+    z-index: 300;
   }
   .grid-auto {
     grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
@@ -153,7 +158,7 @@ const SkillsWrapper = styled.div`
     .top {
       h3 {
         font-size: 24px;
-        font-weight:normal;
+        font-weight: normal;
         @media (max-width: 480px) {
           font-size: 24px;
         }
@@ -171,7 +176,7 @@ const SkillsWrapper = styled.div`
   h4 {
     font-weight: 300;
     line-height: 1.7;
-    font-size: 14px;
+    font-size: 15px;
     transition: all 0.6s ease;
     @media (max-width: 480px) {
       font-size: 14px;

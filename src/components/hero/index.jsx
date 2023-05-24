@@ -5,7 +5,7 @@ import { BsInstagram, BsGithub, BsTwitter } from "react-icons/bs";
 import { AiFillLinkedin } from "react-icons/ai";
 import { GrFacebook } from "react-icons/gr";
 import styled from "styled-components";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 import AnimatedLetters from "../common/Animatedletters";
 
 const Balls = () => {
@@ -23,11 +23,6 @@ const Balls = () => {
 
 export default function HeroIndex() {
   const [letterclass, setLetterClass] = useState("text-animate");
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setLetterClass('text-bounce')
-  //   }, 4000);
-  // }, [setLetterClass])
   const WorkRight = () => {
     return (
       <div className="WorkRight flex justify-center item-center hidden">
@@ -71,28 +66,10 @@ export default function HeroIndex() {
               letterClass={letterclass}
             />
           </h4>
-          <div className="flex w-100 column">
-            <h1 className="text-white">
-              <AnimatedLetters
-                strArray={"I'm Victor Robin,".split("")}
-                idx={12}
-                letterClass={letterclass}
-              />
-            </h1>
-            <h1 className="text-grey">
-              <AnimatedLetters
-                strArray={"I develop beautiful".split("")}
-                idx={24}
-                letterClass={letterclass}
-              />
-            </h1>
-            <h1 className="text-grey">
-              <AnimatedLetters
-                strArray={"and functional websites".split("")}
-                idx={38}
-                letterClass={letterclass}
-              />
-            </h1>
+          <div className="flex textwrapper w-100 column">
+            <h1 className="text-white text1">I'm Victor Robin</h1>
+            <h1 className="text-grey text1">I develop beautiful</h1>
+            <h1 className="text-grey text1">and functional websites</h1>
           </div>
           <h4 className="family1 w-90 fs-20 text-light text-grey">
             {/* I’m a full stack developer specializing in building server and
@@ -143,7 +120,7 @@ export default function HeroIndex() {
 }
 
 const WorkWrapper = styled.div`
-  background-color:var(--primary);
+  background-color: var(--primary);
   width: 100%;
   padding: 15rem 0;
   min-height: 100vh;
@@ -199,7 +176,3 @@ const WorkWrapper = styled.div`
     }
   }
 `;
-
-
-
-

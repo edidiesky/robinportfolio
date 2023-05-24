@@ -4,7 +4,6 @@ import Pace from "pace-js";
 import "pace-js/themes/yellow/pace-theme-minimal.css";
 import gsap from "gsap";
 import AOS from "aos";
-import { Canvas, useFrame } from "@react-three/fiber";
 import "aos/dist/aos.css";
 import "animate.css";
 import { Layout } from "./screens";
@@ -12,14 +11,13 @@ import { Layout } from "./screens";
 export default function App() {
   useEffect(() => {
     //  preloader
-    gsap.to("body", 0, { css: { visibility: "visible" } })
     Pace.on("done", () => {
       gsap
         .timeline()
         .add("p")
         .to(".pace", {
-          duration: .4,
-          delay: .8,
+          duration: 0.4,
+          delay: 0.8,
           ease: "power1.out",
         })
         .to(
@@ -28,11 +26,13 @@ export default function App() {
             height: "100%",
             duration: 0.8,
             top: 0,
-            visibility: 'hidden'
-          }, "-=.3"
+            visibility: "hidden",
+          },
+          "-=.3"
         )
         .to(
-          ".preloader .loading_text", 1.3,
+          ".preloader .loading_text",
+          1.3,
           {
             delay: 0.2,
             duration: 6,
@@ -41,13 +41,29 @@ export default function App() {
             ease: "expo.inOut",
           },
           "p"
-        ).to(
+        )
+        .to(
           ".preloader",
           {
             delay: 0.8,
             duration: 1,
             top: -10000,
-            ease: "expo.inOut"
+            ease: "expo.inOut",
+          },
+          "p"
+        )
+        .to(
+          ".textwrapper .text1",
+          {
+            y: 0,
+            ease: "power4.out",
+            delay: 1,
+            duration: 1.5,
+            skewY: 0,
+            transform: "none",
+            stagger: {
+              amount: 0.3,
+            },
           },
           "p"
         );
@@ -58,10 +74,8 @@ export default function App() {
   }, []);
   const [height, setHeight] = useState(0);
 
-
   return (
     <div className="based" style={{ height }}>
-      {/* <Preloader /> */}
       <div className="preloader">
         <div className="loading_text family1 fs-12 text-white text-light ">
           LOADING
