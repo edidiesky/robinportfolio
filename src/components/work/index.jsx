@@ -45,15 +45,23 @@ export default function Work() {
                   <h4 className="family1 fs-14 text-secondary">Tools</h4>
                   <div className=" flex worktools">
                     {x.tools.map((x, index) => {
-                      return <div className="tools family2" key={index}>{x}</div>
+                      return (
+                        <div className="tools family2" key={index}>
+                          {x}
+                        </div>
+                      );
                     })}
-                  </div>''
+                  </div>
+                  ''
                 </div>
                 <div className="w-100 btnWrapper flex item-center gap-2">
                   <div className="btn fs-14 family2 py-1">
                     View project Demo
                   </div>
-                  <Link to={'https://github.com/Vivixell/portfolioVictorRobin'} className="btn fs-14 family2 py-1">
+                  <Link
+                    to={"https://github.com/Vivixell/portfolioVictorRobin"}
+                    className="btn fs-14 family2 py-1"
+                  >
                     View project Code
                   </Link>
                 </div>
@@ -66,7 +74,6 @@ export default function Work() {
   );
 }
 const WorkContent = styled.div`
-  padding: 4rem 0;
   gap: 2rem;
   background-color: var(--primary);
   .title {
@@ -77,11 +84,11 @@ const WorkContent = styled.div`
   }
   .btnWrapper {
     padding-top: 3rem;
-     @media (max-width: 780px) {
-       flex-direction: column;
-       padding-top: 1.7rem;
-       align-items: flex-start;
-      }
+    @media (max-width: 780px) {
+      flex-direction: column;
+      padding-top: 1.7rem;
+      align-items: flex-start;
+    }
   }
   .worktools {
     display: flex;
@@ -90,11 +97,11 @@ const WorkContent = styled.div`
     gap: 1rem;
     width: 40%;
     @media (max-width: 780px) {
-        width: 60%;
-      }
-      @media (max-width: 480px) {
-        width: 90%;
-      }
+      width: 60%;
+    }
+    @media (max-width: 480px) {
+      width: 90%;
+    }
     .tools {
       padding: 0.5rem 2rem;
       font-size: 1.2rem;
@@ -102,7 +109,7 @@ const WorkContent = styled.div`
       border-radius: 30px;
       font-weight: 600;
       text-transform: uppercase;
-      transition: all .5s;
+      transition: all 0.5s;
       cursor: pointer;
       &:hover {
         background-color: var(--secondary);

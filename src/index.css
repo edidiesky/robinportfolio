@@ -23,7 +23,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: "Teko", sans-serif;
-  transform-style: preserve-3d;
   line-height: 1.5;
   color: var(--primary);
   font-weight: normal;
@@ -507,12 +506,12 @@ a:hover {
     width: 100%;
   }
 
-  .textwrapper .text1 {
+  /* .textwrapper .text1 {
     translate: none;
     rotate: none;
     scale: none;
     transform: translate(0px, 100px) skew(0deg, 7deg);
-  }
+  } */
 
   .grid-2,
   .grid-3 {

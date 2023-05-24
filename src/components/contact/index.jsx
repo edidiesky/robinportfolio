@@ -172,6 +172,7 @@ const ContactWrapper = styled.div`
   position: relative;
   display: grid;
   place-items: center;
+  padding: 10rem 0;
   .bntWrapper {
     padding: 4rem 0;
   }

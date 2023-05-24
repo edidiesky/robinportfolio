@@ -52,17 +52,16 @@ export default function App() {
           },
           "p"
         )
-        .to(
+        .from(
           ".textwrapper .text1",
           {
-            y: 0,
-            ease: "power4.out",
-            delay: 1,
-            duration: 1.5,
-            skewY: 0,
-            transform: "none",
+            delay: 1.2,
+            duration: 1.2,
+            y: 100,
+            skewY: 7,
+            ease: "power4.Out",
             stagger: {
-              amount: 0.3,
+              amount: 0.4,
             },
           },
           "p"
@@ -76,6 +75,7 @@ export default function App() {
 
   return (
     <div className="based" style={{ height }}>
+      {/* <Preloader /> */}
       <div className="preloader">
         <div className="loading_text family1 fs-12 text-white text-light ">
           LOADING
