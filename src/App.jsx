@@ -52,16 +52,16 @@ export default function App() {
           },
           "p"
         )
-        .from(
-          ".textwrapper .text1",
+        .to(
+          ".herotext",
           {
-            delay: 1.2,
-            duration: 1.2,
-            y: 100,
-            skewY: 7,
+            delay: 1.3,
+            duration: 1,
+            opacity: 1,
+            transform: "none",
             ease: "power4.Out",
             stagger: {
-              amount: 0.4,
+              amount: 0.7,
             },
           },
           "p"

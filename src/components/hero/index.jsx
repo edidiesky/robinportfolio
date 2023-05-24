@@ -59,28 +59,21 @@ export default function HeroIndex() {
     return (
       <div className="flex-1">
         <div className="left w-100 h-100 flex column gap-2">
-          <h4 className="flex fs-20 family1 text-light item-center gap-1 text-secondary">
-            <AnimatedLetters
-              strArray={"Nice to meet you!".split("")}
-              idx={12}
-              letterClass={letterclass}
-            />
+          <h4 className="flex fs-20 family1 herotext text-light item-center gap-1 text-secondary">
+            Nice to meet you!
           </h4>
           <div className="flex textwrapper w-100 column">
-            <h1 className="text-white text1">I'm Victor Robin</h1>
-            <h1 className="text-grey text1">I develop beautiful</h1>
-            <h1 className="text-grey text1">and functional websites</h1>
+            <h1 className="text-white herotext">I'm Victor Robin</h1>
+            <h1 className="text-grey herotext">I develop beautiful</h1>
+            <h1 className="text-grey herotext">and functional websites</h1>
           </div>
-          <h4 className="family1 w-90 fs-20 text-light text-grey">
-            {/* I’m a full stack developer specializing in building server and
-            client side section of the web with exceptional digital experiences
-            for the user. Currently, I’m working as a{" "} */}
+          <h4 className="family1 w-90 fs-20 herotext text-light text-grey">
             I’m working as a <span className="textActive">freelancer</span> and
             looking for various opportunities to create{" "}
             <span className="textActive">value to organization's</span> brands
             and product.{" "}
           </h4>
-          <div className="w-100 wrapperlink py-2 flex gap-2 hidden">
+          <div className="w-100 wrapperlink flex gap-2">
             {/* <Link
               to={"/contact"}
               className="btn fs-16 py-2 px-4 text-white text-bold"
@@ -88,19 +81,19 @@ export default function HeroIndex() {
             >
               Contact Me
             </Link> */}
-            <Link to={"/"}>
+            <Link to={"/"} className="herotext">
               <BsInstagram color="var(--grey-1)" fontSize={"24px"} />
             </Link>
-            <Link to={"/"}>
+            <Link to={"/"} className="herotext">
               <BsGithub color="var(--grey-1)" fontSize={"24px"} />
             </Link>
-            <Link to={"/"}>
+            <Link to={"/"} className="herotext">
               <BsTwitter color="var(--grey-1)" fontSize={"24px"} />
             </Link>
-            <Link to={"/"}>
+            <Link to={"/"} className="herotext">
               <AiFillLinkedin color="var(--grey-1)" fontSize={"24px"} />
             </Link>
-            <Link to={"/"}>
+            <Link to={"/"} className="herotext">
               <GrFacebook color="var(--grey-1)" fontSize={"24px"} />
             </Link>
           </div>
@@ -134,7 +127,6 @@ const WorkWrapper = styled.div`
     height: 20rem;
   }
   .wrapperlink {
-    animation: fadeInUp 1s 2s backwards;
   }
   .wrapper {
     gap: 4rem;
@@ -146,7 +138,6 @@ const WorkWrapper = styled.div`
   h4 {
     line-height: 26px;
     font-size: 17px;
-    animation: fadeIn 10s 2s backwards;
     @media (max-width: 780px) {
       font-size: 15px;
     }
