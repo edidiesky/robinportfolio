@@ -106,7 +106,7 @@ export default function SkillsIndex() {
                 alt=""
                 className="icon1"
               />
-              <h3 style={{ fontWeight: "normal" }} className="fs-24  family2 uppercase text-white">
+              <h3 style={{ fontWeight: "normal" }} className="fs-24 family2 uppercase text-white">
                 Knowledge
               </h3>
             </div>
@@ -153,9 +153,6 @@ const SkillsWrapper = styled.div`
     }
   }
   .text {
-    @media (max-width: 580px) {
-      font-size: 17px;
-    }
   }
   .grid-wrapper {
     grid-template-columns: 1fr 10vw 10vw;
