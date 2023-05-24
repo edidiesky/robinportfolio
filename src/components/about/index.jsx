@@ -136,6 +136,9 @@ const SkillsWrapper = styled.div`
   }
   .left {
     z-index: 300;
+    display: grid;
+  place-items: center;
+  height: 100%;
   }
   .grid-auto {
     grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
