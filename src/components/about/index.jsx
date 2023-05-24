@@ -97,6 +97,7 @@ const SkillsWrapper = styled.div`
   position: relative;
   display: grid;
   place-items: center;
+  padding:14rem 0;
   transform-style: inherit;
   .imagegradient {
     background-image: linear-gradient(
