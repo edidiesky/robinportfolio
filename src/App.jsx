@@ -53,6 +53,20 @@ export default function App() {
           "p"
         )
         .to(
+          ".linktext2",
+          {
+            delay: 1.2,
+            duration: 1.3,
+            opacity: 1,
+            transform: "translateY(0)",
+            ease: "power4.Out",
+            stagger: {
+              amount: 0.8,
+            },
+          },
+          "p"
+        )
+        .to(
           ".herotext",
           {
             delay: 1.3,

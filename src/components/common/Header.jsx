@@ -19,7 +19,7 @@ export default function Header() {
       <div className="w-85 auto flex item-center justify-space">
         <Link
           to={"/"}
-          className="uppercase linktext flex-1 family2 text-white fs-30 text-light"
+          className="uppercase linktext2 flex-1 family2 text-white fs-30 text-light"
         >
           VICTOR ROBIN
         </Link>
@@ -32,9 +32,8 @@ export default function Header() {
               <Link
                 spy={true}
                 smooth={true}
-                offset={50}
                 duration={1000}
-                className="link fs-20 uppercase text-white family2"
+                className="linktext2 linktext1 fs-20 uppercase text-white family2"
                 to={`${x.path}`}
                 key={x.id}
               >
@@ -51,16 +50,23 @@ export default function Header() {
 const HeaderContent = styled.div`
   background-color: var(--primary);
   padding: 2rem 0;
-  z-index: 4000;
-  a {
+  z-index: 900;
+  position: sticky;
+  top: 0;
+  .linktext2.linktext1 {
     padding: 0 1.7rem;
-    transition: all 0.4s ease;
     font-weight: normal;
     &:hover {
       color: var(--secondary);
     }
   }
-  .linktext {
+  .linktext2 {
+    /* opacity: 0;
+    transform: translate3d(0, -100px, 0); */
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  .linktext2 {
     padding: 0;
     @media (max-width: 780px) {
       font-size: 3rem;
