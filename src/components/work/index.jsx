@@ -61,6 +61,7 @@ export default function Work() {
                   <Link
                     to={"https://github.com/Vivixell/portfolioVictorRobin"}
                     className="btn fs-14 family2 py-1"
+                    target="_blank"
                   >
                     View project Code
                   </Link>
