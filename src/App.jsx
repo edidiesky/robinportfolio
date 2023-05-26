@@ -65,6 +65,17 @@ export default function App() {
             },
           },
           "p"
+        )
+        .to(
+          ".content",
+          {
+            delay: 1.3,
+            duration: 1.3,
+            opacity: 1,
+            transform: "translate3d(0,0,0)",
+            ease: "power4.Out",
+          },
+          "p"
         );
     });
     AOS.init({

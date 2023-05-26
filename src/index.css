@@ -46,7 +46,7 @@ body {
 
 .pace {
   pointer-events: none;
-  z-index: 500000;
+  z-index: 1300;
   font-weight: 700;
   position: fixed;
   top: 55%;
@@ -72,7 +72,7 @@ body {
   right: 100%;
   width: 100%;
   height: 2px;
-  z-index: 500000;
+  z-index: 1200;
 }
 
 /* rgb(red 60, 78) */
@@ -88,7 +88,7 @@ html {
   display: grid;
   background-color: rgb(51, 60, 78);
   place-items: center;
-  z-index: 500000;
+  z-index: 1000;
 }
 
 .preloader .loading_text {
@@ -220,6 +220,10 @@ h1 {
   transform: translate(0px, 100px) skew(0deg, 7deg);
 }
 
+.content {
+  opacity: 0;
+  transform: translate3d(1000px, 0, 0);
+}
 
 .head {
   font-size: 50px;
@@ -512,7 +516,6 @@ a:hover {
   p {
     width: 100%;
   }
-
 
   .grid-2,
   .grid-3 {

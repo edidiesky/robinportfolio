@@ -76,6 +76,7 @@ export default function Work() {
 const WorkContent = styled.div`
   gap: 2rem;
   background-color: var(--primary);
+  padding: 5rem 0;
   .title {
     font-family: "Bebas Neue", sans-serif;
   }
@@ -101,7 +102,7 @@ const WorkContent = styled.div`
     }
     @media (max-width: 480px) {
       width: 90%;
-      gap:1.2rem;
+      gap: 1.2rem;
     }
     .tools {
       padding: 0.5rem 2rem;
