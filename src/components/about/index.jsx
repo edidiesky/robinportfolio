@@ -26,8 +26,8 @@ const tools = [
   },
   {
     description:
-      "Using HTML, CSS, and JavaScript with pre-processors and build tools such as Sass and Grunt, I have a passion for developing pixel-perfect websites and apps while maintaining a semantic, modular, and DRY code base.",
-    title: "RESPONSIVE UI DESIGN",
+      "With a deep understanding of media queries, I ensure that the websites and applications I develop adapt flawlessly to various platforms. By utilizing key concepts in grid and flex concept, I streamline the development process, allowing me to create responsive UIs that are not only aesthetically pleasing but also perform optimally on any device.",
+    title: "KEEN IN RESPONSIVE DEVELOPMENT",
     icon: "https://v2.brittanychiang.com/img/icons/pencil.png",
   },
   {
@@ -38,8 +38,8 @@ const tools = [
   },
   {
     description:
-      "Using HTML, CSS, and JavaScript with pre-processors and build tools such as Sass and Grunt, I have a passion for developing pixel-perfect websites and apps while maintaining a semantic, modular, and DRY code base.",
-    title: "DIVERSITY IN TECH",
+      "Versed and passionate in the application of modern technology, I believe that these technologies can lead to a more better and faster innovative solutions to problems in the industry. ",
+    title: "VERSED IN MODERN TECHNOLOGIES",
     icon: "https://v2.brittanychiang.com/img/icons/ux-design.png",
   },
 ];
@@ -140,8 +140,9 @@ const SkillsWrapper = styled.div`
     place-items: center;
   }
   .grid-auto {
-    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
     grid-gap: 4rem;
+    grid-row-gap: 10rem;
     @media (max-width: 980px) {
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       grid-row-gap: 10rem;
@@ -157,14 +158,10 @@ const SkillsWrapper = styled.div`
     content: "";
   }
   .card {
-    min-height: 20rem;
     .top {
       h3 {
-        font-size: 24px;
+        font-size: 27px;
         font-weight: normal;
-        @media (max-width: 480px) {
-          font-size: 24px;
-        }
       }
     }
     &:hover {
@@ -179,7 +176,7 @@ const SkillsWrapper = styled.div`
   h4 {
     font-weight: 300;
     line-height: 1.7;
-    font-size: 15px;
+    font-size: 1.6rem;
     transition: all 0.6s ease;
     @media (max-width: 480px) {
       font-size: 14px;
