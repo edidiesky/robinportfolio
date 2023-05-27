@@ -117,7 +117,7 @@ const SkillsWrapper = styled.div`
     height: 100%;
   }
   .imageWrapper {
-    background-image: url("chat_3.jpg");
+    background-image: url("coding_1.jpg");
     background-size: cover;
     position: absolute;
     background-position: center;
