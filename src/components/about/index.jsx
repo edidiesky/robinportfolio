@@ -26,7 +26,7 @@ const tools = [
   },
   {
     description:
-      "With a deep understanding of media queries, I ensure that the websites and applications I develop adapt flawlessly to various platforms. By utilizing key concepts in grid and flex concept, I streamline the development process, allowing me to create responsive UIs that are not only aesthetically pleasing but also perform optimally on any device.",
+      "With a deep understanding of media queries, I ensure that the websites and applications I develop adapt flawlessly to various platforms. By utilizing key concepts in grid and flex, I streamline the development process, allowing me to create responsive UIs that are not only aesthetically pleasing but also perform optimally on any device.",
     title: "KEEN IN RESPONSIVE DEVELOPMENT",
     icon: "https://v2.brittanychiang.com/img/icons/pencil.png",
   },
