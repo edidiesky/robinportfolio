@@ -200,7 +200,7 @@ const ContactWrapper = styled.div`
   }
   .image {
     background-size: cover;
-    background-image: url("https://v2.brittanychiang.com/img/bg-contact/contact-xl.jpg");
+    background-image: url("chat_1.jpg");
     position: absolute;
     background-position: center;
     width: 100%;

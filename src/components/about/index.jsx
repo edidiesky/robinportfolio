@@ -32,7 +32,7 @@ const tools = [
   },
   {
     description:
-      "As a developer I seek to create satisfaction in delivering efficient products, nothwithstanding I also seek that I keep to the set time for the project completion",
+      "As a developer I seek to create satisfaction in delivering efficient products, nothwithstanding I also seek that I keep to the set time for the project completion.",
     title: "STICKS TO DEADLINE",
     icon: "https://v2.brittanychiang.com/img/icons/internet.png",
   },
@@ -117,7 +117,7 @@ const SkillsWrapper = styled.div`
     height: 100%;
   }
   .imageWrapper {
-    background-image: url("coding_1.jpg");
+    background-image: url("chat_3.jpg");
     background-size: cover;
     position: absolute;
     background-position: center;
