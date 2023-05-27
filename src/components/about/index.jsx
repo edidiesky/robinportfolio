@@ -20,7 +20,7 @@ const Skills = [
 const tools = [
   {
     description:
-      "Using HTML, CSS, and JavaScript with pre-processors and build tools such as Sass and Grunt, I have a passion for developing pixel-perfect websites and apps while maintaining a semantic, modular, and DRY code base.",
+      "I strive to create pixel-perfect websites and applications that not only look great but also have a solid foundation of clean, modular, and efficient code.I am committed to maintaining a semantic structure and implementing the DRY (Don't Repeat Yourself) principle, ensuring scalability and maintainability of the projects I work on.    ",
     title: "WEB DEVELOPMENT",
     icon: "https://v2.brittanychiang.com/img/icons/html.png",
   },
@@ -32,8 +32,8 @@ const tools = [
   },
   {
     description:
-      "Using HTML, CSS, and JavaScript with pre-processors and build tools such as Sass and Grunt, I have a passion for developing pixel-perfect websites and apps while maintaining a semantic, modular, and DRY code base.",
-    title: "EXPERIENCE DESIGN",
+      "As a developer I seek to create satisfaction in delivering efficient products, nothwithstanding I also seek that I keep to the set time for the project completion",
+    title: "STICKS TO DEADLINE",
     icon: "https://v2.brittanychiang.com/img/icons/internet.png",
   },
   {
@@ -97,7 +97,7 @@ const SkillsWrapper = styled.div`
   position: relative;
   display: grid;
   place-items: center;
-  padding: 14rem 0;
+  padding: 6rem 0;
   transform-style: inherit;
   .imagegradient {
     background-image: linear-gradient(
@@ -117,7 +117,7 @@ const SkillsWrapper = styled.div`
     height: 100%;
   }
   .imageWrapper {
-    background-image: url("https://v2.brittanychiang.com/img/bg-services/services-lg.jpg");
+    background-image: url("coding_1.jpg");
     background-size: cover;
     position: absolute;
     background-position: center;
@@ -144,7 +144,7 @@ const SkillsWrapper = styled.div`
     grid-gap: 4rem;
     grid-row-gap: 10rem;
     @media (max-width: 980px) {
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
       grid-row-gap: 10rem;
     }
   }
@@ -178,9 +178,6 @@ const SkillsWrapper = styled.div`
     line-height: 1.7;
     font-size: 1.6rem;
     transition: all 0.6s ease;
-    @media (max-width: 480px) {
-      font-size: 14px;
-    }
   }
   .icon1 {
     filter: brightness(100%);
