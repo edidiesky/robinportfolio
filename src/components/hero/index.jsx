@@ -60,9 +60,11 @@ export default function HeroIndex() {
             Nice to meet you!
           </h4>
           <div className="flex textwrapper w-100 column">
-            <h1 className="text-white herotext">I'm Victor Robin</h1>
-            <h1 className="text-grey herotext">I develop beautiful</h1>
-            <h1 className="text-grey herotext">and functional websites</h1>
+            <h1 className="text-white herotext hidden">I'm Victor Robin</h1>
+            <h1 className="text-grey herotext hidden">I develop beautiful</h1>
+            <h1 className="text-grey herotext hidden">
+              and functional websites
+            </h1>
           </div>
           <h4 className="family1 w-90 fs-20 herotext text-light text-grey">
             I’m working as a <span className="textActive">freelancer</span> and
@@ -71,20 +73,14 @@ export default function HeroIndex() {
             and product.{" "}
           </h4>
           <div className="w-100 wrapperlink flex gap-2">
-            <Link to={"/"}>
-              <BsInstagram color="var(--grey-1)" fontSize={"24px"} />
+            <Link to={"/"} className="social">
+              <BsGithub color="var(--grey-1)" fontSize={"26px"} />
             </Link>
-            <Link to={"/"}>
-              <BsGithub color="var(--grey-1)" fontSize={"24px"} />
+            <Link to={"/"} className="social">
+              <BsTwitter color="var(--grey-1)" fontSize={"26px"} />
             </Link>
-            <Link to={"/"}>
-              <BsTwitter color="var(--grey-1)" fontSize={"24px"} />
-            </Link>
-            <Link to={"/"}>
-              <AiFillLinkedin color="var(--grey-1)" fontSize={"24px"} />
-            </Link>
-            <Link to={"/"}>
-              <GrFacebook color="var(--grey-1)" fontSize={"24px"} />
+            <Link to={"/"} className="social">
+              <AiFillLinkedin color="var(--grey-1)" fontSize={"26px"} />
             </Link>
           </div>
         </div>
@@ -112,11 +108,15 @@ const WorkWrapper = styled.div`
   @media (max-width: 780px) {
     padding: 8rem 0;
   }
+  .social {
+    opacity: 0;
+  }
   .content {
     width: 16rem;
     height: 20rem;
   }
   .wrapperlink {
+    padding-top: 5rem;
   }
   .wrapper {
     gap: 4rem;
@@ -140,8 +140,8 @@ const WorkWrapper = styled.div`
       font-size: 4rem;
     }
     @media (max-width: 780px) {
-      font-size: 3.5rem;
       font-weight: 400;
+      line-height: 46px;
     }
   }
   .WorkRight {
@@ -150,10 +150,10 @@ const WorkWrapper = styled.div`
       flex: 0.6;
     }
   }
-  a {
+  .social {
     transition: all 0.6s;
     &:hover {
-      opacity: 0.7;
+      color: var(--secondary);
     }
   }
 `;

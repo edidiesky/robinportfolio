@@ -86,8 +86,24 @@ export default function App() {
             delay: 1.3,
             duration: 1.3,
             opacity: 1,
+            ease: "power4.Out",
             transform: "translate3d(0,0,0)",
             ease: "power4.Out",
+            stagger: {
+              amount: 0.7,
+            },
+          },
+          "p"
+        )
+        .to(
+          ".social",
+          {
+            delay: 1.5,
+            duration: 1.7,
+            opacity: 1,
+            stagger: {
+              amount: 0.7,
+            },
           },
           "p"
         );
