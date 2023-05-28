@@ -191,11 +191,11 @@ const ContactWrapper = styled.div`
   .imagegradient {
     background-image: linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 0.61),
-      rgba(0, 0, 0, 0.61),
-      rgba(0, 0, 0, 0.61),
-      rgba(0, 0, 0, 0.61),
-      rgba(0, 0, 0, 0.61)
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.8)
     );
   }
   .image {
