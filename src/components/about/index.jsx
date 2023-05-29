@@ -93,7 +93,6 @@ export default function AboutIndex() {
 
 const SkillsWrapper = styled.div`
   width: 100%;
-  min-height: 100vh;
   position: relative;
   display: grid;
   place-items: center;

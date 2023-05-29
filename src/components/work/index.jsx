@@ -17,7 +17,7 @@ export default function Work() {
           SOME OF MY WORKS
         </h3>
       </div>
-      <div className="w-100 auto gap-2 Workwp">
+      <div className="w-90 auto gap-2 Workwp">
         {work.map((x, index) => {
           return (
             <div
@@ -199,7 +199,6 @@ const WorkContent = styled.div`
   }
   .headerWrapper {
     position: relative;
-    min-height: 100vh;
     padding: 16rem 0;
     display: grid;
     place-items: center;

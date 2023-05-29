@@ -71,13 +71,27 @@ export default function HeroIndex() {
             and product.{" "}
           </h4>
           <div className="w-100 wrapperlink flex gap-2">
-            <Link to={"/"} className="social">
+            <Link
+              to={"https://github.com/Vivixell/portfolioVictorRobin"}
+              target="_blank"
+              className="social"
+            >
               <BsGithub color="var(--grey-1)" fontSize={"26px"} />
             </Link>
-            <Link to={"/"} className="social">
+            <Link
+              to={
+                "https://twitter.com/DevtorCode/status/1660742554789335074?s=20"
+              }
+              target="_blank"
+              className="social"
+            >
               <BsTwitter color="var(--grey-1)" fontSize={"26px"} />
             </Link>
-            <Link to={"/"} className="social">
+            <Link
+              to={"https://linkedin.com/in/robinvictoro"}
+              target="_blank"
+              className="social"
+            >
               <AiFillLinkedin color="var(--grey-1)" fontSize={"26px"} />
             </Link>
           </div>
@@ -100,7 +114,6 @@ const WorkWrapper = styled.div`
   background-color: var(--primary);
   width: 100%;
   padding: 15rem 0;
-  min-height: 100vh;
   display: grid;
   place-items: center;
   @media (max-width: 780px) {
