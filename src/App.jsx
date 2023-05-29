@@ -55,11 +55,11 @@ export default function App() {
         .to(
           ".linktext2",
           {
-            delay: 1.2,
-            duration: 1.3,
+            delay: 1,
+            duration: .7,
             opacity: 1,
             transform: "translateY(0)",
-            ease: "power4.Out",
+            
             stagger: {
               amount: 0.8,
             },
@@ -73,7 +73,7 @@ export default function App() {
             duration: 1,
             opacity: 1,
             transform: "none",
-            ease: "power4.Out",
+            
             stagger: {
               amount: 0.7,
             },
@@ -83,12 +83,10 @@ export default function App() {
         .to(
           ".content",
           {
-            delay: 1.3,
+            delay: 1.2,
             duration: 1.3,
             opacity: 1,
-            ease: "power4.Out",
             transform: "translate3d(0,0,0)",
-            ease: "power4.Out",
             stagger: {
               amount: 0.7,
             },
