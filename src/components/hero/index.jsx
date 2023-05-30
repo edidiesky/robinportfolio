@@ -114,6 +114,7 @@ const WorkWrapper = styled.div`
   background-color: var(--primary);
   width: 100%;
   padding: 15rem 0;
+  min-height: 100vh;
   display: grid;
   place-items: center;
   @media (max-width: 780px) {

@@ -56,10 +56,10 @@ export default function App() {
           ".linktext2",
           {
             delay: 1,
-            duration: .7,
+            duration: 0.7,
             opacity: 1,
             transform: "translateY(0)",
-            
+
             stagger: {
               amount: 0.8,
             },
@@ -69,11 +69,11 @@ export default function App() {
         .to(
           ".herotext",
           {
-            delay: 1.3,
-            duration: 1,
+            delay: 1.1,
+            duration: 0.8,
             opacity: 1,
             transform: "none",
-            
+
             stagger: {
               amount: 0.7,
             },

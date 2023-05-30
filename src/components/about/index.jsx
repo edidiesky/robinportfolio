@@ -69,7 +69,6 @@ export default function AboutIndex() {
                     data-aos="fade"
                     data-aos-duration="1500"
                     data-aos-delay={index * 350}
-                    style={{ height: "15rem" }}
                   >
                     <div className="top flex item-center gap-2">
                       <img src={x.icon} alt="" className="icon1" />
@@ -141,10 +140,13 @@ const SkillsWrapper = styled.div`
   .grid-auto {
     grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
     grid-gap: 4rem;
-    grid-row-gap: 10rem;
+    grid-row-gap: 6rem;
     @media (max-width: 980px) {
       grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-      grid-row-gap: 10rem;
+      grid-row-gap: 6rem;
+    }
+    @media (max-width: 480px) {
+      grid-template-columns:1fr;
     }
   }
   .heads::after {

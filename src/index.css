@@ -24,6 +24,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-family: "Teko", sans-serif;
   line-height: 1.5;
+  background-color: var(--primary);
   color: var(--primary);
   font-weight: normal;
 }
