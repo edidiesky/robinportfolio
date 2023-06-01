@@ -56,7 +56,7 @@ export default function App() {
           ".linktext2",
           {
             delay: 1,
-            duration: 0.7,
+            duration: 0.6,
             opacity: 1,
             transform: "translateY(0)",
 

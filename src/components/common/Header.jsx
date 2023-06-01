@@ -26,14 +26,14 @@ export default function Header() {
         <div className="icon" onClick={() => dispatch(onSidebar())}>
           <HiBars4 fontSize={"34px"} color="#fff" />
         </div>
-        <div className="flex item-center list flex-1 gap-3">
+        <div className="flex item-center list flex-1 gap-4">
           {data.map((x) => {
             return (
               <Link
                 spy={true}
                 smooth={true}
                 duration={1000}
-                className="linktext2 linktext1 fs-20 uppercase text-white family2"
+                className="linktext2 linktext1 fs-18 uppercase text-white family2"
                 to={`${x.path}`}
                 key={x.id}
               >
