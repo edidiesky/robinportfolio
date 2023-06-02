@@ -66,17 +66,15 @@ export default function AboutIndex() {
                   <div
                     className="w-100 flex column card gap-2"
                     key={x.id}
-                    data-aos="fade"
+                    data-aos="fade-up"
                     data-aos-duration="1500"
                     data-aos-delay={index * 350}
                   >
                     <div className="top flex item-center gap-2">
                       <img src={x.icon} alt="" className="icon1" />
-                      <h3 className="fs-18 family2 uppercase text-white">
-                        {x.title}
-                      </h3>
+                      <h3 className="fs-20 uppercase text-white">{x.title}</h3>
                     </div>
-                    <h4 className="family1 fs-14 text-light text-white">
+                    <h4 className="family1 fs-16 text-light text-white">
                       {x.description}
                     </h4>
                   </div>
@@ -100,11 +98,11 @@ const SkillsWrapper = styled.div`
   .imagegradient {
     background-image: linear-gradient(
       to bottom,
-      rgba(0, 0, 0, .9),
-      rgba(0, 0, 0, .9),
-      rgba(0, 0, 0, .9),
-      rgba(0, 0, 0, .9),
-      rgba(0, 0, 0, .9)
+      rgba(0, 0, 0, 0.9),
+      rgba(0, 0, 0, 0.9),
+      rgba(0, 0, 0, 0.9),
+      rgba(0, 0, 0, 0.9),
+      rgba(0, 0, 0, 0.9)
     );
     z-index: 200;
   }
@@ -146,7 +144,7 @@ const SkillsWrapper = styled.div`
       grid-row-gap: 6rem;
     }
     @media (max-width: 480px) {
-      grid-template-columns:1fr;
+      grid-template-columns: 1fr;
     }
   }
   .heads::after {
@@ -161,7 +159,7 @@ const SkillsWrapper = styled.div`
   .card {
     .top {
       h3 {
-        font-size: 27px;
+        font-size: 30px;
         font-weight: normal;
       }
     }
@@ -177,7 +175,6 @@ const SkillsWrapper = styled.div`
   h4 {
     font-weight: 300;
     line-height: 1.7;
-    font-size: 1.6rem;
     transition: all 0.6s ease;
   }
   .icon1 {

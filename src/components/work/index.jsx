@@ -21,8 +21,8 @@ export default function Work() {
         {work.map((x, index) => {
           return (
             <div
-              data-aos="fade"
-              data-aos-duration="1900"
+              data-aos="zoom-in-up"
+              data-aos-duration="1200"
               data-aos-dalay={index * 350}
               className="headerWrapper w-100"
               key={index}
@@ -78,6 +78,7 @@ const WorkContent = styled.div`
   gap: 2rem;
   background-color: var(--primary);
   padding: 3rem 0;
+
   .title {
     font-family: "Bebas Neue", sans-serif;
   }

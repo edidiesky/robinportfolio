@@ -87,13 +87,13 @@ export default function SkillsIndex() {
               {tools.map((x, index) => {
                 return (
                   <div
-                    className="w-100 fs-14 text-white family1 flex item-center gap-1"
+                    className="w-100 fs-16 text-white family1 flex item-center gap-1"
                     key={x.id}
                     data-aos="fade"
                     data-aos-duration="1200"
                     data-aos-delay={index * 150}
                   >
-                    <BiChevronRight fontSize={"20px"} /> {x}
+                    <BiChevronRight fontSize={"24px"} /> {x}
                   </div>
                 );
               })}
@@ -114,13 +114,13 @@ export default function SkillsIndex() {
               {tools.map((x, index) => {
                 return (
                   <div
-                    className="w-100 fs-14 text-white family1 flex item-center gap-1"
+                    className="w-100 fs-16 text-white family1 flex item-center gap-1"
                     key={x.id}
                     data-aos="fade"
                     data-aos-duration="1200"
                     data-aos-delay={index * 150}
                   >
-                    <BiChevronRight fontSize={"20px"} /> {x}
+                    <BiChevronRight fontSize={"24px"} /> {x}
                   </div>
                 );
               })}
@@ -169,6 +169,9 @@ const SkillsWrapper = styled.div`
     bottom: -25%;
     left: 0%;
     content: "";
+  }
+  .fs-24 {
+    font-size: 30px;
   }
   .icon1 {
     filter: grayscale(100%);

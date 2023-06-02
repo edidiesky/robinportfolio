@@ -12,6 +12,9 @@
   text-decoration: none;
   list-style: none;
 }
+.target {
+  font-kerning: none;
+}
 
 button {
   font-family: inherit;
@@ -203,7 +206,7 @@ p {
 }
 
 h1 {
-  font-family: "Archivo Black", sans-serif;
+  font-family: "Teko", sans-serif;
 }
 
 .family1 {
@@ -217,9 +220,16 @@ h1 {
 }
 
 .herotext {
-  opacity: 0;
-  transform: translate(0px, 100px) skew(0deg, 7deg);
+  font-size: 79px;
+  clip-path: polygon(0 10%, 100% 9%, 100% 100%, 0% 100%);
+  /* line-height: 9rem !important; */
 }
+.char {
+  opacity: 0;
+}
+/* .word {
+  opacity: 0;
+} */
 
 .content {
   opacity: 0;
@@ -227,7 +237,7 @@ h1 {
 }
 
 .head {
-  font-size: 50px;
+  font-size: 80px;
   font-family: "Teko", sans-serif;
   position: relative;
   margin-bottom: 4rem;
@@ -570,19 +580,20 @@ a:hover {
     left: 0%;
     content: "";
   }
-  h1 {
-    line-height: 43px !important;
-    font-size: 35px !important;
-  }
 
   .head {
-    font-size: 40px;
+    font-size: 60px;
   }
 }
 
 @media (max-width: 450px) {
   .pace,
   .pace-progress {
-    max-width: 300px;
+    max-width: 260px;
+  }
+}
+@media (max-width: 380px) {
+  .head {
+    line-height: 1.2;
   }
 }

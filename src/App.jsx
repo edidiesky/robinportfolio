@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
+import SplitType from "split-type";
 import Pace from "pace-js";
 import "pace-js/themes/yellow/pace-theme-minimal.css";
 import gsap from "gsap";
@@ -9,8 +10,15 @@ import "animate.css";
 import { Layout } from "./screens";
 
 export default function App() {
+  // .to(".char", {
+  //   delay: 0.8,
+  //   stagger: 0.08,
+  //   y: 0,
+  //   duration: 0.1,
+  // });
   useEffect(() => {
     //  preloader
+    new SplitType("#herotext1");
     Pace.on("done", () => {
       gsap
         .timeline()
@@ -67,26 +75,24 @@ export default function App() {
           "p"
         )
         .to(
-          ".herotext",
+          ".char",
           {
-            delay: 1.1,
-            duration: 0.8,
+            delay: 0.6,
+            stagger: 0.1,
+            y: 0,
             opacity: 1,
-            transform: "none",
-
-            stagger: {
-              amount: 0.7,
-            },
+            duration: 0.9,
           },
           "p"
         )
         .to(
           ".content",
           {
-            delay: 1.2,
+            delay: 2.6,
             duration: 1.3,
             opacity: 1,
             transform: "translate3d(0,0,0)",
+
             stagger: {
               amount: 0.7,
             },
@@ -96,7 +102,7 @@ export default function App() {
         .to(
           ".social",
           {
-            delay: 1.5,
+            delay: 3,
             duration: 1.7,
             opacity: 1,
             stagger: {
