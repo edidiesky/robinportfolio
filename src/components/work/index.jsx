@@ -9,7 +9,7 @@ export default function Work() {
     <WorkContent id="work" className="flex w-100 column gap-2">
       <div className="w-85 auto hidden">
         <h3
-          data-aos="fade-up"
+          data-aos="fade"
           data-aos-duration="1200"
           style={{ fontWeight: "normal" }}
           className="head text-white text-start"

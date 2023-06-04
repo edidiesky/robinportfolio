@@ -61,15 +61,14 @@ export default function HeroIndex() {
           <div className="flex textwrapper w-100 column">
             <h1 id="herotext1" className="text-white herotext hidden">
               I'm Victor Robin
-              <span className="text-grey herotext hidden block">
-                {" "}
-                I develop beautiful
-              </span>
-              {" "}
-              <span className="text-grey herotext hidden block">
-                and functional websites
-              </span>
             </h1>
+            <h2 id="herotext1" className="text-grey herotext hidden block">
+              {" "}
+              I develop beautiful
+            </h2>{" "}
+            <h2 id="herotext1" className="text-grey herotext hidden block">
+              and functional websites
+            </h2>
           </div>
           <h4 className="family1 w-90 fs-24 social text-light text-grey">
             I’m working as a <span className="textActive">freelancer</span> and
@@ -151,14 +150,15 @@ const WorkWrapper = styled.div`
       font-size: 15px;
     }
   }
+  h2 {
+    font-size: 5rem;
+    line-height: 40px;
+  }
   h1 {
     font-size: 12.5rem;
     line-height: 130px;
     font-weight: normal;
-    span {
-      font-size: 5rem;
-      line-height: 40px;
-    }
+
     @media (max-width: 780px) {
       line-height: 100px;
       font-size: 12rem;
