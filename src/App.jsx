@@ -61,6 +61,16 @@ export default function App() {
           "p"
         )
         .to(
+          ".preloader_2",
+          {
+            delay: 0.8,
+            duration: 1.3,
+            width: 0,
+            ease: "expo.inOut",
+          },
+          "p"
+        )
+        .to(
           ".linktext2",
           {
             delay: 1,
@@ -77,11 +87,25 @@ export default function App() {
         .to(
           ".char",
           {
-            delay: 0.6,
-            stagger: 0.1,
+            delay: 1,
+            stagger: 0.2,
             y: 0,
             opacity: 1,
-            duration: 0.9,
+            duration: 1.8,
+          },
+          "p"
+        )
+        .to(
+          ".herotext2",
+          {
+            delay: 1,
+            duration: 1.5,
+            // skewY: 7,
+            // y: 100,
+            transform: "none",
+            stagger: {
+              amount: 0.3,
+            },
           },
           "p"
         )
@@ -126,6 +150,7 @@ export default function App() {
           LOADING
         </div>
       </div>
+      <div className="preloader_2"></div>
       <Routes>
         <Route path={"/"} element={<Layout />}></Route>
       </Routes>

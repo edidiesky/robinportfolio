@@ -50,7 +50,7 @@ export default function Header() {
 const HeaderContent = styled.div`
   background-color: var(--primary);
   padding: 2rem 0;
-  z-index: 900;
+  z-index: 400;
   position: sticky;
   top: 0;
   .linktext2.linktext1 {

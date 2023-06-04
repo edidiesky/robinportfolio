@@ -10,7 +10,7 @@ export default function Work() {
       <div className="w-85 auto hidden">
         <h3
           data-aos="fade"
-          data-aos-duration="1200"
+          data-aos-duration="900"
           style={{ fontWeight: "normal" }}
           className="head text-white text-start"
         >

@@ -95,6 +95,16 @@ html {
   z-index: 1000;
 }
 
+.preloader_2 {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  background-color: rgb(134, 134, 134);
+  place-items: center;
+  z-index: 500;
+}
+
 .preloader .loading_text {
   font-weight: normal;
   letter-spacing: 30px;
@@ -119,6 +129,9 @@ html {
 
 .shadow:hover {
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+}
+.herotext2 {
+  transform: translate3d(0, -100px, 0) skewY(-70deg);
 }
 
 .subBtn:hover {

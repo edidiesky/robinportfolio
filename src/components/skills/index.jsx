@@ -17,8 +17,8 @@ const Skills = [
   "https://v1.brittanychiang.com/img/skills/js.png",
   "https://v1.brittanychiang.com/img/skills/tumblr.png",
   "https://v1.brittanychiang.com/img/skills/linux.png",
-  './tech/nodejs.png',
-  './tech/typescript.png'
+  "./tech/nodejs.png",
+  "./tech/typescript.png",
 ];
 
 const tools = [
@@ -38,7 +38,7 @@ export default function SkillsIndex() {
         <div className="w-100 auto">
           <h2
             style={{ fontWeight: "normal" }}
-            className="head text-white family2 fs-50 text-start"
+            className="head text-white family2 text-start"
           >
             Skills
           </h2>
@@ -51,7 +51,10 @@ export default function SkillsIndex() {
                 alt=""
                 className="icon1"
               />
-              <h3 style={{ fontWeight: "normal" }} className="fs-24 family2 text uppercase text-white">
+              <h3
+                style={{ fontWeight: "normal" }}
+                className="fs-30 family2 text uppercase text-white"
+              >
                 TECHNOLOGIES
               </h3>
             </div>
@@ -79,7 +82,10 @@ export default function SkillsIndex() {
                 alt=""
                 className="icon1"
               />
-              <h3 style={{ fontWeight: "normal" }} className="fs-24 family2 uppercase text-white">
+              <h3
+                style={{ fontWeight: "normal" }}
+                className="fs-20 family2 uppercase text-white"
+              >
                 Tools
               </h3>
             </div>
@@ -106,7 +112,10 @@ export default function SkillsIndex() {
                 alt=""
                 className="icon1"
               />
-              <h3 style={{ fontWeight: "normal" }} className="fs-24 family2 uppercase text-white">
+              <h3
+                style={{ fontWeight: "normal" }}
+                className="fs-20 family2 uppercase text-white"
+              >
                 Knowledge
               </h3>
             </div>
@@ -170,8 +179,8 @@ const SkillsWrapper = styled.div`
     left: 0%;
     content: "";
   }
-  .fs-24 {
-    font-size: 30px;
+  .fs-20 {
+    font-size: 20px;
   }
   .icon1 {
     filter: grayscale(100%);
@@ -191,7 +200,7 @@ const SkillsWrapper = styled.div`
     place-items: center;
     .image {
       width: 70px;
-      height: auto; 
+      height: auto;
       @media (max-width: 580px) {
         width: 65px;
       }
