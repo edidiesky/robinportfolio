@@ -172,6 +172,7 @@ const ContactWrapper = styled.div`
   display: grid;
   place-items: center;
   padding: 10rem 0;
+  z-index: 40;
   .bntWrapper {
     padding: 4rem 0;
   }
@@ -232,7 +233,7 @@ const ContactWrapper = styled.div`
     align-items: flex-start;
     font-size: 1.8rem;
     font-family: "Nunito", sans-serif;
-    z-index: 4000;
+    z-index: 400;
     .inputWrapper {
       width: 100%;
       position: relative;
