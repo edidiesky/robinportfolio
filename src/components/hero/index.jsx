@@ -63,11 +63,8 @@ export default function HeroIndex() {
               I'm Victor Robin
             </h1>
             <div className="hidden w-100">
-              <h2 className="text-grey herotext2 block">I develop beautiful</h2>
-            </div>
-            <div className="hidden w-100">
-              <h2 className="text-grey herotext2 block">
-                and functional websites
+              <h2 id="herotext2" className="text-grey herotext2 block">
+                I develop beautiful <br /> and functional websites
               </h2>
             </div>
           </div>
@@ -157,7 +154,7 @@ const WorkWrapper = styled.div`
     font-weight: 400;
   }
   h1 {
-    font-size: 12.5rem;
+    font-size: 11.5rem;
     line-height: 130px;
     font-weight: normal;
 

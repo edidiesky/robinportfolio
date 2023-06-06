@@ -9,7 +9,7 @@ export default function Work() {
     <WorkContent id="work" className="flex w-100 column gap-2">
       <div className="w-85 auto hidden">
         <h3
-          data-aos="fade"
+          data-aos="fade-up"
           data-aos-duration="900"
           style={{ fontWeight: "normal" }}
           className="head text-white text-start"
@@ -21,9 +21,9 @@ export default function Work() {
         {work.map((x, index) => {
           return (
             <div
-              data-aos="zoom-in-up"
-              data-aos-duration="1200"
-              data-aos-dalay={index * 350}
+              data-aos="fade-up"
+              data-aos-duration="1100"
+              data-aos-dalay={index * 300}
               className="headerWrapper w-100"
               key={index}
             >

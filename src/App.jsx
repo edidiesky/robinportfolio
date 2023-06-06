@@ -19,6 +19,7 @@ export default function App() {
   useEffect(() => {
     //  preloader
     new SplitType("#herotext1");
+    new SplitType("#herotext2");
     Pace.on("done", () => {
       gsap
         .timeline()
@@ -71,48 +72,34 @@ export default function App() {
           "p"
         )
         .to(
+          ".char",
+          {
+            delay: 2,
+            opacity: 1,
+            duration: 2,
+            stagger: 0.06,
+            ease: "expo.inOut",
+          },
+          "p"
+        )
+        .to(
           ".linktext2",
           {
-            delay: 1,
-            duration: 0.6,
+            delay: 5,
+            duration: 0.8,
             opacity: 1,
             transform: "translateY(0)",
-
             stagger: {
               amount: 0.8,
             },
           },
           "p"
         )
-        .to(
-          ".char",
-          {
-            delay: 1,
-            stagger: 0.2,
-            y: 0,
-            opacity: 1,
-            duration: 1.8,
-          },
-          "p"
-        )
-        .to(
-          ".herotext2",
-          {
-            delay: 1,
-            duration: 1.5,
-            // skewY: 7,
-            // y: 100,
-            transform: "none",
-            stagger: {
-              amount: 0.3,
-            },
-          },
-          "p"
-        )
+
         .to(
           ".content",
           {
-            delay: 2.6,
+            delay: 5,
             duration: 1.3,
             opacity: 1,
             transform: "translate3d(0,0,0)",
@@ -126,7 +113,7 @@ export default function App() {
         .to(
           ".social",
           {
-            delay: 3,
+            delay: 5,
             duration: 1.7,
             opacity: 1,
             stagger: {
