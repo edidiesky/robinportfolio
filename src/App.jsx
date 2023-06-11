@@ -62,16 +62,6 @@ export default function App() {
           "p"
         )
         .to(
-          ".preloader_2",
-          {
-            delay: 0.8,
-            duration: 1.3,
-            width: 0,
-            ease: "expo.inOut",
-          },
-          "p"
-        )
-        .to(
           ".char",
           {
             delay: 2,
@@ -137,7 +127,6 @@ export default function App() {
           LOADING
         </div>
       </div>
-      <div className="preloader_2"></div>
       <Routes>
         <Route path={"/"} element={<Layout />}></Route>
       </Routes>

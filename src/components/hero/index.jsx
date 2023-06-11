@@ -155,7 +155,7 @@ const WorkWrapper = styled.div`
   }
   h1 {
     font-size: 11.5rem;
-    line-height: 130px;
+    line-height: 110px;
     font-weight: normal;
 
     @media (max-width: 780px) {

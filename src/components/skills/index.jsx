@@ -11,11 +11,8 @@ const Skills = [
   "https://v1.brittanychiang.com/img/skills/node.png",
   "https://v1.brittanychiang.com/img/skills/mongodb.png",
   "https://v1.brittanychiang.com/img/skills/github.png ",
-  "https://v1.brittanychiang.com/img/skills/angular.png",
   "./tech/redux.png",
-  "https://v1.brittanychiang.com/img/skills/python.png",
   "https://v1.brittanychiang.com/img/skills/js.png",
-  "https://v1.brittanychiang.com/img/skills/tumblr.png",
   "https://v1.brittanychiang.com/img/skills/linux.png",
   "./tech/nodejs.png",
   "./tech/typescript.png",
@@ -164,7 +161,7 @@ const SkillsWrapper = styled.div`
   .text {
   }
   .grid-wrapper {
-    grid-template-columns: 1fr 10vw 10vw;
+    grid-template-columns: 1fr 20vw 20vw;
     grid-gap: 8rem;
     @media (max-width: 980px) {
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));

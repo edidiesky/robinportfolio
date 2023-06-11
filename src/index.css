@@ -231,11 +231,7 @@ h1 {
   letter-spacing: 1px;
 }
 
-.herotext {
-  font-size: 79px;
-  clip-path: polygon(0 10%, 100% 9%, 100% 100%, 0% 100%);
-  /* line-height: 9rem !important; */
-}
+
 .char {
   opacity: 0;
 }
