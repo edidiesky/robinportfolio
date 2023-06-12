@@ -55,13 +55,20 @@ export default function Work() {
                   ''
                 </div>
                 <div className="w-100 btnWrapper flex item-center gap-2">
-                  <Link
-                    to={x.link1}
-                    className="btn fs-14 family2 py-1"
-                    target="_blank"
-                  >
-                    View project Demo
-                  </Link>
+                  {x.link1 ? (
+                    <Link
+                      to={x.link1}
+                      className="btn fs-14 family2 py-1"
+                      target="_blank"
+                    >
+                      View project Demo
+                    </Link>
+                  ) : (
+                    <div className="btn fs-14 family2 py-1" target="_blank">
+                      Project Comming Soon
+                    </div>
+                  )}
+
                   <Link
                     to={"https://github.com/Vivixell/portfolioVictorRobin"}
                     className="btn fs-14 family2 py-1"

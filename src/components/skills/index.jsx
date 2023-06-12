@@ -1,7 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
-import { Head } from "../common";
-import Input from "../forms/Input";
 import { BiChevronRight } from "react-icons/bi";
 
 const Skills = [
@@ -20,12 +18,15 @@ const Skills = [
 
 const tools = [
   "Command Line",
-  "Redux",
-  "Redux Dev tool",
-  "Context Api",
   "Post Man",
   "Git + Github",
   "Chrome DevTools",
+];
+
+const tools2 = [
+  "Redux",
+  "Redux Dev tool",
+  "Context Api",
 ];
 
 export default function SkillsIndex() {
@@ -81,7 +82,7 @@ export default function SkillsIndex() {
               />
               <h3
                 style={{ fontWeight: "normal" }}
-                className="fs-20 family2 uppercase text-white"
+                className="fs-24 family2 uppercase text-white"
               >
                 Tools
               </h3>
@@ -90,7 +91,7 @@ export default function SkillsIndex() {
               {tools.map((x, index) => {
                 return (
                   <div
-                    className="w-100 fs-16 text-white family1 flex item-center gap-1"
+                    className="w-100 fs-14 text-white family1 flex item-center gap-1"
                     key={x.id}
                     data-aos="fade"
                     data-aos-duration="1200"
@@ -111,16 +112,16 @@ export default function SkillsIndex() {
               />
               <h3
                 style={{ fontWeight: "normal" }}
-                className="fs-20 family2 uppercase text-white"
+                className="fs-24 family2 uppercase text-white"
               >
                 Knowledge
               </h3>
             </div>
             <div className="flex column gap-1">
-              {tools.map((x, index) => {
+              {tools2.map((x, index) => {
                 return (
                   <div
-                    className="w-100 fs-16 text-white family1 flex item-center gap-1"
+                    className="w-100 fs-14 text-white family1 flex item-center gap-1"
                     key={x.id}
                     data-aos="fade"
                     data-aos-duration="1200"
@@ -176,16 +177,13 @@ const SkillsWrapper = styled.div`
     left: 0%;
     content: "";
   }
-  .fs-20 {
-    font-size: 20px;
-  }
   .icon1 {
     filter: grayscale(100%);
-    width: 40px;
+    width: 35px;
     height: auto;
     transition: all 0.6s ease;
     @media (max-width: 580px) {
-      width: 40px;
+      width: 30px;
     }
     &:hover {
       filter: brightness(80%);

@@ -33,7 +33,7 @@ export const work = [
         "HTML",
       ],
     type: "Full-Stack Development",
-     link1: "https://car-dealership-39vz.onrender.com",
+     link1: "",
     link2: "",
     title: "Fiverr Website",
   },
