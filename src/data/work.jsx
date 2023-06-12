@@ -23,9 +23,15 @@ export const work = [
       "./image_2.png",
     description:
       "In this project, Fiverr clone, I seek to make a replica of the free-lancing website,Fiverr. I made a mock-up of their user-interface;I created a deshboard in which order management, gigs management, and user management were being developed. Different roles such as seller, admin, and user were being developed by my own customized api. I had to create a chatting system for the seller to be able to carry out converstaion with the buyers with the aid of socket-Io",
-    tools: [
-      "REACT.JS",
-    ],
+      tools: [
+        "REACT.JS",
+        "CSS",
+        "styled-components",
+        "NODEJS",
+        "EXPRESSJS",
+        "MONGODB",
+        "HTML",
+      ],
     type: "Full-Stack Development",
      link1: "https://car-dealership-39vz.onrender.com",
     link2: "",
