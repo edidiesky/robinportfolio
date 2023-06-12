@@ -17,6 +17,7 @@ export default function ContactIndex() {
     user_name: "",
     message: "",
     subject: "",
+    
   });
   const form = useRef();
   const dispatch = useDispatch();
