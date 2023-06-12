@@ -17,7 +17,7 @@ export default function Work() {
           SOME OF MY WORKS
         </h3>
       </div>
-      <div className="w-90 auto gap-2 Workwp">
+      <div className="w-90 auto flex column gap-4 Workwp">
         {work.map((x, index) => {
           return (
             <div
