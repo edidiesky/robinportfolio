@@ -158,6 +158,9 @@ const WorkContent = styled.div`
       }
       @media (max-width: 480px) {
         width: 70%;
+        line-height: 40px;
+        font-size: 45px;
+        font-weight: normal;
       }
     }
   }
@@ -225,6 +228,7 @@ const WorkContent = styled.div`
     width: 100%;
     height: 100%;
     z-index: 400;
+    object-fit: cover;
     background-image: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0.7),

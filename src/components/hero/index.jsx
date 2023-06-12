@@ -152,6 +152,10 @@ const WorkWrapper = styled.div`
     font-size: 5rem;
     line-height: 40px;
     font-weight: 400;
+    @media (max-width: 590px) {
+      font-size:4rem;
+      line-height: 30px;
+    }
   }
   h1 {
     font-size: 11.5rem;
@@ -167,8 +171,8 @@ const WorkWrapper = styled.div`
       font-size: 10.5rem;
     }
     @media (max-width: 350px) {
-      line-height: 90px;
-      font-size: 9rem;
+      line-height: 60px;
+      font-size: 8.7rem;
       &.text-grey {
         font-size: 4.5rem;
         line-height: 40px;

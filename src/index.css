@@ -584,10 +584,6 @@ a:hover {
     left: 0%;
     content: "";
   }
-
-  .head {
-    font-size: 60px;
-  }
 }
 
 @media (max-width: 450px) {
@@ -595,9 +591,22 @@ a:hover {
   .pace-progress {
     max-width: 260px;
   }
+  .fs-14 {
+    font-size: 12px;
+  }
+  
+  .fs-16 {
+    font-size: 14px;
+  }
+  
+  .fs-18 {
+    font-size: 16px;
+  }
+  
 }
 @media (max-width: 380px) {
   .head {
     line-height: 1.2;
+    font-size: 37px;
   }
 }

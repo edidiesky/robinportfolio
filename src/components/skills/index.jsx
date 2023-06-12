@@ -16,18 +16,9 @@ const Skills = [
   "./tech/typescript.png",
 ];
 
-const tools = [
-  "Command Line",
-  "Post Man",
-  "Git + Github",
-  "Chrome DevTools",
-];
+const tools = ["Command Line", "Post Man", "Git + Github", "Chrome DevTools"];
 
-const tools2 = [
-  "Redux",
-  "Redux Dev tool",
-  "Context Api",
-];
+const tools2 = ["Redux", "Redux Dev tool", "Context Api"];
 
 export default function SkillsIndex() {
   const SkillsLeft = () => {
@@ -65,7 +56,6 @@ export default function SkillsIndex() {
                     data-aos="fade"
                     data-aos-duration="1200"
                     data-aos-delay={index * 150}
-                    style={{ height: "15rem" }}
                   >
                     <img src={x} alt="" className="image" />
                   </div>
@@ -158,6 +148,10 @@ const SkillsWrapper = styled.div`
     @media (max-width: 980px) {
       grid-template-columns: repeat(auto-fit, minmax(auto, 1fr));
     }
+    @media (max-width: 580px) {
+      grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+      grid-row-gap: 5rem;
+    }
   }
   .text {
   }
@@ -195,9 +189,9 @@ const SkillsWrapper = styled.div`
     place-items: center;
     .image {
       width: 70px;
-      height: auto;
+      /* height: auto; */
       @media (max-width: 580px) {
-        width: 65px;
+        width: 45px;
       }
       transition: all 0.6s ease;
       &:hover {
