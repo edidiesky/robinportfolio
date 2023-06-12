@@ -14,7 +14,7 @@ export default function Work() {
           style={{ fontWeight: "normal" }}
           className="head text-white text-start"
         >
-          SOME OF MY WORKs
+          SOME OF MY WORKS
         </h3>
       </div>
       <div className="w-90 auto flex column gap-4 Workwp">

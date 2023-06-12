@@ -74,7 +74,7 @@ export default function AboutIndex() {
                       <img src={x.icon} alt="" className="icon1" />
                       <h3 className="fs-20 uppercase text-white">{x.title}</h3>
                     </div>
-                    <h4 className="family1 fs-16 text-light text-white">
+                    <h4 className="family1 fs-14 text-light text-white">
                       {x.description}
                     </h4>
                   </div>

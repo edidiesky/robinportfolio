@@ -17,7 +17,6 @@ export default function ContactIndex() {
     user_name: "",
     message: "",
     subject: "",
-    
   });
   const form = useRef();
   const dispatch = useDispatch();
@@ -44,14 +43,18 @@ export default function ContactIndex() {
         )
         .then(
           (result) => {
+            setFormData({
+              user_email: "",
+              user_name: "",
+              message: "",
+              subject: "",
+            });
             dispatch(handleMessage("Message has been sucessfully sent"));
           },
           (error) => {
             console.log(error.text);
           }
         );
-
-        setFormData("")
     }
 
     // dispatch(loginCustomer(formdata));
