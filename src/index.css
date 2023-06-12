@@ -587,10 +587,7 @@ a:hover {
 }
 
 @media (max-width: 450px) {
-  .pace,
-  .pace-progress {
-    max-width: 260px;
-  }
+
   .fs-14 {
     font-size: 12px;
   }
@@ -602,6 +599,18 @@ a:hover {
   .fs-18 {
     font-size: 16px;
   }
+
+  .preloader .loading_text {
+    letter-spacing: 18px;
+    font-size: .9rem;
+  }
+
+ .pace {
+  width: 200px;
+ }
+ .pace-progress {
+  max-width: 200px;
+ }
   
 }
 @media (max-width: 380px) {
