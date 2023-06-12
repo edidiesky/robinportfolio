@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 export default function Work() {
   return (
-    <WorkContent id="work" className="flex w-100 column gap-2">
+    <WorkContent id="work" className="flex w-100 column gap-3">
       <div className="w-85 auto hidden">
         <h3
           data-aos="fade-up"
@@ -24,7 +24,7 @@ export default function Work() {
               data-aos="fade-up"
               data-aos-duration="1100"
               data-aos-dalay={index * 300}
-              className="headerWrapper w-100"
+              className="headerWrapper py-2 w-100"
               key={index}
             >
               <div className="imagegradient"></div>
@@ -55,9 +55,13 @@ export default function Work() {
                   ''
                 </div>
                 <div className="w-100 btnWrapper flex item-center gap-2">
-                  <div className="btn fs-14 family2 py-1">
+                  <Link
+                    to={x.link1}
+                    className="btn fs-14 family2 py-1"
+                    target="_blank"
+                  >
                     View project Demo
-                  </div>
+                  </Link>
                   <Link
                     to={"https://github.com/Vivixell/portfolioVictorRobin"}
                     className="btn fs-14 family2 py-1"
@@ -216,11 +220,11 @@ const WorkContent = styled.div`
     z-index: 400;
     background-image: linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 0.4),
-      rgba(0, 0, 0, 0.4),
-      rgba(0, 0, 0, 0.4),
-      rgba(0, 0, 0, 0.4),
-      rgba(0, 0, 0, 0.4)
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
     );
   }
 `;

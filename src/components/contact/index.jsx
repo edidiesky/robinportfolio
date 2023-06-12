@@ -36,8 +36,8 @@ export default function ContactIndex() {
     } else {
       emailjs
         .sendForm(
-          "service_l5afxzs",
-          "template_m6d3vk7",
+          "service_5qrqvgj",
+          "template_j0u5e1n",
           form.current,
           "QWKTEx5C0Fp0YpDNp"
         )
@@ -49,6 +49,8 @@ export default function ContactIndex() {
             console.log(error.text);
           }
         );
+
+        setFormData("")
     }
 
     // dispatch(loginCustomer(formdata));

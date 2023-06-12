@@ -1,11 +1,9 @@
-
-
 export const work = [
   {
     image:
-      "https://uploads-ssl.webflow.com/5b0eb11723332d2455b73469/5e04efbf0b1ac58fadeb3a64_boosted-ux-hero.jpg",
+      "./image_1.png",
     description:
-      "Crowd DJ is a web app that allows people who are at a party or social gathering with a DJ (who uses Spotify) to request songs via their smartphones. The web app allows people to see the currently playing song, request songs, upvote songs, and rate songs so the DJ can see how the crowd is feeling and act accordingly. In other words, Crowd DJ is essentially a crowdsourced music queue.",
+      "The car dealership website is a platform where buyers who are interested in getting different cars can visit. A payment system using PayPal was integrated for users to carry out payments. The site provides a platform for the admin to view statistics on their sales and product created. Notwithstanding product, user and order management are also accessible for the admin",
     tools: [
       "REACT.JS",
       "CSS",
@@ -15,75 +13,23 @@ export const work = [
       "MONGODB",
       "HTML",
     ],
-     type:"Front-End Development",
-    title: "DEVELOPING A RESPONSIVE NFT WEBSITE",
+    type: "Full-Stack Development",
+     link1: "https://car-dealership-39vz.onrender.com",
+    link2: "",
+    title: " A CAR DEALERSHIP WEBSITE",
   },
   {
     image:
-      "https://uploads-ssl.webflow.com/5b0eb11723332d2455b73469/5b57ecf81371d7ac0ac7f304_boosted-2018-bg.jpg",
+      "./image_2.png",
     description:
-      "Crowd DJ is a web app that allows people who are at a party or social gathering with a DJ (who uses Spotify) to request songs via their smartphones. The web app allows people to see the currently playing song, request songs, upvote songs, and rate songs so the DJ can see how the crowd is feeling and act accordingly. In other words, Crowd DJ is essentially a crowdsourced music queue.",
+      "In this project, Fiverr clone, I seek to make a replica of the free-lancing website,Fiverr. I made a mock-up of their user-interface;I created a deshboard in which order management, gigs management, and user management were being developed. Different roles such as seller, admin, and user were being developed by my own customized api. I had to create a chatting system for the seller to be able to carry out converstaion with the buyers with the aid of socket-Io",
     tools: [
       "REACT.JS",
-      "CSS",
-      "styled-components",
-      "NODEJS",
-      "EXPRESSJS",
-      "MONGODB",
-      "HTML",
     ],
-     type:"Full-Stack Development",
-    title: "Social Media Website",
+    type: "Full-Stack Development",
+     link1: "https://car-dealership-39vz.onrender.com",
+    link2: "",
+    title: "Fiverr Website",
   },
-  {
-    image:
-      "https://uploads-ssl.webflow.com/5b0eb11723332d2455b73469/5ba8028a9ad787a0531f56cc_kore-cs-bg.png",
-    description:
-      "Crowd DJ is a web app that allows people who are at a party or social gathering with a DJ (who uses Spotify) to request songs via their smartphones. The web app allows people to see the currently playing song, request songs, upvote songs, and rate songs so the DJ can see how the crowd is feeling and act accordingly. In other words, Crowd DJ is essentially a crowdsourced music queue.",
-    tools: [
-      "REACT.JS",
-      "CSS",
-      "styled-components",
-      "NODEJS",
-      "EXPRESSJS",
-      "MONGODB",
-      "HTML",
-    ],
-     type:"Full-Stack Development",
-    title: " Cloning a functional Social Media Website",
-  },
-  {
-    image:
-      "https://uploads-ssl.webflow.com/5b0eb11723332d2455b73469/6362d058c159b6998224ea81_220801_KYSON-DANA_EASTERN_IDAHO-.jpeg",
-    description:
-      "Crowd DJ is a web app that allows people who are at a party or social gathering with a DJ (who uses Spotify) to request songs via their smartphones. The web app allows people to see the currently playing song, request songs, upvote songs, and rate songs so the DJ can see how the crowd is feeling and act accordingly. In other words, Crowd DJ is essentially a crowdsourced music queue.",
-    tools: [
-      "REACT.JS",
-      "CSS",
-      "styled-components",
-      "NODEJS",
-      "EXPRESSJS",
-      "MONGODB",
-      "HTML",
-    ],
-     type:"Full-Stack Development",
-    title: "Social Media Website",
-  },
-  {
-    image:
-      "https://uploads-ssl.webflow.com/5b0eb11723332d2455b73469/6362d058c159b6998224ea81_220801_KYSON-DANA_EASTERN_IDAHO-.jpeg",
-    description:
-      "Crowd DJ is a web app that allows people who are at a party or social gathering with a DJ (who uses Spotify) to request songs via their smartphones. The web app allows people to see the currently playing song, request songs, upvote songs, and rate songs so the DJ can see how the crowd is feeling and act accordingly. In other words, Crowd DJ is essentially a crowdsourced music queue.",
-    tools: [
-      "REACT.JS",
-      "CSS",
-      "styled-components",
-      "NODEJS",
-      "EXPRESSJS",
-      "MONGODB",
-      "HTML",
-    ],
-     type:"Full-Stack Development",
-    title: "DEVELOPING A CAR SALES WEBSITE.",
-  },
+
 ];
