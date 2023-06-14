@@ -136,7 +136,7 @@ const SkillsWrapper = styled.div`
     place-items: center;
   }
   .grid-auto {
-    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
     grid-gap: 4rem;
     grid-row-gap: 6rem;
     @media (max-width: 980px) {

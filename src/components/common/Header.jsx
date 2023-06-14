@@ -51,7 +51,7 @@ const HeaderContent = styled.div`
   background-color: var(--primary);
   padding: 2rem 0;
   z-index: 400;
-  position: sticky;
+  position: fic;
   top: 0;
   .linktext2.linktext1 {
     padding: 0 1.7rem;
