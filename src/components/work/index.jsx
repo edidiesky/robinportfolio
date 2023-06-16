@@ -12,12 +12,12 @@ export default function Work() {
           data-aos="fade-up"
           data-aos-duration="900"
           style={{ fontWeight: "normal" }}
-          className="head text-white text-start"
+          className="head text-dark text-start"
         >
           SOME OF MY WORKS
         </h3>
       </div>
-      <div className="w-90 auto flex column gap-4 Workwp">
+      {/* <div className="w-90 auto flex column gap-4 Workwp">
         {work.map((x, index) => {
           return (
             <div
@@ -36,11 +36,11 @@ export default function Work() {
                 >
                   A {x.type}
                 </h4>
-                <h2 className="fs-46 w-50 family2 text-light text-white">
+                <h2 className="fs-46 w-50 family2 text-light text-dark">
                   {x.title}
                 </h2>
 
-                <h4 className="family1 fs-14 text-white">{x.description}</h4>
+                <h4 className="family1 fs-14 text-dark">{x.description}</h4>
                 <div className="w-100 flex gap-1 column">
                   <h4 className="family1 fs-14 text-secondary">Tools</h4>
                   <div className=" flex worktools">
@@ -81,13 +81,13 @@ export default function Work() {
             </div>
           );
         })}
-      </div>
+      </div> */}
     </WorkContent>
   );
 }
 const WorkContent = styled.div`
   gap: 2rem;
-  background-color: var(--primary);
+  background-color: #fff;
   padding: 3rem 0;
 
   .title {

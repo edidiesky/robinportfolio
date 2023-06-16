@@ -29,7 +29,7 @@ export default function SmallSidebar() {
                 smooth={true}
                 offset={50}
                 duration={1000}
-                className="text-center w-100 li gap-2 item-center px-2 py-1 family2 f-16 text-bold pt-2 text-blue"
+                className="text-center w-100 li gap-2 item-center px-2 py-1 family2 f-16 text-bold pt-2 text-dark"
                 to={`${x.path}`}
                 key={x.id}
               >
@@ -51,7 +51,7 @@ const SmallSidebarContent = styled.div`
   width: 100%;
   background: #fff;
   height: 100vh;
-  top: -100%;
+  top: -150%;
   left: 0%;
   display: flex;
   align-items: center;
@@ -81,7 +81,7 @@ const SmallSidebarContent = styled.div`
     svg {
       width: 3rem;
       height: 3rem;
-      color: #fff;
+      color: #000;
     }
   }
   .smallSidebarWrapper {
@@ -98,7 +98,7 @@ const SmallSidebarContent = styled.div`
       .li {
         font-size: 40px;
         font-weight: normal;
-        color: var(--primary);
+        /* color: var(--primary); */
         padding: 0.5rem 3rem;
         transition: all 0.5s;
         cursor: pointer;

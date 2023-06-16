@@ -55,11 +55,11 @@ export default function HeroIndex() {
     return (
       <div className="flex-1">
         <div className="left w-100 h-100 flex column gap-2">
-          <h4 className="flex fs-20 family1 herotext text-light item-center gap-1 text-secondary">
+          <h4 className="flex fs-20 family1 herotext text-bold item-center gap-1 text-secondary">
             Nice to meet you!
           </h4>
           <div className="flex textwrapper w-100 column">
-            <h1 id="herotext1" className="text-white herotext hidden">
+            <h1 id="herotext1" className="text-dark herotext hidden">
               I'm Victor Robin
             </h1>
             <div className="hidden w-100">
@@ -68,7 +68,7 @@ export default function HeroIndex() {
               </h2>
             </div>
           </div>
-          <h4 className="family1 w-90 fs-24 social text-light text-grey">
+          <h4 className="family1 w-90 fs-24 social text-extra-bold text-dark">
             I’m working as a <span className="textActive">freelancer</span> and
             looking for various opportunities to create{" "}
             <span className="textActive">value to organization's</span> brands
@@ -115,7 +115,7 @@ export default function HeroIndex() {
 }
 
 const WorkWrapper = styled.div`
-  background-color: var(--primary);
+  background-color: #fff;
   width: 100%;
   padding: 15rem 0;
   min-height: 100vh;
@@ -153,7 +153,7 @@ const WorkWrapper = styled.div`
     line-height: 40px;
     font-weight: 400;
     @media (max-width: 590px) {
-      font-size:4rem;
+      font-size: 4rem;
       line-height: 30px;
     }
   }

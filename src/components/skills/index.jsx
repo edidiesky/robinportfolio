@@ -27,7 +27,7 @@ export default function SkillsIndex() {
         <div className="w-100 auto">
           <h2
             style={{ fontWeight: "normal" }}
-            className="head text-white family2 text-start"
+            className="head text-dark family2 text-start"
           >
             Skills
           </h2>
@@ -42,7 +42,7 @@ export default function SkillsIndex() {
               />
               <h3
                 style={{ fontWeight: "normal" }}
-                className="fs-30 family2 text uppercase text-white"
+                className="fs-30 family2 text uppercase text-dark"
               >
                 TECHNOLOGIES
               </h3>
@@ -72,7 +72,7 @@ export default function SkillsIndex() {
               />
               <h3
                 style={{ fontWeight: "normal" }}
-                className="fs-24 family2 uppercase text-white"
+                className="fs-24 family2 uppercase text-dark"
               >
                 Tools
               </h3>
@@ -81,7 +81,7 @@ export default function SkillsIndex() {
               {tools.map((x, index) => {
                 return (
                   <div
-                    className="w-100 fs-14 text-white family1 flex item-center gap-1"
+                    className="w-100 fs-16 text-dark text-extra-bold family1 flex item-center gap-1"
                     key={x.id}
                     data-aos="fade"
                     data-aos-duration="1200"
@@ -95,14 +95,14 @@ export default function SkillsIndex() {
           </div>
           <div className="left flex column gap-4">
             <div className="flex item-center gap-3">
-              <img
+              <imgdark
                 src="https://v2.brittanychiang.com/img/icons/light-bulb.png"
                 alt=""
                 className="icon1"
               />
               <h3
                 style={{ fontWeight: "normal" }}
-                className="fs-24 family2 uppercase text-white"
+                className="fs-24 family2 uppercase text-dark"
               >
                 Knowledge
               </h3>
@@ -111,7 +111,7 @@ export default function SkillsIndex() {
               {tools2.map((x, index) => {
                 return (
                   <div
-                    className="w-100 fs-14 text-white family1 flex item-center gap-1"
+                    className="w-100 fs-16 text-dark text-extra-bold  family1 flex item-center gap-1"
                     key={x.id}
                     data-aos="fade"
                     data-aos-duration="1200"
@@ -145,6 +145,7 @@ const SkillsWrapper = styled.div`
   background-color: var(--primary);
   .grid-auto {
     grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    grid-row-gap: 4rem;
     @media (max-width: 980px) {
       grid-template-columns: repeat(auto-fit, minmax(auto, 1fr));
     }
@@ -154,6 +155,9 @@ const SkillsWrapper = styled.div`
     }
   }
   .text {
+  }
+  h3 {
+    font-weight: 700;
   }
   .grid-wrapper {
     grid-template-columns: 1fr 20vw 20vw;
@@ -172,7 +176,7 @@ const SkillsWrapper = styled.div`
     content: "";
   }
   .icon1 {
-    filter: grayscale(100%);
+    filter: brightness(0%);
     width: 35px;
     height: auto;
     transition: all 0.6s ease;

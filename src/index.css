@@ -40,7 +40,7 @@ body {
 :root {
   --grey-1: rgb(134, 134, 134);
   --gradient: #2f3243;
-  --primary: #030303;
+  --primary: #f2f2f2;
   --secondary: #f4ad24;
   --light-grey: #f2f2f2;
   --dark-1: rgb(51, 60, 78);
@@ -161,6 +161,11 @@ html {
   color: #fff;
 }
 
+.text-dark {
+  color: #030303;
+}
+
+
 .textActive {
   color: var(--secondary);
   position: relative;
@@ -201,9 +206,9 @@ input {
   flex: 1;
 }
 
-.text-dark {
+/* .text-dark {
   color: var(--dark-1);
-}
+} */
 
 .text-grey2 {
   color: var(--light-grey);

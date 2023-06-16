@@ -98,11 +98,11 @@ const SkillsWrapper = styled.div`
   .imagegradient {
     background-image: linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 0.9),
-      rgba(0, 0, 0, 0.9),
-      rgba(0, 0, 0, 0.9),
-      rgba(0, 0, 0, 0.9),
-      rgba(0, 0, 0, 0.9)
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
     );
     z-index: 200;
   }
