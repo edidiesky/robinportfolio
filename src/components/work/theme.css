@@ -1,0 +1,52 @@
+.custom-dots {
+  display: flex;
+  justify-content: center !important;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  gap: 0.1rem;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.custom-dot {
+  background-color: #fff !important;
+  /* border: 1px solid #fff !important; */
+  border-radius: 50% !important;
+  height: 15px !important;
+  margin: 0 5px !important;
+  width: 15px !important;
+}
+
+.custom-dot.active {
+  width: 100%;
+  position: relative;
+  background-color: var(--secondary) !important;
+}
+
+.owl-dot span {
+  display: none !important;
+}
+
+.owl-carousel .owl-item {
+  transition: all 1s ease-in-out !important;
+}
+
+.owl-carousel .owl-item:not(.active) {
+  /* opacity: 0.3 !important; */
+}
+
+/* .item {
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+    
+    .item.active {
+      opacity: 1;
+    } */
+
+@media (max-width: 780px) {
+  .custom-dots {
+    display: none;
+  }
+}
