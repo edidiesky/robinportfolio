@@ -143,6 +143,7 @@ html {
   cursor: pointer;
   font-family: "Teko", sans-serif;
   color: #fff;
+  border-radius: 40px;
   background-color: transparent;
   text-transform: uppercase;
   transition: all 0.5s;
