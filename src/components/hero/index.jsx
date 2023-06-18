@@ -1,7 +1,6 @@
 import { Canvas, useFrame } from "@react-three/fiber";
 import { MeshWobbleMaterial, OrbitControls, useGLTF } from "@react-three/drei";
 import React, { useRef } from "react";
-import SplitType from "split-type";
 import { BsGithub, BsTwitter } from "react-icons/bs";
 import { AiFillLinkedin } from "react-icons/ai";
 import styled from "styled-components";
@@ -115,7 +114,7 @@ export default function HeroIndex() {
 }
 
 const WorkWrapper = styled.div`
-  background-color: #fff;
+  background-color: var(--prinmary);
   width: 100%;
   padding: 15rem 0;
   min-height: 100vh;
@@ -136,9 +135,10 @@ const WorkWrapper = styled.div`
   }
   .wrapper {
     gap: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     @media (max-width: 780px) {
-      flex-direction: column;
-      gap: 6rem;
+      grid-template-columns: 1fr 1fr;
     }
   }
   h4 {

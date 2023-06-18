@@ -146,7 +146,7 @@ const SkillsWrapper = styled.div`
   padding: 5rem 0;
   display: grid;
   place-items: center;
-  background-color: var(--primary);
+  background-color: #fff;
   .grid-auto {
     grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
     grid-row-gap: 4rem;
