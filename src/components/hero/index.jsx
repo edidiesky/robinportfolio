@@ -58,7 +58,7 @@ export default function HeroIndex() {
             Nice to meet you!
           </h4>
           <div className="flex textwrapper w-100 column">
-            <h1 id="herotext1" className="text-dark herotext hidden">
+            <h1 id="herotext1" className="text-white herotext hidden">
               I'm Victor Robin
             </h1>
             <div className="hidden w-100">
@@ -67,7 +67,7 @@ export default function HeroIndex() {
               </h2>
             </div>
           </div>
-          <h4 className="family1 w-90 fs-24 social text-extra-bold text-dark">
+          <h4 className="family1 w-90 fs-18 social text-extra-bold text-grey">
             I’m working as a <span className="textActive">freelancer</span> and
             looking for various opportunities to create{" "}
             <span className="textActive">value to organization's</span> brands
@@ -143,7 +143,6 @@ const WorkWrapper = styled.div`
   }
   h4 {
     line-height: 26px;
-    font-size: 17px;
     @media (max-width: 780px) {
       font-size: 15px;
     }
