@@ -83,7 +83,7 @@ export default function ContactIndex() {
             Get In Touch
           </h3>
           <span
-            className="block fs-16 py-1 text1 text-white text-center w-85 auto family1"
+            className="block fs-20 py-1 text1 text-white text-center w-85 auto family1"
             style={{ fontWeight: "300" }}
           >
             Have an interesting work in mind for me? Feel free to send me your
@@ -177,7 +177,8 @@ const ContactWrapper = styled.div`
   position: relative;
   display: grid;
   place-items: center;
-  padding: 10rem 0;
+  padding: 5rem 0;
+  padding-top: 8rem;
   z-index: 40;
   .bntWrapper {
     padding: 4rem 0;

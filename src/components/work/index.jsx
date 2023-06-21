@@ -2,28 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import { FaSearchPlus } from "react-icons/fa";
 import { work } from "../../data/work";
-import OwlCarousel from "react-owl-carousel";
 import { Link } from "react-router-dom";
 
-import "owl.carousel/dist/assets/owl.carousel.css";
-import "owl.carousel/dist/assets/owl.theme.default.css";
-import "./theme.css";
-// owl options
-const options = {
-  items: 1,
-  dots: true,
-  dotsClass: "owl-dots custom-dots",
-  dotClass: "owl-dot custom-dot",
-  margin: 20,
-  responsive: {
-    0: {
-      items: 1,
-    },
-    600: {
-      items: 1,
-    },
-  },
-};
+
 
 export default function Work() {
   return (
@@ -40,73 +21,71 @@ export default function Work() {
       </div>
       <div className="w-100 auto flex column gap-4 Workwp">
         {/* owl carousel section */}
-        <OwlCarousel className="owl-theme" {...options}>
-          {work.map((x, index) => {
-            return (
-              <div
-                data-aos="fade-up"
-                data-aos-duration="1100"
-                data-aos-dalay={index * 300}
-                className="headerWrapper py-2 w-100"
-                key={index}
-              >
-                <div className="imagegradient"></div>
-                <img src={x.image} alt="" className="imageWrapper" />
-                <div className="herowrapper h-100 flex justify-center column gap-3  ">
-                  <h4
-                    style={{ fontWeight: "400" }}
-                    className="family2  w-100 fs-16 text-secondary"
-                  >
-                    A {x.type}
-                  </h4>
-                  <h2 className="fs-46 w-100 family2 text-light text-white">
-                    {x.title}
-                  </h2>
+        {work.map((x, index) => {
+          return (
+            <div
+              data-aos="fade-up"
+              data-aos-duration="1100"
+              data-aos-dalay={index * 300}
+              className="headerWrapper py-2 w-100"
+              key={index}
+            >
+              <div className="imagegradient"></div>
+              <img src={x.image} alt="" className="imageWrapper" />
+              <div className="herowrapper h-100 flex justify-center column gap-3  ">
+                <h4
+                  style={{ fontWeight: "400" }}
+                  className="family2  w-100 fs-16 text-secondary"
+                >
+                  A {x.type}
+                </h4>
+                <h2 className="fs-46 w-100 family2 text-light text-white">
+                  {x.title}
+                </h2>
 
-                  <h4 className="family1 w-100 fs-14 text-white">
-                    {x.description}
-                  </h4>
-                  <div className="w-100 flex gap-1 column">
-                    <h4 className="family1 fs-14 text-secondary">Tools</h4>
-                    <div className=" w-100 flex worktools">
-                      {x.tools.map((x, index) => {
-                        return (
-                          <div className="tools family2" key={index}>
-                            {x}
-                          </div>
-                        );
-                      })}
-                    </div>
-                    ''
+                <h4 className="family1 w-100 fs-14 text-white">
+                  {x.description}
+                </h4>
+                <div className="w-100 flex gap-1 column">
+                  <h4 className="family1 fs-14 text-secondary">Tools</h4>
+                  <div className=" w-100 flex worktools">
+                    {x.tools.map((x, index) => {
+                      return (
+                        <div className="tools family2" key={index}>
+                          {x}
+                        </div>
+                      );
+                    })}
                   </div>
-                  <div className="w-100 btnWrapper flex item-center gap-2">
-                    {x.link1 ? (
-                      <Link
-                        to={x.link1}
-                        className="btn fs-14 family2 py-1"
-                        target="_blank"
-                      >
-                        View project Demo
-                      </Link>
-                    ) : (
-                      <div className="btn fs-14 family2 py-1" target="_blank">
-                        Project Comming Soon
-                      </div>
-                    )}
-
+                  ''
+                </div>
+                <div className="w-100 btnWrapper flex item-center gap-2">
+                  {x.link1 ? (
                     <Link
-                      to={"https://github.com/Vivixell/portfolioVictorRobin"}
+                      to={x.link1}
                       className="btn fs-14 family2 py-1"
                       target="_blank"
                     >
-                      View project Code
+                      View project Demo
                     </Link>
-                  </div>
+                  ) : (
+                    <div className="btn fs-14 family2 py-1" target="_blank">
+                      Project Comming Soon
+                    </div>
+                  )}
+
+                  <Link
+                    to={"https://github.com/Vivixell/portfolioVictorRobin"}
+                    className="btn fs-14 family2 py-1"
+                    target="_blank"
+                  >
+                    View project Code
+                  </Link>
                 </div>
               </div>
-            );
-          })}
-        </OwlCarousel>
+            </div>
+          );
+        })}
       </div>
     </WorkContent>
   );
