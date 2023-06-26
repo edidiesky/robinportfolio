@@ -40,7 +40,7 @@ body {
 :root {
   --grey-1: rgb(134, 134, 134);
   --gradient: #2f3243;
-  --primary: #100F10;
+  --primary: #100f10;
   --secondary: #f4ad24;
   --light-grey: #f2f2f2;
   --dark-1: rgb(51, 60, 78);
@@ -166,7 +166,6 @@ html {
   color: #030303;
 }
 
-
 .textActive {
   color: var(--secondary);
   position: relative;
@@ -236,7 +235,6 @@ h1 {
   font-family: "Teko", sans-serif;
   letter-spacing: 1px;
 }
-
 
 .char {
   opacity: 0;
@@ -593,31 +591,29 @@ a:hover {
 }
 
 @media (max-width: 450px) {
-
   .fs-14 {
     font-size: 12px;
   }
-  
+
   .fs-16 {
     font-size: 14px;
   }
-  
+
   .fs-18 {
     font-size: 16px;
   }
 
   .preloader .loading_text {
     letter-spacing: 18px;
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
 
- .pace {
-  width: 200px;
- }
- .pace-progress {
-  max-width: 200px;
- }
-  
+  .pace {
+    width: 200px;
+  }
+  .pace-progress {
+    max-width: 200px;
+  }
 }
 @media (max-width: 380px) {
   .head {
