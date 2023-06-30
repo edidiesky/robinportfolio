@@ -81,7 +81,7 @@ const SmallSidebarContent = styled.div`
     svg {
       width: 3rem;
       height: 3rem;
-      color: #000;
+      color: #fff;
     }
   }
   .smallSidebarWrapper {
