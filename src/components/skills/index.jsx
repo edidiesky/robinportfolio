@@ -17,7 +17,6 @@ const Skills = [
   "./tech/typescript.png",
   "./tech/tailwind.png",
   "./tech/git.png",
-
 ];
 
 const tools = ["Command Line", "Post Man", "Git + Github", "Chrome DevTools"];
@@ -162,14 +161,16 @@ const SkillsWrapper = styled.div`
   }
   .fs-16 {
     font-size: 15px;
-    @media (max-width:780px) {
+    @media (max-width: 780px) {
       font-size: 14px;
     }
   }
   .fs-20 {
     font-size: 18px;
-    font-weight: 900;
-   
+    font-weight: 700;
+    @media (max-width: 450px) {
+      font-size: 14px;
+    }
   }
   h3 {
     font-weight: 700;
