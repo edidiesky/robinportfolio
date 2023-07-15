@@ -12,15 +12,15 @@ export default function Footer() {
   // console.log(form.current)
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!user_email || !subject || !user_name || !message) {
+    if (!user_email || !subject || !user_name || !message || !subject) {
       alert("Fill in the required form data");
     } else {
       emailjs
         .sendForm(
-          "service_h971wyz",
-          "template_c7w87nw",
+          "service_ikss287",
+          "template_jwbhpkj",
           form.current,
-          "QWKTEx5C0Fp0YpDNp"
+          "HvjUueCjGw8jnVKgB"
         )
         .then(
           (result) => {
@@ -53,7 +53,7 @@ export default function Footer() {
             style={{ justifyContent: "flex-end" }}
           >
             {" "}
-            <img src="./profile.jfif" alt="" className="image" />
+            {/* <img src="./profile.jfif" alt="" className="image" /> */}
           </div>
         </div>
         <div className="grid_wrapper w-85 auto" style={{ paddingTop: "4rem" }}>
@@ -134,7 +134,7 @@ export default function Footer() {
                   value={message}
                   id="message"
                   type="text"
-                  placeholder="Hello Edidiong, can you help me with.... *"
+                  placeholder="Hello Victor, can you help me with.... *"
                   className="input family3"
                 />
               </label>
@@ -156,7 +156,7 @@ export default function Footer() {
               </h4>
               <ul className="flex column flex" style={{ gap: "1.5rem" }}>
                 <li className="fs-14 text-grey family1">
-                  essienedidiong1000@gmail.com
+                  essienVictor1000@gmail.com
                 </li>
                 <li className="fs-14 text-grey family1">08127107270</li>
               </ul>
