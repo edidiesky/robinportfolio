@@ -1,4 +1,3 @@
-
 import React, { useRef } from "react";
 import { BsGithub, BsTwitter } from "react-icons/bs";
 import { AiFillLinkedin } from "react-icons/ai";
@@ -12,7 +11,6 @@ export default function HeroIndex() {
   // useEffect(() => {
 
   // }, []);
-
 
   return (
     <WorkWrapper>
@@ -28,17 +26,19 @@ export default function HeroIndex() {
             <div className="flex textwrapper w-100 hidden column">
               <div className="flex column">
                 <div className="hidden">
-                  <h2 className="text-grey text1 hidden text-center">Making</h2>
+                  <h2 className="text-grey text1 hidden text-center">
+                    Bringing
+                  </h2>
                 </div>
                 <div className="hidden">
                   {" "}
                   <h2 className="text-grey text1 hidden text-center">
-                    <span className="text-secondary">good stuffs</span>
+                    <span className="text-secondary">Amazing stuffs</span>
                   </h2>
                 </div>
                 <div className="hidden">
                   <h2 className="text-grey text1 hidden text-center">
-                    a reality
+                    to reality
                   </h2>
                 </div>
               </div>
@@ -80,8 +80,8 @@ const WorkWrapper = styled.div`
     padding-top: 5rem;
   }
   h2 {
-    font-size: 15rem;
-    line-height: 130px;
+    font-size: 13rem;
+    line-height: 120px;
     font-weight: normal;
     width: 50%;
     margin: 0 auto;
@@ -90,7 +90,7 @@ const WorkWrapper = styled.div`
 
     @media (max-width: 980px) {
       line-height: 100px;
-      font-size: 14rem;
+      font-size: 12rem;
       width: 90%;
     }
 
