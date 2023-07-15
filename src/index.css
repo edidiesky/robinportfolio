@@ -1,9 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Nunito+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Teko:wght@300;400;500;600;700&display=swap");
-/* *,
-::after,
-::before {
-  box-sizing: border-box;
-} */
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Forum&display=swap");
 
 * {
   margin: 0;
@@ -11,6 +7,9 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
+}
+.line {
+  position: relative;
 }
 .target {
   font-kerning: none;
@@ -20,16 +19,45 @@ button {
   font-family: inherit;
 }
 
+[data-aos="fade-up"] {
+  transform: translate3d(0, 140px, 0) !important;
+}
+[data-aos="fade-up"].aos-animate {
+  transform: translate3d(0, 0, 0) !important;
+
+}
+
+.wrapper {
+  background-color: var(--primary);
+}
+
+
+.wrapper {
+  /* position: absolute; */
+  width: 100vw;
+  height: 100vh;
+}
+/* .wrapper h1 {
+  font-size: 70px;
+  font-weight: normal;
+  letter-spacing: 2px;
+  color: #fff;
+  line-height: 5.9rem;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+} */
+
 html,
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "Teko", sans-serif;
-  line-height: 1.5;
+  font-family: "Bebas Neue", sans-serif;
+  line-height: 1.2;
+  /* line-height: 30px; */
   background-color: var(--primary);
   color: var(--primary);
   font-weight: normal;
+  position: relative;
 }
 
 /* .layout {
@@ -38,51 +66,64 @@ body {
 } */
 
 :root {
-  --grey-1: rgb(134, 134, 134);
+  --grey-1: #b7ab98;
   --gradient: #2f3243;
-  --primary: #100f10;
-  --secondary: #f4ad24;
+  --primary: rgb(13, 13, 13);
+  --secondary: #f4a70f;
   --light-grey: #f2f2f2;
-  --dark-1: rgb(51, 60, 78);
+  --dark-1: rgb(13, 13, 13);
   --dark-3: rgb(27, 27, 27);
   --red: #c61212;
 }
-
-.pace {
-  pointer-events: none;
-  z-index: 1300;
+/* .text {
+  opacity: 0;
+  transform: translate3d(0, -200px, 0);
+} */
+/* .word {
+  opacity: 0;
+  transform: translate3d(0, 200px, 0);
+} */
+/* .word {
+  display: block !important;
+} */
+/* .text {
+  transform: translateY(350px);
+  transition: all 0.4s;
+} */
+.overlay {
+  z-index: 3000600;
   font-weight: 700;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
   position: fixed;
-  top: 55%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 300px;
-  border: 0;
-  height: 0.1px;
-  overflow: hidden;
-  background-color: #1b1b1b;
+  background-color: var(--grey-1);
+  align-items: flex-end;
 }
 
-.pace.pace-inactive {
-  display: block;
+.overlay .bar {
+  width: 10vw;
+  height: 0;
+  background-color: var(--primary);
 }
 
-.pace .pace-progress {
-  background: #ffffff !important;
+.counter {
   position: fixed;
-  z-index: 100000000;
-  top: 0;
-  max-width: 300px;
-  right: 100%;
+  height: 100%;
   width: 100%;
-  height: 2px;
-  z-index: 1200;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  font-size: 20rem;
+  color: #fff;
+  z-index: 33330000;
+  /* background-color: #1a1a1a; */
 }
-
-/* rgb(red 60, 78) */
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 .preloader {
@@ -130,22 +171,55 @@ html {
 .shadow:hover {
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
 }
-.herotext2 {
-}
 
 .subBtn:hover {
   background-color: var(--blue-2);
 }
 
+.pace {
+  pointer-events: none;
+  z-index: 6300;
+  font-weight: 700;
+  position: fixed;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 1px;
+  overflow: hidden;
+  background-color: #1b1b1b !important;
+  /* height: 2px; */
+  /* border-radius: 50%; */
+  /* border: 2px solid #1b1b1b !important; */
+}
+
+.pace.pace-inactive {
+  display: block;
+}
+
+.pace .pace-progress {
+  background: #ffffff !important;
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  max-width: 300px;
+  right: 100%;
+  width: 100%;
+  height: 1px;
+  z-index: 2200;
+  /* border-radius: inherit; */
+  /* border: 1px solid #fff !important; */
+}
+
 .btn {
-  border: 1px solid white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   outline: none;
   cursor: pointer;
-  font-family: "Teko", sans-serif;
+  /* font-family: "Bebas Neue", sans-serif; */
   color: #fff;
   border-radius: 40px;
   background-color: transparent;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   transition: all 0.5s;
 }
 
@@ -209,9 +283,8 @@ input {
 /* .text-dark {
   color: var(--dark-1);
 } */
-
 .text-grey2 {
-  color: var(--light-grey);
+  color: #777;
 }
 
 .span1 {
@@ -219,26 +292,33 @@ input {
 }
 
 p {
-  font-family: "Nunito  ", sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
-h1 {
+/* h1 {
   font-family: "Teko", sans-serif;
-}
+} */
 
 .family1 {
-  font-family: "Nunito", sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-weight: normal;
 }
 
 .family2 {
-  font-family: "Teko", sans-serif;
-  letter-spacing: 1px;
+  font-family: "Lora", sans-serif;
+}
+.family3 {
+  font-family: "Work Sans", sans-serif;
+}
+h4 {
+  font-size: 12px;
+  letter-spacing: 8px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  color: var(--grey-1);
 }
 
-.char {
-  opacity: 0;
-}
 /* .word {
   opacity: 0;
 } */
@@ -476,13 +556,12 @@ a:hover {
 .fs-70 {
   font-size: 70px;
 }
+.fs-60 {
+  font-size: 60px;
+}
 
 .fs-46 {
   font-size: 46px;
-}
-
-.fs-70 {
-  font-size: 70px;
 }
 
 .fs-12 {
@@ -506,7 +585,7 @@ a:hover {
 }
 
 .w-85 {
-  width: 85%;
+  width: 75%;
   max-width: 1190px;
 }
 
@@ -562,7 +641,7 @@ a:hover {
   }
 
   .w-85 {
-    width: 90%;
+    width: 75%;
   }
 }
 
@@ -590,9 +669,12 @@ a:hover {
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 780px) {
   .fs-14 {
     font-size: 12px;
+  }
+  .fs-60 {
+    font-size: 45px;
   }
 
   .fs-16 {
@@ -614,10 +696,16 @@ a:hover {
   .pace-progress {
     max-width: 200px;
   }
+  h4 {
+    font-size: 1.1rem;
+  }
 }
 @media (max-width: 380px) {
   .head {
     line-height: 1.2;
     font-size: 37px;
+  }
+  .fs-60 {
+    font-size: 40px;
   }
 }

@@ -1,86 +1,50 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { Head } from "../common";
-import Input from "../forms/Input";
-import { BiChevronRight } from "react-icons/bi";
+import TextIndex from "../common/Text";
 
-const Skills = [
-  "https://v1.brittanychiang.com/img/skills/html.png",
-  "https://v1.brittanychiang.com/img/skills/css.png",
-  "https://v1.brittanychiang.com/img/skills/js.png",
-  "https://v1.brittanychiang.com/img/skills/node.png",
-  "https://v1.brittanychiang.com/img/skills/mongodb.png",
-  "https://v1.brittanychiang.com/img/skills/github.png ",
-  "https://v1.brittanychiang.com/img/skills/angular.png",
-  "./tech/redux.png",
-  "https://v1.brittanychiang.com/img/skills/python.png",
-  "https://v1.brittanychiang.com/img/skills/js.png",
-];
-
-const tools = [
-  {
-    description:
-      "I strive to create pixel-perfect websites and applications that not only look great but also have a solid foundation of clean, modular, and efficient code.I am committed to maintaining a semantic structure and implementing the DRY (Don't Repeat Yourself) principle, ensuring scalability and maintainability of the projects I work on.    ",
-    title: "WEB DEVELOPMENT",
-    icon: "https://v2.brittanychiang.com/img/icons/html.png",
-  },
-  {
-    description:
-      "With a deep understanding of media queries, I ensure that the websites and applications I develop adapt flawlessly to various platforms. By utilizing key concepts in grid and flex, I streamline the development process, allowing me to create responsive UIs that are not only aesthetically pleasing but also perform optimally on any device.",
-    title: "KEEN IN RESPONSIVE DEVELOPMENT",
-    icon: "https://v2.brittanychiang.com/img/icons/pencil.png",
-  },
-  {
-    description:
-      "As a developer I seek to create satisfaction in delivering efficient products, nothwithstanding I also seek that I keep to the set time for the project completion.",
-    title: "STICKS TO DEADLINE",
-    icon: "https://v2.brittanychiang.com/img/icons/internet.png",
-  },
-  {
-    description:
-      "Versed and passionate in the application of modern technology, I believe that these technologies can lead to a more better and faster innovative solutions to problems in the industry. ",
-    title: "VERSED IN MODERN TECHNOLOGIES",
-    icon: "https://v2.brittanychiang.com/img/icons/ux-design.png",
-  },
+const whatIdoData = [
+  "Responsive design",
+  "Api development",
+  "Animations",
+  "Maintainable Code",
 ];
 
 export default function AboutIndex() {
   return (
     <SkillsWrapper id="about">
-      <div className="imageWrapper"></div>
-      <div className="imagegradient"></div>
-      <div className="left w-85 auto h-100 flex column gap-3">
-        <div className="w-100">
-          <h3
+      <div className="left w-100  h-100 flex column">
+        <div className=" w-85 auto">
+          <h4
             style={{ fontWeight: "normal" }}
-            className="head text-white text-start"
+            className="text-grey family2 text-start flex item-center gap-2"
           >
+            <img
+              src="https://v2.brittanychiang.com/img/icons/settings.png"
+              alt=""
+              className="icon1"
+            />
             What I Do
-          </h3>
+          </h4>
         </div>
-        <div className="w-100 grid grid-wrapper">
-          <div className="left flex column gap-2">
-            <div className="w-100 grid grid-auto">
-              {tools.map((x, index) => {
-                return (
-                  <div
-                    className="w-100 flex column card gap-2"
-                    key={x.id}
+        <div className="w-100 grid">
+          <div className="left flex item-start column">
+            {whatIdoData.map((x, index) => {
+              return (
+                <div className="w-100 hidden">
+                  <h2
+                    key={index}
                     data-aos="fade-up"
-                    data-aos-duration="1500"
-                    data-aos-delay={index * 350}
+                    data-aos-duration="1000"
+                    data-aos-delay={index * 250}
+                    className="text-grey w-100 uppercase text-start"
                   >
-                    <div className="top flex item-center gap-2">
-                      <img src={x.icon} alt="" className="icon1" />
-                      <h3 className="fs-20 uppercase text-white">{x.title}</h3>
+                    <div className="w-85 auto">
+                      <TextIndex x={x} />
                     </div>
-                    <h4 className="family1 fs-14 text-light text-white">
-                      {x.description}
-                    </h4>
-                  </div>
-                );
-              })}
-            </div>
+                  </h2>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
@@ -94,33 +58,18 @@ const SkillsWrapper = styled.div`
   display: grid;
   place-items: center;
   padding: 6rem 0;
+  padding-top: 6rem;
   transform-style: inherit;
-  .imagegradient {
-    background-image: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.6),
-      rgba(0, 0, 0, 0.6),
-      rgba(0, 0, 0, 0.6),
-      rgba(0, 0, 0, 0.6),
-      rgba(0, 0, 0, 0.6)
-    );
-    z-index: 200;
-  }
-  .imageWrapper,
-  .imagegradient {
+  /* background-color: rgba(13, 13, 13, 0.81) !important; */
+
+  .line .span {
     position: absolute;
-    width: 100%;
+    top: 0;
+    right: 0;
     height: 100%;
-  }
-  .imageWrapper {
-    background-image: url("coding_1.jpg");
-    background-size: cover;
-    position: absolute;
-    background-position: center;
     width: 100%;
-    z-index: -1;
-    height: 100%;
-    background-attachment: fixed;
+    background-color: rgba(13, 13, 13);
+    background-color: rgba(13, 13, 13, 0.852);
   }
   .text1,
   .head {
@@ -130,23 +79,7 @@ const SkillsWrapper = styled.div`
       margin: 0;
     }
   }
-  .left {
-    z-index: 300;
-    display: grid;
-    place-items: center;
-  }
-  .grid-auto {
-    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-    grid-gap: 4rem;
-    grid-row-gap: 6rem;
-    @media (max-width: 980px) {
-      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-      grid-row-gap: 6rem;
-    }
-    @media (max-width: 480px) {
-      grid-template-columns: 1fr;
-    }
-  }
+
   .heads::after {
     position: absolute;
     width: 100px;
@@ -156,27 +89,26 @@ const SkillsWrapper = styled.div`
     left: 0%;
     content: "";
   }
-  .card {
-    .top {
-      h3 {
-        font-size: 30px;
-        font-weight: normal;
-      }
+  h2 {
+    letter-spacing: 1px;
+    font-weight: normal;
+    font-size: 100px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 0;
+
+    @media (max-width: 1080px) {
+      font-size: 90px;
+      /* font-weight: bold; */
     }
-    &:hover {
-      h4 {
-        color: var(--secondary);
-      }
-      .icon1 {
-        filter: brightness(80%);
-      }
+    @media (max-width: 780px) {
+      font-size: 70px;
+      /* font-weight: bold; */
+    }
+    @media (max-width: 380px) {
+      font-size: 55px;
     }
   }
-  h4 {
-    font-weight: 300;
-    line-height: 1.7;
-    transition: all 0.6s ease;
-  }
+
   .icon1 {
     filter: brightness(100%);
     transition: all 0.6s ease;

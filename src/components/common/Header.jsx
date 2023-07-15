@@ -24,7 +24,7 @@ export default function Header() {
           VICTOR ROBIN
         </Link>
         <div className="icon" onClick={() => dispatch(onSidebar())}>
-          <HiBars4 fontSize={"30px"} />
+          <HiBars4 fontSize={"30px"} color="#222" />
         </div>
         <div className="flex item-center list flex-1 gap-4">
           {data.map((x) => {
