@@ -1,38 +1,32 @@
-import React from "react";
+import React, { useLayoutEffect } from "react";
 import { motion } from "framer-motion";
-import styled from "styled-components";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect } from "react";
-import TextIndex from "../common/Text";
-import useMousePosition from "../../hooks/useMousePosition";
 import SplitType from "split-type";
+import styled from "styled-components";
+import useMousePosition from "../../hooks/useMousePosition";
 import { useState } from "react";
-import { useLayoutEffect } from "react";
-gsap.registerPlugin(ScrollTrigger);
+import gsap from "gsap";
 
-export default function AboutMeIndex() {
+export default function Experience() {
   const { x, y } = useMousePosition();
   const [isHovered, setIsHovered] = useState(false);
   const size = isHovered ? 400 : 20;
-
   useLayoutEffect(() => {
-    const spitTexts = new SplitType(".aboutmetext", { type: "chars" });
+    const spitTexts = new SplitType(".experiencetext", { type: "chars" });
     gsap.fromTo(
       spitTexts.chars,
-      { skewY: 65, y: 670 }, // Initial skewY value
+      { y: 670, opacity: 0 }, // Initial skewY value
       {
-        skewY: 0,
         y: 0,
-        duration: 1.2,
-        delay: 1.5,
+        opacity: 1,
+        duration: 1.6,
+        delay: 2,
         ease: "easeOutExpo",
         stagger: {
-          amount: 0.5,
+          amount: 0.8,
         },
         scrollTrigger: {
-          trigger: ".aboutmetext",
-          start: "top 80%",
+          trigger: ".experiencetext",
+          start: "top 85%",
           end: "bottom 65%",
           scrub: true,
           container: ".left",
@@ -41,9 +35,9 @@ export default function AboutMeIndex() {
     );
   }, []);
   return (
-    <SkillsWrapper
-      id="about"
+    <ExperienceStyles
       data-scroll-section
+      id="about"
       className="flex item-center column justify-center gap-2"
     >
       <div className="left w-100 flex item-center justify-center auto h-100 flex column gap-4">
@@ -63,47 +57,43 @@ export default function AboutMeIndex() {
               onMouseLeave={() => {
                 setIsHovered(false);
               }}
-              className=" family1 text-grey"
+              className="family1 text-grey"
             >
               <div style={{ marginBottom: "30px" }} className="block fs-16">
-                ABOUT ME
+                Experience
               </div>
-              <div className="aboutmetext">
-                No cap I can help sky-rocket your web product distinctively by
-                introducing high quality product which dependes on the pay-check
-              </div>
+              <span className="experiencetext">
+                Well I have work a majority of my experience as a full stack
+                devloper in free-lancing and obviously contributing to open
+                sources with amazing devs.
+              </span>
             </h2>
           </motion.div>
           <div className="mask_content w-100 h-100 flex item-center justify-center">
-            <h2 className="family1 family1 text-grey">
+            <h2 className="family1 text text-grey">
               <div style={{ marginBottom: "30px" }} className="block fs-16">
-                ABOUT ME
+                Experience
               </div>
-
-              <div className="aboutmetext">
-                I am a full stack web developer with a keen focus in helping
-                organization's products stand distinctively by producing high
-                quality product and an impactful user experience
-              </div>
+              <span className="experiencetext">
+                Devloping amazing projects and working with couple of developers
+                in developing amazing interfaces and contributing to open source
+              </span>
             </h2>
           </div>
         </div>
       </div>
-    </SkillsWrapper>
+    </ExperienceStyles>
   );
 }
 
-const SkillsWrapper = styled.div`
+const ExperienceStyles = styled.div`
   width: 100%;
   position: relative;
-
   height: 100vh;
+
   h4 {
     width: 1000px;
     padding: 30px 20px;
-  }
-  .line {
-    overflow: hidden !important;
   }
   .maskWrapper {
     position: relative;
@@ -122,15 +112,19 @@ const SkillsWrapper = styled.div`
     .text {
       /* z-index: 20; */
     }
-
+    .line {
+      overflow: hidden !important;
+    }
     h2 {
       font-size: 60px;
       line-height: 1;
       width: 1000px;
       padding: 30px 20px;
-      span {
+      width: 1000px;
+      padding: 30px 20px;
+      /* span {
         color: var(--secondary);
-      }
+      } */
       @media (max-width: 980px) {
         font-size: 50px;
       }

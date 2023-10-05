@@ -1,8 +1,102 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Forum&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Montserrat+Alternates:ital,wght@0,300;0,400;0,500;0,700;1,200;1,300;1,400;1,500;1,600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Montserrat+Alternates:ital,wght@0,300;0,400;0,500;0,700;1,200;1,300;1,400;1,500;1,600&display=swap");
 
+@font-face {
+  font-family: "CustomFont_Bold";
+  src: url("./assets/Montreal.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "CustomFont_Light";
+  src: url("./assets/Montreal.ttf") format("truetype");
+}
+
+html.has-scroll-smooth {
+  overflow: hidden;
+}
+
+html.has-scroll-dragging {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.has-scroll-smooth [data-scroll-container] {
+  min-height: 100vh;
+}
+
+[data-scroll-direction="horizontal"] [data-scroll-container] {
+  min-height: 100vh;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+[data-scroll-direction="horizontal"] [data-scroll-section] {
+  display: inline-block;
+  vertical-align: top;
+  white-space: nowrap;
+  height: 100%;
+}
+
+.c-scrollbar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 11px;
+  height: 100%;
+  transform-origin: center right;
+  transition: transform 0.3s, opacity 0.3s;
+  opacity: 0;
+}
+.c-scrollbar:hover {
+  transform: scaleX(1.45);
+}
+.c-scrollbar:hover,
+.has-scroll-scrolling .c-scrollbar,
+.has-scroll-dragging .c-scrollbar {
+  opacity: 1;
+}
+[data-scroll-direction="horizontal"] .c-scrollbar {
+  width: 100%;
+  height: 10px;
+  top: auto;
+  bottom: 0;
+  transform: scaleY(1);
+}
+[data-scroll-direction="horizontal"] .c-scrollbar:hover {
+  transform: scaleY(1.3);
+}
+
+.c-scrollbar_thumb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: black;
+  opacity: 0.5;
+  width: 7px;
+  border-radius: 10px;
+  margin: 2px;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+.has-scroll-dragging .c-scrollbar_thumb {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+[data-scroll-direction="horizontal"] .c-scrollbar_thumb {
+  right: auto;
+  bottom: 0;
+}
+a {
+  color: inherit;
+}
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
 
 * {
   margin: 0;
@@ -27,13 +121,11 @@ button {
 }
 [data-aos="fade-up"].aos-animate {
   transform: translate3d(0, 0, 0) !important;
-
 }
 
 .wrapper {
   background-color: var(--primary);
 }
-
 
 .wrapper {
   /* position: absolute; */
@@ -54,11 +146,11 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: "CustomFont_Light", sans-serif;
   line-height: 1.2;
   /* line-height: 30px; */
   background-color: var(--primary);
-  color: var(--primary);
+  color: var(--grey-1);
   font-weight: normal;
   position: relative;
 }
@@ -78,82 +170,10 @@ body {
   --dark-3: rgb(27, 27, 27);
   --red: #c61212;
 }
-/* .text {
-  opacity: 0;
-  transform: translate3d(0, -200px, 0);
-} */
-/* .word {
-  opacity: 0;
-  transform: translate3d(0, 200px, 0);
-} */
-/* .word {
-  display: block !important;
-} */
-/* .text {
-  transform: translateY(350px);
-  transition: all 0.4s;
-} */
-.overlay {
-  z-index: 3000600;
-  font-weight: 700;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  position: fixed;
-  background-color: var(--grey-1);
-  align-items: flex-end;
-}
-
-.overlay .bar {
-  width: 10vw;
-  height: 0;
-  background-color: var(--primary);
-}
-
-.counter {
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  justify-content: center;
-  display: flex;
-  align-items: center;
-  padding: 1rem 2rem;
-  font-size: 20rem;
-  color: #fff;
-  z-index: 33330000;
-  /* background-color: #1a1a1a; */
-}
 
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
-}
-
-.preloader {
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  display: grid;
-  background-color: rgb(51, 60, 78);
-  place-items: center;
-  z-index: 1000;
-}
-
-.preloader_2 {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  display: grid;
-  background-color: rgb(134, 134, 134);
-  place-items: center;
-  z-index: 500;
-}
-
-.preloader .loading_text {
-  font-weight: normal;
-  letter-spacing: 20px;
-  pointer-events: none;
-  user-select: none;
 }
 
 .hidden {
@@ -179,13 +199,11 @@ html {
   background-color: var(--blue-2);
 }
 
-
-
 .btn {
   border: 1px solid rgba(255, 255, 255, 0.2);
   outline: none;
   cursor: pointer;
-  /* font-family: "Bebas Neue", sans-serif; */
+  /* font-family: "CustomFont_Light", sans-serif; */
   color: #fff;
   border-radius: 40px;
   background-color: transparent;
@@ -240,34 +258,6 @@ input {
   font-size: 40px;
 }
 
-p {
-  font-family: "Nunito", sans-serif;
-}
-
-/* h1 {
-  font-family: "Teko", sans-serif;
-} */
-
-.family1 {
-  font-family: "DM Sans", sans-serif;
-  font-weight: normal;
-}
-
-.family2 {
-  font-family: "Lora", sans-serif;
-}
-.family3 {
-  font-family: "Montserrat Alternates", sans-serif;
-}
-h4 {
-  font-size: 12px;
-  letter-spacing: 8px;
-  font-weight: bold;
-  text-transform: uppercase;
-  font-family: "Montserrat", sans-serif;
-  color: var(--grey-1);
-}
-
 /* .word {
   opacity: 0;
 } */
@@ -296,8 +286,8 @@ h4 {
   content: "";
 }
 
-.family4 {
-  font-family: "Archivo Black", sans-serif;
+.family1 {
+  font-family: "Montserrat Alternates", sans-serif;
 }
 
 .area {
@@ -352,24 +342,23 @@ h4 {
   padding-right: 4rem;
 }
 
-a:hover {
-  color: var(--secondary);
-}
-
 .px-4 {
   padding: 0 4rem;
 }
 
 .text-extra-bold {
-  font-weight: 700;
+  font-family: "CustomFont_Bold", sans-serif;
+  font-weight: bolder;
 }
 
 .text-bold {
-  font-weight: 600;
+  font-family: "CustomFont_Bold", sans-serif;
+  font-weight: bold;
 }
 
 .text-light {
-  font-weight: 400;
+  font-family: "CustomFont_Light", sans-serif;
+  font-weight: lighter;
 }
 
 .uppercase {

@@ -1,20 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { BsGithub, BsTwitter } from "react-icons/bs";
-import { Link as Links } from "react-scroll";
-
-import { FaLinkedinIn } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import SmallSidebar from "./sidebar/SmallSidebar";
-import AboutIndex from "../components/about";
-import SkillsIndex from "../components/skills";
-
-import Message from "../components/loaders/Message";
-import HeroIndex from "../components/hero";
-import AboutMeIndex from "../components/aboutme";
-import { Footer } from "../components/common";
-import WorkIndex from "../components/work";
-import MottoIndex from "../components/motto";
 import { useRef } from "react";
 import Aos from "aos";
 const LayoutWrapper = styled.div`
@@ -23,7 +10,73 @@ const LayoutWrapper = styled.div`
   flex-direction: column;
   align-items: flex-start;
   background-color: rgb(51, 51, 51);
-
+  .wrapperlink {
+    position: fixed;
+    bottom: 10%;
+    left: 3%;
+    z-index: 30000;
+    height: 50vh;
+    @media (max-width: 780px) {
+      left: 1%;
+      bottom: 0;
+      /* display: none; */
+    }
+    .arrow {
+      height: 500px;
+      width: 0.2px;
+      background-color: #b7ab9834;
+    }
+  }
+  h5 {
+    font-weight: lighter;
+  }
+  .card_btn {
+    padding: 1.6rem 3rem;
+    min-width: 18rem;
+    min-height: 4rem;
+    border-radius: 40px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    @media (max-width: 780px) {
+      padding: 1.5rem;
+      text-align: center;
+      width: 100%;
+    }
+    .text1 {
+      z-index: 10;
+    }
+    &:is(:hover, :focus-visible)::before {
+      bottom: -10%;
+      transform: translateX(-50%) scale(1.4);
+      color: var(--dark-1);
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -200%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      height: 50%;
+      border-radius: 100%;
+      background-color: var(--secondary);
+      /* Add more styles for the card here */
+      transition: all 1s ease;
+      z-index: 1;
+      padding: 2rem;
+    }
+  }
+  .topHeader {
+    position: fixed;
+    top: 0;
+    background-color: inherit;
+    backdrop-filter: blur(12px);
+    padding: 2rem 0;
+    z-index: 100000;
+  }
   .social {
     svg {
       font-size: 16px;
@@ -110,7 +163,7 @@ const LayoutWrapper = styled.div`
   .wrapperlink {
     position: fixed;
     bottom: 10%;
-    left: 5%;
+    left: 3%;
     z-index: 30000;
   }
   .LayoutContainer {
@@ -150,70 +203,10 @@ export default function Layout() {
   return (
     <LayoutWrapper className="based" style={{ height }}>
       <div className="LayoutContainer">
-        {/* <SidebarIndex /> */}
-        <div className="titleIcon">
-          <h3 className="text-1 text family3 text-white text-light uppercase">
-            VICTOR
-          </h3>
-          <h3 className="text-2 text family3 text-white text-light uppercase">
-            ROBIN
-          </h3>
-        </div>
-        <div className=" wrapperlink flex column gap-2">
-          <Link
-            to={"https://github.com/edidiesky"}
-            target="_blank"
-            className="social"
-          >
-            <BsGithub />
-          </Link>
-          <Link
-            to={
-              "https://twitter.com/DevtorCode/status/1660742554789335074?s=20"
-            }
-            target="_blank"
-            className="social"
-          >
-            <BsTwitter />
-          </Link>
-          <Link
-            to={"https://linkedin.com/in/robinvictoro"}
-            target="_blank"
-            className="social"
-          >
-            <FaLinkedinIn />
-          </Link>
-        </div>
-        <Message />
-        {/* <Header /> */}
         <SmallSidebar />
-
-        <div className="flex item-end justify-end column list flex-1">
-          {data.map((x) => {
-            return (
-              <Links
-                spy={true}
-                smooth={true}
-                duration={1000}
-                className="linktext2 family3 linktext1 text-extra-bold fs-12 text-grey text-light"
-                to={`${x.path}`}
-                key={x.id}
-              >
-                {x.title}
-              </Links>
-            );
-          })}
-        </div>
-        <div className="container">
-          <HeroIndex />
-          <AboutMeIndex />
-          <AboutIndex />
-          <WorkIndex />
-          <SkillsIndex />
-          <MottoIndex />
-          <Footer />
-        </div>
+        <Outlet />
       </div>
     </LayoutWrapper>
   );
 }
+

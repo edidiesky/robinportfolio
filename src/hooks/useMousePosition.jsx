@@ -6,13 +6,15 @@ export default function useMousePosition() {
   const handleMousePosition = (e) => {
     const { width, height, left, top } = e.target.getBoundingClientRect();
     setMousePosition({
-      x: e.clientX - left,
-      y: e.clientY - top,
+      x: e.clientX,
+      y: e.clientY,
     });
   };
   useEffect(() => {
     window.addEventListener("mousemove", handleMousePosition);
     return () => window.removeEventListener("mousemove", handleMousePosition);
   }, [setMousePosition]);
+
+  // console.log("mouseposition", mouseposition);
   return mouseposition;
 }

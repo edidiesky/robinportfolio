@@ -1,31 +1,54 @@
-import React, { useState } from "react";
+import React, { useLayoutEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import TextIndex from "../common/Text";
+import { HiArrowDownRight } from "react-icons/hi2";
+import gsap from "gsap";
+import SplitType from "split-type";
 
-const whatIdoData = [
-  "Responsive design",
-  "Api development",
-  "Animations",
-  "Maintainable Code",
-];
+const whatIdoData = ["Responsive design", "Api development", "Animations"];
 
 export default function AboutIndex() {
+  useLayoutEffect(() => {
+    const spitTexts = new SplitType(".doText", { type: "chars" });
+    gsap.fromTo(
+      spitTexts.chars,
+      { y: 670, opacity: 0 }, // Initial skewY value
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1.6,
+        delay: 2,
+        ease: "easeOutExpo",
+        stagger: {
+          amount: 0.8,
+        },
+        scrollTrigger: {
+          trigger: ".doText",
+          start: "top 80%",
+          end: "bottom 25%",
+          scrub: true,
+          container: ".left",
+        },
+      }
+    );
+  }, []);
   return (
-    <SkillsWrapper id="about">
+    <SkillsWrapper data-scroll-section id="about">
       <div className="left w-100  h-100 flex column">
-        <div className=" w-85 auto">
-          <h4
-            style={{ fontWeight: "normal" }}
-            className="text-grey family2 text-start flex item-center gap-2"
+        <h4 className=" w-85 auto family1 text-grey">
+          Here is what I can I do
+          <div
+            className="flex fs-30 text-white justify-start item-center"
+            style={{
+              justifyContent: "flex-start",
+              marginLeft: "250px",
+              marginTop: "20px",
+            }}
           >
-            <img
-              src="https://v2.brittanychiang.com/img/icons/settings.png"
-              alt=""
-              className="icon1"
-            />
-            What I Do
-          </h4>
-        </div>
+            {" "}
+            <HiArrowDownRight />
+          </div>
+        </h4>
         <div className="w-100 grid">
           <div className="left flex item-start column">
             {whatIdoData.map((x, index) => {
@@ -33,14 +56,9 @@ export default function AboutIndex() {
                 <div className="w-100 hidden">
                   <h2
                     key={index}
-                    data-aos="fade-up"
-                    data-aos-duration="1000"
-                    data-aos-delay={index * 250}
-                    className="text-grey w-100 uppercase text-start"
+                    className="text-grey w-100 doText uppercase text-center"
                   >
-                    <div className="w-85 auto">
-                      <TextIndex x={x} />
-                    </div>
+                    <div className="w-85 text-start auto">{x}</div>
                   </h2>
                 </div>
               );
@@ -60,41 +78,22 @@ const SkillsWrapper = styled.div`
   padding: 6rem 0;
   padding-top: 6rem;
   transform-style: inherit;
-  /* background-color: rgba(13, 13, 13, 0.81) !important; */
-
-  .line .span {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(13, 13, 13);
-    background-color: rgba(13, 13, 13, 0.852);
+  .line {
+    overflow: hidden !important;
   }
-  .text1,
-  .head {
-    @media (max-width: 580px) {
-      width: 90%;
-      text-align: start;
-      margin: 0;
-    }
-  }
-
-  .heads::after {
-    position: absolute;
-    width: 100px;
-    height: 2px;
-    background-color: var(--secondary);
-    bottom: -25%;
-    left: 0%;
-    content: "";
+  h4 {
+    letter-spacing: 1px;
+    font-weight: bolder;
+    font-size: 16px;
+    transition: all 0.6s;
   }
   h2 {
     letter-spacing: 1px;
-    font-weight: normal;
-    font-size: 100px;
+    font-weight: bolder;
+    font-size: 90px;
+    padding: 1.5rem 2rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    padding: 0;
+    color: var(--grey-1);
 
     @media (max-width: 1080px) {
       font-size: 90px;

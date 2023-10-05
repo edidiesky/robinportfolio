@@ -1,176 +1,44 @@
 import React, { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
+import { Link } from "react-router-dom";
+import { HiArrowDownLeft } from "react-icons/hi2";
 import styled from "styled-components";
 
 export default function Footer() {
-  const [user_email, setUser_Email] = useState("");
-  const [user_name, setUser_Name] = useState("");
-  const [message, setMessage] = useState("");
-  const [subject, setSubject] = useState("");
-
-  const form = useRef();
-  // console.log(form.current)
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!user_email || !subject || !user_name || !message || !subject) {
-      alert("Fill in the required form data");
-    } else {
-      emailjs
-        .sendForm(
-          "service_ikss287",
-          "template_jwbhpkj",
-          form.current,
-          "HvjUueCjGw8jnVKgB"
-        )
-        .then(
-          (result) => {
-            setUser_Email("");
-            setUser_Name("");
-            setMessage("");
-            setSubject("");
-            alert("Message has been delivered");
-          },
-          (error) => {
-            console.log(error.text);
-          }
-        );
-    }
-
-    // dispatch(loginCustomer(formdata));
-  };
-
   return (
-    <FooterWrapper id="contact">
+    <FooterWrapper data-scroll-section id="contact">
       <div className="left w-90 auto h-100 flex column gap-4">
         <div className="flex top item-center w-85 auto">
           <div className="w-100 flex column gap-2">
-            <h2 className="text-grey w-100 family1 fs-45">
-              Let's start a project together
+            <h2 className="text-white w-100 family1 fs-45">
+              Let's work <span className="block">together</span>
             </h2>
           </div>
+          <Link
+            to={"/contact"}
+            className="card_btn_wrapper2 family2 flex item-center justify-center"
+          >
+            <div className="card_btn fs-14 flex justify-center item-center text-white text-light">
+              <div className="text1 text-center">Contact Me</div>
+            </div>
+          </Link>
           <div
-            className="flex-1 flex justify-end item-center"
+            className="flex-1 flex fs-30 text-white justify-end item-center"
             style={{ justifyContent: "flex-end" }}
           >
             {" "}
-            {/* <img src="./profile.jfif" alt="" className="image" /> */}
+            <HiArrowDownLeft />
           </div>
         </div>
-        <div className="grid_wrapper w-85 auto" style={{ paddingTop: "4rem" }}>
-          <form
-            ref={form}
-            onSubmit={handleSubmit}
-            className="flex column relative"
-            style={{ position: "relative" }}
-          >
-            {/* contact form */}
-            <div className="form w-100 flex item-start gap-2">
-              <div className="flex">
-                <h4>01</h4>
-              </div>
-              <label htmlFor="user_name" className="flex column w-100 gap-2">
-                <h3 className="fs-24 family3 text-grey">What's your name?</h3>
-                <input
-                  type="text"
-                  id="user_name"
-                  name="user_name"
-                  onChange={(e) => setUser_Name(e.target.value)}
-                  value={user_name}
-                  placeholder="John Doe *"
-                  className="input family3"
-                />
-              </label>
-            </div>{" "}
-            {/* email */}
-            <div className="form w-100 flex item-start gap-2">
-              <div className="flex">
-                <h4>02</h4>
-              </div>
-              <label htmlFor="user_email" className="flex column w-100 gap-2">
-                <h3 className="fs-24 family3 text-grey">What's your email?</h3>
-                <input
-                  type="text"
-                  id="user_email"
-                  name="user_email"
-                  onChange={(e) => setUser_Email(e.target.value)}
-                  value={user_email}
-                  placeholder="JohnDoe@gmail.com *"
-                  className="input family3"
-                />
-              </label>
-            </div>{" "}
-            {/* services */}
-            <div className="form w-100 flex item-start gap-2">
-              <div className="flex">
-                <h4>03</h4>
-              </div>
-              <label htmlFor="subject" className="flex column w-100 gap-2">
-                <h3 className="fs-24 family3 text-grey">
-                  What services are you looking for?
-                </h3>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  onChange={(e) => setSubject(e.target.value)}
-                  value={subject}
-                  placeholder="Web Development"
-                  className="input family3"
-                />
-              </label>
-            </div>{" "}
-            {/* message */}
-            <div
-              style={{ borderBottom: "2px solid rgba(255, 255, 255, 0.1)" }}
-              className="form w-100 flex item-start gap-2"
-            >
-              <div className="flex">
-                <h4>04</h4>
-              </div>
-              <label htmlFor="message" className="flex column w-100 gap-2">
-                <h3 className="fs-24 family3 text-grey">Your message</h3>
-                <textarea
-                  onChange={(e) => setMessage(e.target.value)}
-                  value={message}
-                  id="message"
-                  type="text"
-                  placeholder="Hello Victor, can you help me with.... *"
-                  className="input family3"
-                />
-              </label>
+        <div className="flex bottom w-85 auto item-center gap-4">
+          <div className="card_btn_wrapper family2 flex item-center justify-center">
+            <div className="card_btn fs-16 flex justify-center item-center text-white text-light">
+              <div className="text1">essienedidiong1000@gmail.com</div>
             </div>
-            <div
-              onClick={handleSubmit}
-              className="cardw fs-20 text-grey family3"
-            >
-              <div className="text-1">Send It</div>
+          </div>
 
-              <div className="text-2">Send It</div>
-            </div>
-          </form>
-          {/* contact list */}
-          <div className="flex column w-100 gap-4">
-            <div className="flex column gap-2">
-              <h4 className="text-grey" style={{ fontSize: "9px" }}>
-                Contact
-              </h4>
-              <ul className="flex column flex" style={{ gap: "1.5rem" }}>
-                <li className="fs-14 text-grey family1">
-                  essienVictor1000@gmail.com
-                </li>
-                <li className="fs-14 text-grey family1">08127107270</li>
-              </ul>
-            </div>
-            <div className="flex column gap-2">
-              <h4 className="text-grey" style={{ fontSize: "9px" }}>
-                Social
-              </h4>
-              <ul className="flex column flex" style={{ gap: "1.5rem" }}>
-                <li className="fs-14 text-grey family1">Instagram</li>
-                <li className="fs-14 text-grey family1">Facebook</li>
-                <li className="fs-14 text-grey family1">Github</li>
-                <li className="fs-14 text-grey family1">Twitter</li>
-              </ul>
+          <div className="card_btn_wrapper family2 flex item-center justify-center">
+            <div className="card_btn fs-16 flex justify-center item-center text-white text-light">
+              <div className="text1">0812 710 7270</div>
             </div>
           </div>
         </div>
@@ -187,7 +55,11 @@ const FooterWrapper = styled.div`
   padding: 15rem 0;
   display: grid;
   place-items: center;
-  background-color: var(--primary);
+  z-index: 20000000;
+  background-color: #1c1d20;
+  .left {
+    width: 96%;
+  }
   .grid_wrapper {
     display: grid;
     grid-template-columns: 1fr 10vw;
@@ -196,17 +68,106 @@ const FooterWrapper = styled.div`
       grid-template-columns: 1fr;
     }
   }
+  .bottom {
+    @media (max-width: 780px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.5rem;
+    }
+  }
   @media (max-width: 780px) {
     font-size: 14px;
   }
-  .form {
-    border-top: 2px solid rgba(255, 255, 255, 0.1);
-    padding: 4rem 0;
-    &:last-child {
-      border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  .card_btn_wrapper2 {
+    .card_btn {
+      min-width: 16rem;
+      min-height: 16rem;
+      border-radius: 50%;
+      overflow: hidden;
+      cursor: pointer;
+      position: relative;
+      background-color: var(--secondary);
+      transition: all 0.7s ease;
+      transform: translateY(70%);
+      @media (max-width: 780px) {
+        transform: translateY(45%);
+      }
+
+      @media (max-width: 380px) {
+        transform: none;
+      }
+
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      .text1 {
+        z-index: 10;
+      }
+      &:is(:hover, :focus-visible)::before {
+        bottom: 20%;
+        transform: translateX(-50%) scale(1.4);
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -200%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        height: 70%;
+        border-radius: 100%;
+        background-color: #3e4fbcc6;
+        /* Add more styles for the card here */
+        transition: all 1s ease;
+        z-index: 1;
+        padding: 2rem;
+      }
+    }
+  }
+  .card_btn_wrapper {
+    @media (max-width: 780px) {
+      width: 100%;
+    }
+    .card_btn {
+      padding: 3rem;
+      min-width: 18rem;
+      min-height: 5rem;
+      border-radius: 40px;
+      overflow: hidden;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.7s ease;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      @media (max-width: 780px) {
+        padding: 4rem 3rem;
+        text-align: center;
+        width: 100%;
+      }
+      .text1 {
+        z-index: 10;
+      }
+      &:is(:hover, :focus-visible)::before {
+        bottom: -10%;
+        transform: translateX(-50%) scale(1.4);
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -200%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        height: 50%;
+        border-radius: 100%;
+        background-color: var(--secondary);
+        /* Add more styles for the card here */
+        transition: all 1s ease;
+        z-index: 1;
+        padding: 2rem;
+      }
     }
   }
   .top {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 4rem;
     @media (max-width: 480px) {
       flex-direction: column;
       align-items: flex-start;
@@ -218,56 +179,26 @@ const FooterWrapper = styled.div`
       font-size: 20px;
     }
   }
-  input {
-    height: 5rem;
-    background: transparent;
-    padding: 0;
-    width: 100%;
-    border: none;
-    outline: none;
-    font-size: 2rem;
-    font-weight: 400;
-    transition: all 0.6s;
-    color: #fff;
-    @media (max-width: 480px) {
-      font-size: 16px;
-    }
-  }
-  textarea {
-    height: 15rem;
-    background: transparent;
-    padding: 0;
-    width: 100%;
-    border: none;
-    outline: none;
-    font-size: 2rem;
-    font-weight: 400;
-    transition: all 0.6s;
-    color: #fff;
-    resize: none;
-  }
-
   .cardw {
     position: absolute;
     display: grid;
     place-items: center;
-    width: 20rem;
-    height: 20rem;
+    width: 17rem;
+    height: 17rem;
     border-radius: 50%;
-    letter-spacing: 3px;
     bottom: -15%;
     right: -10%;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     /* font-size: 12px; */
     z-index: 3000;
     overflow: hidden;
     cursor: pointer;
     transition: all 1s ease;
-    background-color: rgb(206, 181, 139);
-    color: var(--dark-1);
+    background-color: #455ce9;
+    color: #fff;
     &:hover {
       transform: translateY(-10px);
-      box-shadow: 0 4px 13px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 4px 13px rgba(0, 0, 0, 0.1);
     }
     .text-2 {
       position: absolute;
@@ -275,7 +206,7 @@ const FooterWrapper = styled.div`
       left: 50%;
       transform: translateX(-50%);
       min-width: max-content;
-      color: #000;
+
       transition: all 0.7s ease;
     }
     .text-1 {
@@ -284,8 +215,8 @@ const FooterWrapper = styled.div`
       left: 50%;
       transform: translateX(-50%);
       min-width: max-content;
-      color: #000;
-      transition: all 0.3s;
+
+      transition: all 0.1s;
     }
     &:is(:hover, :focus-visible)::before {
       bottom: -50%;
