@@ -90,9 +90,9 @@ const HeroWrapper = styled.div`
     padding-top: 5rem;
   }
   h2 {
-    font-size: 110px;
+    font-size: 120px;
     font-weight: bolder;
-    line-height: 1;
+    line-height: 1.2;
     text-align: center;
     padding: 0 5px;
     @media (max-width: 1080px) {

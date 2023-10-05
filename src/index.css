@@ -153,6 +153,7 @@ body {
   color: var(--grey-1);
   font-weight: normal;
   position: relative;
+  font-kerning: none;
 }
 
 /* .layout {
@@ -169,6 +170,9 @@ body {
   --dark-1: rgb(13, 13, 13);
   --dark-3: rgb(27, 27, 27);
   --red: #c61212;
+}
+.target {
+  font-kerning: none;
 }
 
 html {

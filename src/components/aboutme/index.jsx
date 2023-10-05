@@ -16,8 +16,8 @@ export default function AboutMeIndex() {
   const [isHovered, setIsHovered] = useState(false);
   const size = isHovered ? 400 : 20;
 
-  useLayoutEffect(() => {
-    const spitTexts = new SplitType(".aboutmetext", { type: "chars" });
+  useEffect(() => {
+    const spitTexts = new SplitType(".aboutmetext", { type: "words, chars" });
     gsap.fromTo(
       spitTexts.chars,
       { skewY: 65, y: 670 }, // Initial skewY value
@@ -28,7 +28,7 @@ export default function AboutMeIndex() {
         delay: 1.5,
         ease: "easeOutExpo",
         stagger: {
-          amount: 0.5,
+          amount: 0.1,
         },
         scrollTrigger: {
           trigger: ".aboutmetext",
@@ -104,6 +104,7 @@ const SkillsWrapper = styled.div`
   }
   .line {
     overflow: hidden !important;
+    font-kerning: none;
   }
   .maskWrapper {
     position: relative;
@@ -126,10 +127,12 @@ const SkillsWrapper = styled.div`
     h2 {
       font-size: 60px;
       line-height: 1;
-      width: 1000px;
+      width: 1100px;
       padding: 30px 20px;
+      font-kerning: none;
       span {
         color: var(--secondary);
+        font-kerning: none;
       }
       @media (max-width: 980px) {
         font-size: 50px;

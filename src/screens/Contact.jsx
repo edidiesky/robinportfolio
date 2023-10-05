@@ -34,7 +34,10 @@ export default function Contact() {
       <PixelBackground />
       <div className="topHeader flex item-center justify-space w-100">
         <div className="w-90 flex item-center justify-space auto">
-          <h5 className="fs-16 text-grey text-light">@ Code By Victor</h5>
+          <Link to={"/"} className="fs-16 text-grey text-light">
+            @ Code By Victor
+          </Link>
+
           <div className="flex item-center justify-end gap-1">
             <div className="card_btn_wrapper family2 flex item-center justify-center">
               <div className="card_btn fs-18 flex justify-center item-center text-white text-light">

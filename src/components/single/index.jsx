@@ -33,7 +33,7 @@ const SingleWrapper = styled.div`
     }
   }
 
-  .card_btn {
+  .card_btn1 {
     width: 16rem;
     height: 16rem;
     border-radius: 50%;
@@ -248,108 +248,21 @@ export default function SingleIndex() {
           >
             <img src={projectdetails.image} className="auto " alt="" />
 
-            <Link
-              to={"/contact"}
-              className="card_btn fs-16 flex justify-center item-center text-light"
-            >
-              <div className="text1 flex text-white itemcenter gap-1 text-center">
-                Live Site
-                <HiArrowUpRight />
-              </div>
-            </Link>
+            <div className="flex">
+              <Link
+                to={"/contact"}
+                className="card_btn1 fs-16 flex justify-center item-center text-light"
+              >
+                <div className="text1 flex text-white itemcenter gap-1 text-center">
+                  Live Site
+                  <HiArrowUpRight />
+                </div>
+              </Link>
+            </div>
           </div>
         </div>
         {/* research planning  */}
-        <div
-          style={{ margin: "5rem auto" }}
-          className="w-85 auto flex column gap-4"
-        >
-          <div className="w-90 auto flex column gap-4 item-start gap-3">
-            <div className="fs-16 flex column gap-2 item-start text-grey">
-              <h5 className="block dropdownHeader text-grey fs-30 text-bold">
-                Features
-              </h5>
-              <div className="flex column w-100 gap-1">
-                <ul className="flex column" style={{ gap: "1.5rem" }}>
-                  {projectdetails?.features.map((x, index) => {
-                    return (
-                      <li className="block text-light fs-18">
-                        <div className="text-bold text-grey fs-18 flex item-center gap-1">
-                          <span style={{ marginLeft: "-10px" }}>
-                            {index + 1}.
-                          </span>{" "}
-                          {x.text}
-                        </div>
-                        <div className="text-grey w-100 family1 fs-16">
-                          {x.description}
-                        </div>
-                      </li>
-                    );
-                  })}
-                </ul>
-              </div>
-            </div>
-            {/* role */}
-            <div className="fs-16 flex column gap-2 item-start text-grey">
-              <h5 className="block dropdownHeader text-grey fs-30 text-bold">
-                Role
-              </h5>
-              <div className="flex column w-100 gap-1">
-                <div className="flex column" style={{ gap: "2rem" }}>
-                  {projectdetails?.role.map((x, index) => {
-                    return (
-                      <div className=" flex column gap-1 text-light fs-18">
-                        <div className="text-bold text-grey flex item-center gap-1">
-                          <span style={{ marginLeft: "-10px" }}>
-                            {index + 1}.
-                          </span>{" "}
-                          {x.text}
-                        </div>
-                        <ul
-                          style={{ listStyleType: "disc" }}
-                          className="text-grey flex column gap-1 fs-16"
-                        >
-                          {x.subtext.map((x) => {
-                            return (
-                              <li
-                                style={{ marginRight: "-100px" }}
-                                className="family1 w-100 text-grey"
-                              >
-                                {x}
-                              </li>
-                            );
-                          })}
-                        </ul>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* galleries */}
-        {/* <div
-          style={{ margin: "5rem auto" }}
-          className="w-100 py-2 grid_auto grid item-center"
-        >
-          {projectdata2.map((data, index) => {
-            return (
-              <StyledCard
-                key={index}
-                backgroundColor={data.color}
-                className="card w-100 flex item-center justify-center"
-              >
-                <img
-                  style={{ width: "90%" }}
-                  src={data.image}
-                  className="auto "
-                  alt=""
-                />
-              </StyledCard>
-            );
-          })}
-        </div> */}
+     
       </div>
     </SingleWrapper>
   );

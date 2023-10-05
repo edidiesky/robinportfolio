@@ -22,7 +22,7 @@ export default function Experience() {
         delay: 2,
         ease: "easeOutExpo",
         stagger: {
-          amount: 0.8,
+          amount: 0.2,
         },
         scrollTrigger: {
           trigger: ".experiencetext",
